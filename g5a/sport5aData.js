@@ -19,7 +19,7 @@ const firebaseConfig = {
     var sex = getElementVal('mySex');
     var grade = getElementVal('myGrade');
     //October
-    var speaking = getElementVal('mySoct');
+    var speaking = getElementVal('getInput');
     var writing = getElementVal('myWoct');
     var listening = getElementVal('myLoct');
     var reading = getElementVal('myRoct');
@@ -124,6 +124,7 @@ function addItemsToTable(name,id,sex,grade,speaking,writing,listening,
   td4.appendChild(input1);
   input1.className = "myInput";
   input1.id = "getInput"
+  input1.setAttribute("oninput", "AddStd();");
   td5.appendChild(input2);
   input2.className = "myInput1";
   input2.id = "getInput1"
@@ -164,7 +165,7 @@ var Mname = document.getElementById('myName');
 var Mid = document.getElementById('myID');
 var Msex = document.getElementById('mySex');
 var Mgrade = document.getElementById('myGrade');
-var Mspeaking = document.getElementById('mySoct');
+var Mspeaking = document.getElementById('getInput');
 var Mwriting = document.getElementById('myWoct');
 var Mlistening = document.getElementById('myLoct');
 var Mreadiing = document.getElementById('myRoct');
@@ -178,7 +179,7 @@ var BtnClearBox = document.getElementById('myClearBox');
 var BtnClearAll = document.getElementById('myClearAll');
 
 
-
+/*
 function Fillbox(index){
   if(index==null){
     BtnSubmit.style.display='inline-block';
@@ -223,7 +224,7 @@ function Fillbox(index){
 
   }
 }
-
+*/
 function AddStd(){
   firebase.database().ref("sport5AData/"+Mid.value).set(
     {
@@ -290,7 +291,7 @@ function ExportToExcel(type, fn, dl) {
 }
 //Clear text in Box
 function clearBox(){
-document.getElementById('mySoct').value = "";
+document.getElementById('getInput').value = "";
 document.getElementById('myWoct').value = "";
 document.getElementById('myLoct').value = "";
 document.getElementById('myRoct').value = "";
@@ -312,7 +313,7 @@ function clearAll(){
   document.getElementById('myName').value = "";
   document.getElementById('myID').value = "";
   document.getElementById('mySex').value = "";
-  document.getElementById('mySoct').value = "";
+  document.getElementById('getInput').value = "";
   document.getElementById('myWoct').value = "";
   document.getElementById('myLoct').value = "";
   document.getElementById('myRoct').value = "";
