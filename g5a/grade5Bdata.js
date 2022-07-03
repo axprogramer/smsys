@@ -1223,12 +1223,14 @@ function adder() {
 
   var get = num1 + num2 + num3 + num4;
   var total = get / 4;
+  total = parseFloat(total).toFixed(2);
   document.getElementById("myAoct").value = total;
 }
 function divid(){
   var num5 = parseInt(document.getElementById('myScoreoct').value);
   var score = num5;
   var get = score / 3;
+  get = parseFloat(get).toFixed(2);
   document.getElementById("myWoct").value = get;
   document.getElementById("myLoct").value = get;
   document.getElementById("myRoct").value = get;
@@ -1243,6 +1245,7 @@ function adder1() {
 
   var get2 = num5 + num6 + num7 + num8;
   var total1 = get2 / 4;
+  total1 = parseFloat(total1).toFixed(2);
   document.getElementById("myAnov").value = total1;
 
 }
@@ -1250,6 +1253,7 @@ function divid1(){
   var num6 = parseInt(document.getElementById('myScorenov').value);
   var score1 = num6;
   var get2 = score1 / 3;
+  get2 = parseFloat(get2).toFixed(2);
   document.getElementById("myWnov").value = get2;
   document.getElementById("myLnov").value = get2;
   document.getElementById("myRnov").value = get2;
@@ -1264,6 +1268,7 @@ function adder2() {
 
   var get2 = num5 + num6 + num7 + num8;
   var total1 = get2 / 4;
+  total1 = parseFloat(total1).toFixed(2);
   document.getElementById("myAdec").value = total1;
 
 }
@@ -1271,6 +1276,7 @@ function divid2(){
   var num6 = parseInt(document.getElementById('myScoredec').value);
   var score1 = num6;
   var get2 = score1 / 3;
+  get2 = parseFloat(get2).toFixed(2);
   document.getElementById("myWdec").value = get2;
   document.getElementById("myLdec").value = get2;
   document.getElementById("myRdec").value = get2;
@@ -1285,6 +1291,7 @@ function adder3() {
 
   var get2 = num5 + num6 + num7 + num8;
   var total1 = get2 / 4;
+  total1 = parseFloat(total1).toFixed(2);
   document.getElementById("myAjan").value = total1;
 
 }
@@ -1292,6 +1299,7 @@ function divid3(){
   var num6 = parseInt(document.getElementById('myScorejan').value);
   var score1 = num6;
   var get2 = score1 / 3;
+  get2 = parseFloat(get2).toFixed(2);
   document.getElementById("myWjan").value = get2;
   document.getElementById("myLjan").value = get2;
   document.getElementById("myRjan").value = get2;
@@ -1306,6 +1314,7 @@ function adder4() {
 
   var get2 = num5 + num6 + num7 + num8;
   var total1 = get2 / 4;
+  total1 = parseFloat(total1).toFixed(2);
   document.getElementById("myAfeb").value = total1;
 
 }
@@ -1313,6 +1322,7 @@ function divid4(){
   var num6 = parseInt(document.getElementById('myScorefeb').value);
   var score1 = num6;
   var get2 = score1 / 3;
+  get2 = parseFloat(get2).toFixed(2);
   document.getElementById("myWfeb").value = get2;
   document.getElementById("myLfeb").value = get2;
   document.getElementById("myRfeb").value = get2;
@@ -1357,6 +1367,7 @@ function adder8() {
 
   var get2 = num5 + num6 + num7 + num8;
   var total1 = get2 / 4;
+  total1 = parseFloat(total1).toFixed(2);
   document.getElementById("myAmar").value = total1;
 
 }
@@ -1364,6 +1375,7 @@ function divid8(){
   var num6 = parseInt(document.getElementById('myScoremar').value);
   var score1 = num6;
   var get2 = score1 / 3;
+  get2 = parseFloat(get2).toFixed(2);
   document.getElementById("myWmar").value = get2;
   document.getElementById("myLmar").value = get2;
   document.getElementById("myRmar").value = get2;
@@ -1378,6 +1390,7 @@ function adder9() {
 
   var get2 = num5 + num6 + num7 + num8;
   var total1 = get2 / 4;
+  total1 = parseFloat(total1).toFixed(2);
   document.getElementById("myAma").value = total1;
 
 }
@@ -1385,6 +1398,7 @@ function divid9(){
   var num6 = parseFloat(document.getElementById('myScorema').value);
   var score1 = num6;
   var get2 = score1 / 3;
+  get2 = parseFloat(get2).toFixed(2);
   document.getElementById("myWma").value = get2;
   document.getElementById("myLma").value = get2;
   document.getElementById("myRma").value = get2;
@@ -1399,6 +1413,7 @@ function adder10() {
 
   var get2 = num5 + num6 + num7 + num8;
   var total1 = get2 / 4;
+  total1 = parseFloat(total1).toFixed(2);
   document.getElementById("myAjun").value = total1;
 
 }
@@ -1406,6 +1421,7 @@ function divid10(){
   var num6 = parseFloat(document.getElementById('myScorejun').value);
   var score1 = num6;
   var get2 = score1 / 3;
+  get2 = parseFloat(get2).toFixed(2);
   document.getElementById("myWjun").value = get2;
   document.getElementById("myLjun").value = get2;
   document.getElementById("myRjun").value = get2;
@@ -1449,6 +1465,7 @@ function adder14() {
 
   var get2 = num5 + num6;
   var total1 = get2 / 2;
+  total1 = parseFloat(total1).toFixed(2);
   document.getElementById("myAaY").value = total1;
 
 }

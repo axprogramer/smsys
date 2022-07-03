@@ -43,8 +43,8 @@
         <h1 style="padding-top: 25px;">Student's Report<br>GRADE 5A</h1>
         <div style="padding-top: 25px;">
     </div>
-    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#exampleModal" onclick="Fillbox(null)" style="background: var(--bs-blue); margin-right: 15px;">(+) New<i class="fa fa-address-card" style="padding-left: 5px;"></i></button>
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="background: var(--bs-green);">
+    <button class="button-85"  type="button" data-toggle="modal" data-target="#exampleModal" onclick="Fillbox(null)">(+) New<i class="fa fa-address-card" style="padding-left: 5px;"></i></button>
+        <button class="button-86" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             Print Preview <i i class="bi bi-printer-fill" style="padding-left: 5px;"></i>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -65,7 +65,7 @@
 
         </ul>
 
-    <button onclick="ExportToExcel('xlsx')" class="btn btn-primary" type="button" data-toggle="modal" data-target="#exampleModal" style="background: var(--bs-red); margin-left: 15px;">Save Data<i i class="bi bi-cloud-download" style="padding-left: 5px;"></i></button>
+    <button onclick="ExportToExcel('xlsx')" class="button-87" type="button" data-toggle="modal" data-target="#exampleModal">Save Data<i i class="bi bi-cloud-download" style="padding-left: 5px;"></i></button>
     </div>
     
     <!--Print October-->
@@ -1662,7 +1662,7 @@
     <div>
         <div class="table-responsive" style="padding: 20px;">
             <table class="table-responsive table-bordered table-sortable border-secondary text-center" id="input5aOct">
-                <thead class="table-success border-secondary">
+                <thead class="table-success border-secondary" id="myShowingTA">
                         <th>N0</th>
                         <th  class="name">Full Name</th>
                         <th>ID</th>
