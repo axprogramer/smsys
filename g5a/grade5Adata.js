@@ -1525,6 +1525,15 @@ document.getElementById('myScorenov').value = "";
 
 }
 
+//Save to excel
+function ExportToExcel(type, fn, dl) {
+  var elt = document.getElementById('input5aOct');
+  var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+  return dl ?
+    XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):
+    XLSX.writeFile(wb, fn || ('Student Report Grade 5A.' + (type || 'xlsx')));
+}
+
 //Sorting without change N0
 $('th:not(:first-child)').click(function(){
   var table = $(this).parents('table').eq(0)

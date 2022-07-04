@@ -1473,11 +1473,11 @@ function adder14() {
 
 //Save to excel
 function ExportToExcel(type, fn, dl) {
-  var elt = document.getElementById('input5aOct');
+  var elt = document.getElementById('input5BOct');
   var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
   return dl ?
     XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):
-    XLSX.writeFile(wb, fn || ('MySheetName.' + (type || 'xlsx')));
+    XLSX.writeFile(wb, fn || ('Student Report Grade 5B.' + (type || 'xlsx')));
 }
 //Clear text in Box
 function clearBox(){
