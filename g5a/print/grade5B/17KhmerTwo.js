@@ -1,20 +1,20 @@
   //November
-function myPrintKhmer1(){
-    document.getElementById('tbody16').innerHTML = "";
+function myPrintKhmer2(){
+    document.getElementById('tbody17').innerHTML = "";
     stdNumber=0;
-    firebase.database().ref('5aAllData').once('value',
+    firebase.database().ref('5bAllData').once('value',
     function(AllRecordsPrint){
       AllRecordsPrint.forEach(
         function(CurrentRecord){
           var myKh = CurrentRecord.val().myKh;
           var sex = CurrentRecord.val().sex;
           var grade = CurrentRecord.val().grade;
-          var my1Se = CurrentRecord.val().my1Se;
-          var my1Sa = CurrentRecord.val().my1Sa;
-          var my1SR = CurrentRecord.val().my1SR;
+          var my2Se = CurrentRecord.val().my2Se;
+          var my2Sa = CurrentRecord.val().my2Sa;
+          var my2SR = CurrentRecord.val().my2SR;
                             
-          addItemsToKhmerOne(myKh,sex,grade,my1Se,my1Sa,my1SR);
-          addClassKhOne();
+          addItemsToKhmerTwo(myKh,sex,grade,my2Se,my2Sa,my2SR);
+          addClassKhTwo();
         }
       );
     });
@@ -22,8 +22,8 @@ function myPrintKhmer1(){
   
   var stdNumber;
   var stdListPrint = [];
-  function addItemsToKhmerOne(myKh,sex,grade,my1Se,my1Sa,my1SR){
-    var tbody = document.getElementById('tbody16');
+  function addItemsToKhmerTwo(myKh,sex,grade,my2Se,my2Sa,my2SR){
+    var tbody = document.getElementById('tbody17');
     var trow = document.createElement('tr');
     var td0 = document.createElement('td');
     var td1 = document.createElement('td');
@@ -34,14 +34,14 @@ function myPrintKhmer1(){
     var td6 = document.createElement('td');
     var td7 = document.createElement('td');
   
-    stdListPrint.push([myKh,sex,grade,my1Se,my1Sa,my1SR]);
+    stdListPrint.push([myKh,sex,grade,my2Se,my2Sa,my2SR]);
     td0.innerHTML = ++stdNumber;
     td1.innerHTML = myKh;
     td2.innerHTML = sex;
     td3.innerHTML = grade;
-    td4.innerHTML = my1Se;
-    td5.innerHTML = my1Sa;
-    td6.innerHTML = my1SR;
+    td4.innerHTML = my2Se;
+    td5.innerHTML = my2Sa;
+    td6.innerHTML = my2SR;
   
     trow.appendChild(td0);
     trow.appendChild(td1);
@@ -54,38 +54,38 @@ function myPrintKhmer1(){
     tbody.appendChild(trow);
     $(function() {
       //Get all total values, sort and remove duplicates
-      let totalList = $('.myKhmerOneTable')
+      let totalList = $('.myKhmerTwoTable')
         .map(function() {return $(this).text()})
         .get()
         .sort(function(a,b){return a - b })
         .reduce(function(a, b) {if (b != a[0]) a.unshift(b);return a}, [])
       //Assign rank
       totalList.forEach((v, i) => {
-        $('.myKhmerOneTable').filter(function() {return $(this).text() == v;}).next().text(i + 1);
+        $('.myKhmerTwoTable').filter(function() {return $(this).text() == v;}).next().text(i + 1);
       })
     });
 
  
   }
-  function myKhmerOneP() {
-    var newstr = document.getElementById("myKhmerOnePrint").innerHTML;
+  function myKhmerTwoP() {
+    var newstr = document.getElementById("myKhmerTwoPrint").innerHTML;
     var oldstr = document.body.innerHTML;
     document.body.innerHTML = newstr;
     window.print();
     document.body.innerHTML = oldstr;
     return false;
   }
-  function addClassKhOne(){
-    var els = document.querySelectorAll("#myKhmerOneT td:nth-child(6)");
+  function addClassKhTwo(){
+    var els = document.querySelectorAll("#myKhmerTwoT td:nth-child(6)");
     var len = els.length;
     for(var i = 0, len = els.length; i < len ; i++){
-        els[i].classList.add("myKhmerOneTable"); //To add class on top of existing ones
+        els[i].classList.add("myKhmerTwoTable"); //To add class on top of existing Twos
     }
   }
-  function saveKhmerOne(type, fn, dl) {
-    var elt = document.getElementById('myKhmerOneT');
+  function saveKhmerTwo(type, fn, dl) {
+    var elt = document.getElementById('myKhmerTwoT');
     var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
     return dl ?
       XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):
-      XLSX.writeFile(wb, fn || ('Grade 5A Khmer 1st Semester.' + (type || 'xlsx')));
+      XLSX.writeFile(wb, fn || ('Grade 5A Khmer 2nd Semester.' + (type || 'xlsx')));
   }

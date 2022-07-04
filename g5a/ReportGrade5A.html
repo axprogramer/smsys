@@ -62,6 +62,7 @@
           <li><button onclick="myPrintSeTwoR()" data-toggle="modal" data-target="#mySeTwoR" class="btn" type="button" style="background: transparent; margin-left: 15px;">12 - 2nd Semester Result<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button></li>
           <li><button onclick="myPrintYear()" data-toggle="modal" data-target="#myAnnual" class="btn" type="button" style="background: transparent; margin-left: 15px;">13 - Annual Year<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button></li>
           <li><button onclick="myPrintKhmer1()" data-toggle="modal" data-target="#myKhmerOne" class="btn" type="button" style="background: transparent; margin-left: 15px;">14 - Khmer 1st Semester<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button></li>
+          <li><button onclick="myPrintKhmer2()" data-toggle="modal" data-target="#myKhmerTwo" class="btn" type="button" style="background: transparent; margin-left: 15px;">15 - Khmer 2nd Semester<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button></li>
 
         </ul>
 
@@ -1657,10 +1658,80 @@
                   </div>
                 </div>
           </div>
+        <!--Print Khmer 2nd Semester-->
+        <div>
+            <div class="modal fade" id="myKhmerTwo" tabindex="-1" role="dialog" aria-labelledby="myKhmerTwo" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Print</h5>
+                    <button onclick="myKhmerTwoP()" class="btn btn-primary" type="button" style="background: var(--bs-green); margin-left: 15px;">Print<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button>
+                    <button onclick="saveKhmerTwo()" class="btn btn-primary" type="button" style="background: var(--bs-red); margin-left: 15px;">Save<i i class="bi bi-cloud-download" style="padding-left: 5px;"></i></button>
+      
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <!--November-->
+                  <div class="modal-body">
+      
+                    <div  style="padding: 20px;" id="myKhmerTwoPrint">
+                      <div>
+                        <div class="WordSection1 title">
+      
+                          <p class="MsoNormal" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif"><b>Department of
+                          Education of Sen <span class="MsoNormal" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif">Sok</span>&nbsp; &nbsp; &nbsp; &nbsp;
+                          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span >&nbsp; </span><span >&nbsp;&nbsp;</span><span > </span><span >&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kingdom
+                          of Cambodia<o:p></o:p></b></p>
+                          
+                          <p class="MsoNormal" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif"><span class="SpellE"><b>SlalaMOM</b></span><b> School&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Khmer 2nd SEMESTER&nbsp;&nbsp;&nbsp;<o:p id="textMonth"></o:p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span ></span><span >&nbsp;</span>&nbsp; &nbsp;<span >
+                          </span><span >&nbsp;</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Nation
+                          Religion King<o:p></o:p></b></p>
+                          
+                          <p class="MsoNormal" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif"><b>Grade 5A&nbsp; &nbsp; &nbsp; &nbsp;
+                          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Academic Year &nbsp;<o:p>2022-2023</o:p><o:p></o:p></b></p>
+                          
+                          
+                          </div>
+                          <!--Table of October-->
+                          <div style="overflow-x: auto;font-family:Times New Roman,serif">
+                              <table id="myKhmerTwoT" class="myTable">
+                                  <thead>
+                                      <th>N0</th>
+                                      <th>ឈ្មោះ</th>
+                                      <th>ភេទ</th>
+                                      <th>ថ្នាក់</th>
+                                      <th>ពិន្ទុកប្រឡង</th>
+                                      <th>ពិន្ទុកសរុប</th>
+                                      <th>ចំណាត់ថ្នាក់</th>
+                                  </thead>
+                                  <tbody id="tbody17">
+                                  </tbody>
+                              </table>
+          
+                          </div>
+
+                              </div>
+          
+      
+                          <div>
+      
+                      </div>
+                  </div>
+                  </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
  
     <!--Table Show Data-->
     <div>
-        <div class="table-responsive div1" style="padding: 20px;">
+        <div class="table-responsive" style="padding: 20px;">
             <table class="table-responsive table-bordered table-sortable border-secondary text-center" id="input5aOct">
                 <thead class="table-success border-secondary" id="myShowingTA">
                         <th>N0</th>
@@ -2434,6 +2505,7 @@
 <script src="../assets/js/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="../assets/js/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="../assets/js/bootstrap4.0.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="./print/grade5A/17KhmerTwo.js"></script>
 <script src="./print/grade5A/15Annual.js"></script>
 <script src="./print/grade5A/14KhmerOne.js"></script>
 <script src="./print/grade5A/012SeTwoR.js"></script>
