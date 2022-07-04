@@ -53,10 +53,10 @@ function myPrintSeOneR(){
     stdListPrint.push([name,sex,grade,my1SeR,my1MonR,my1SaR,
       my1SeRa,my1SeRme,average,averageNov,averageDec,averageJan,
     my1Sa]);
-    var get = parseInt(average) + parseInt(averageNov) + parseInt(averageDec) + parseInt(averageJan);
-    var total = parseInt(get) / 4;
-    var last = parseInt(my1Sa) + parseInt(total);
-    var finall = parseInt(last) / 2;
+    var get = parseFloat(average) + parseFloat(averageNov) + parseFloat(averageDec) + parseFloat(averageJan);
+    var total = parseFloat(get) / 4;
+    var last = parseFloat(my1Sa) + parseFloat(total);
+    var finall = parseFloat(last) / 2;
     var my = parseFloat(finall);
     if(my < 5){
       td8.innerHTML = "Poor";
