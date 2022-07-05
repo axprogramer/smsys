@@ -91,6 +91,14 @@ const firebaseConfig = {
     var readingjun = getElementVal('myRjun');
     var averagejun = getElementVal('myAjun');
     var rankjun = getElementVal('myKjun');
+    //June
+    var speakingjuly = getElementVal('mySjuly');
+    var writingjuly = getElementVal('myWjuly');
+    var listeningjuly = getElementVal('myLjuly');
+    var readingjuly = getElementVal('myRjuly');
+    var averagejuly = getElementVal('myAjuly');
+    var rankjuly = getElementVal('myKjuly');
+
     //2nd 4 months
     var myMar = getElementVal('myMar');
     var myMay = getElementVal('myMay');
@@ -339,6 +347,14 @@ function selectAllData(){
       var readingjun = CurrentRecord.val().readingjun;
       var averagejun = CurrentRecord.val().averagejun;
       var rankjun = CurrentRecord.val().rankjun;
+      //July
+      var speakingjuly = CurrentRecord.val().speakingjuly;
+      var writingjuly = CurrentRecord.val().writingjuly;
+      var listeningjuly = CurrentRecord.val().listeningjuly;
+      var readingjuly = CurrentRecord.val().readingjuly;
+      var averagejuly = CurrentRecord.val().averagejuly;
+      var rankjuly = CurrentRecord.val().rankjuly;
+
       //2nd 4 months
       var myMar = CurrentRecord.val().myMar;
       var myMay = CurrentRecord.val().myMay;
