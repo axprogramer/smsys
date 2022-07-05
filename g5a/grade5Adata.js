@@ -892,7 +892,7 @@ var MmentionY = document.getElementById('myMy');
 var MotherY = document.getElementById('myOy');
 //Khmer Name
 var MmyKh = document.getElementById('myKhname');
-//June
+//July
 var Mspeakingjuly = document.getElementById('mySjuly');
 var Mwritingjuly = document.getElementById('myWjuly');
 var Mlisteningjuly = document.getElementById('myLjuly');
