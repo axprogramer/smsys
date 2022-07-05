@@ -1,5 +1,5 @@
   //November
-function myPrintJun(){
+function myPrintjuly(){
     document.getElementById('tbody18').innerHTML="";
     stdNumber=0;
     firebase.database().ref('5aAllData').once('value',
@@ -8,16 +8,16 @@ function myPrintJun(){
         function(CurrentRecord){
           var name = CurrentRecord.val().name;
           var sex = CurrentRecord.val().sex;
-          var speakingjun = CurrentRecord.val().speakingjun;
-          var writingjun = CurrentRecord.val().writingjun;
-          var listeningjun = CurrentRecord.val().listeningjun;
-          var readingjun = CurrentRecord.val().readingjun;
-          var averagejun = CurrentRecord.val().averagejun;
-          var rankjun = CurrentRecord.val().rankjun;
+          var speakingjuly = CurrentRecord.val().speakingjuly;
+          var writingjuly = CurrentRecord.val().writingjuly;
+          var listeningjuly = CurrentRecord.val().listeningjuly;
+          var readingjuly = CurrentRecord.val().readingjuly;
+          var averagejuly = CurrentRecord.val().averagejuly;
+          var rankjuly = CurrentRecord.val().rankjuly;
                                     
-          addItemsToJun(name,sex,speakingjun,writingjun,listeningjun,
-            readingjun,averagejun,rankjun);
-            addClassJun();
+          addItemsTojuly(name,sex,speakingjuly,writingjuly,listeningjuly,
+            readingjuly,averagejuly,rankjuly);
+            addClassjuly();
         }
       );
     });
@@ -25,9 +25,9 @@ function myPrintJun(){
   
   var stdNumber;
   var stdListPrint = [];
-  function addItemsToJun(name,sex,speakingjun,writingjun,listeningjun,
-    readingjun,averagejun,rankjun){
-    var tbody = document.getElementById('tbody11');
+  function addItemsTojuly(name,sex,speakingjuly,writingjuly,listeningjuly,
+    readingjuly,averagejuly,rankjuly){
+    var tbody = document.getElementById('tbody18');
     var trow = document.createElement('tr');
     var td0 = document.createElement('td');
     var td1 = document.createElement('td');
@@ -39,17 +39,17 @@ function myPrintJun(){
     var td7 = document.createElement('td');
     var td8 = document.createElement('td');
   
-    stdListPrint.push([name,sex,speakingjun,writingjun,listeningjun,
-      readingjun,averagejun,rankjun]);
+    stdListPrint.push([name,sex,speakingjuly,writingjuly,listeningjuly,
+      readingjuly,averagejuly,rankjuly]);
     td0.innerHTML = ++stdNumber;
     td1.innerHTML = name;
     td2.innerHTML = sex;
-    td3.innerHTML = speakingjun;
-    td4.innerHTML = writingjun;
-    td5.innerHTML = listeningjun;
-    td6.innerHTML = readingjun;
-    td7.innerHTML = averagejun;
-    td8.innerHTML = rankjun;
+    td3.innerHTML = speakingjuly;
+    td4.innerHTML = writingjuly;
+    td5.innerHTML = listeningjuly;
+    td6.innerHTML = readingjuly;
+    td7.innerHTML = averagejuly;
+    td8.innerHTML = rankjuly;
   
   
     trow.appendChild(td0);
@@ -64,39 +64,39 @@ function myPrintJun(){
     tbody.appendChild(trow);
     $(function() {
       //Get all total values, sort and remove duplicates
-      let totalList = $('.myScoreJun')
+      let totalList = $('.myScorejuly')
         .map(function() {return $(this).text()})
         .get()
         .sort(function(a,b){return a - b })
         .reduce(function(a, b) {if (b != a[0]) a.unshift(b);return a}, [])
       //Assign rank
       totalList.forEach((v, i) => {
-        $('.myScoreJun').filter(function() {return $(this).text() == v;}).next().text(i + 1);
+        $('.myScorejuly').filter(function() {return $(this).text() == v;}).next().text(i + 1);
       })
     });
 
   }
-  function myJun() {
-    var newstr = document.getElementById("myJunPrint").innerHTML;
+  function myjuly() {
+    var newstr = document.getElementById("myJulyPrint").innerHTML;
     var oldstr = document.body.innerHTML;
     document.body.innerHTML = newstr;
     window.print();
     document.body.innerHTML = oldstr;
     return false;
   }
-  function addClassJun(){
-    var els = document.querySelectorAll("#myJunT td:nth-child(8)");
+  function addClassjuly(){
+    var els = document.querySelectorAll("#myJulyT td:nth-child(8)");
     var len = els.length;
     for(var i = 0, len = els.length; i < len ; i++){
-        els[i].classList.add("myScoreJun"); //To add class on top of existing ones
+        els[i].classList.add("myScorejuly"); //To add class on top of existing ones
     }
   }
-  function saveJun(type, fn, dl) {
-    var elt = document.getElementById('myJunT');
+  function savejuly(type, fn, dl) {
+    var elt = document.getElementById('myJulyT');
     var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
     return dl ?
       XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):
-      XLSX.writeFile(wb, fn || ('Grade 5A June.' + (type || 'xlsx')));
+      XLSX.writeFile(wb, fn || ('Grade 5A July.' + (type || 'xlsx')));
   }
 
   

@@ -296,6 +296,12 @@ table {
 #tbody17 td:nth-child(2){
   text-align: left;
 }
+#tbody18 td:nth-child(9){
+  color: red;
+}
+#tbody18 td:nth-child(2){
+  text-align: left;
+}
 
 .modal-title
 

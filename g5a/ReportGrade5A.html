@@ -58,7 +58,7 @@
           <li><button onclick="myPrintMar()" data-toggle="modal" data-target="#myMarT" class="btn" type="button" style="background: transparent; margin-left: 15px;">08 - March<i i  ="bi bi-printer-fill" style="padding-left: 5px;"></i></button></li>
           <li><button onclick="myPrintMay()" data-toggle="modal" data-target="#myMayT" class="btn" type="button" style="background: transparent; margin-left: 15px;">09 - May<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button></li>
           <li><button onclick="myPrintJun()" data-toggle="modal" data-target="#myJunT" class="btn" type="button" style="background: transparent; margin-left: 15px;">10 - June<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button></li>
-          <li><button onclick="myPrintJuly()" data-toggle="modal" data-target="#myJulyT" class="btn" type="button" style="background: transparent; margin-left: 15px;">11 - July<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button></li>
+          <li><button onclick="myPrintjuly()" data-toggle="modal" data-target="#myJulyT" class="btn" type="button" style="background: transparent; margin-left: 15px;">11 - July<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button></li>
           <li><button onclick="myPrintSeTwo()" data-toggle="modal" data-target="#mySeTwo" class="btn" type="button" style="background: transparent; margin-left: 15px;">12 - 2nd Semester<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button></li>
           <li><button onclick="myPrintSeTwoR()" data-toggle="modal" data-target="#mySeTwoR" class="btn" type="button" style="background: transparent; margin-left: 15px;">13 - 2nd Semester Result<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button></li>
           <li><button onclick="myPrintYear()" data-toggle="modal" data-target="#myAnnual" class="btn" type="button" style="background: transparent; margin-left: 15px;">14 - Annual Year<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button></li>
@@ -1245,8 +1245,8 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Print</h5>
-                    <button onclick="myJuly()" class="btn btn-primary" type="button" style="background: var(--bs-green); margin-left: 15px;">Print<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button>
-                    <button onclick="saveJuly()" class="btn btn-primary" type="button" style="background: var(--bs-red); margin-left: 15px;">Save<i i class="bi bi-cloud-download" style="padding-left: 5px;"></i></button>
+                    <button onclick="myjuly()" class="btn btn-primary" type="button" style="background: var(--bs-green); margin-left: 15px;">Print<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button>
+                    <button onclick="savejuly()" class="btn btn-primary" type="button" style="background: var(--bs-red); margin-left: 15px;">Save<i i class="bi bi-cloud-download" style="padding-left: 5px;"></i></button>
      
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
@@ -1954,6 +1954,14 @@
                         <th>OTHER</th>
                         <th>Khmer Name</th>
 
+                        <th>Speaking-July</th>
+                        <th>Writing-July</th>
+                        <th>Listening-July</th>
+                        <th>Reading-July</th>
+                        <th>Average</th>
+                        <th>Rank</th>
+
+
                 </thead>
                 <tbody id="tbody1">
                 </tbody>
@@ -2458,30 +2466,30 @@
                 </div>
             </div>
             </div>
-                            <!--June-->
+                            <!--July-->
                             <button type="button" class="collapsible"><i class="bi bi-caret-down-fill" style="margin-right: 5px;"></i>09 - July</button>
                             <div class="content" id="myFormJun">
                               <div class="row" style="padding-top: 15px;">
                                 <div class="col">
                                     <div class="control-group">
-                                        <div class="mb-0 form-floating controls pb-2"><input oninput="adder10()" class="form-control" type="text" id="mySjuly" required="" placeholder="Speaking" style="color: #7d4e39;" name="num1"><label class="form-label" style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Speaking</label><small class="form-text text-danger help-block"></small></div>
+                                        <div class="mb-0 form-floating controls pb-2"><input oninput="adder16()" class="form-control" type="text" id="mySjuly" required="" placeholder="Speaking" style="color: #7d4e39;" name="num1"><label class="form-label" style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Speaking</label><small class="form-text text-danger help-block"></small></div>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="control-group">
-                                        <div class="mb-0 form-floating controls pb-2"><input oninput="adder10()" class="form-control" type="text" id="myWjuly" required="" placeholder="Writing" name="num2"><label class="form-label" style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Writing</label><small class="form-text text-danger help-block"></small></div>
+                                        <div class="mb-0 form-floating controls pb-2"><input oninput="adder16()" class="form-control" type="text" id="myWjuly" required="" placeholder="Writing" name="num2"><label class="form-label" style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Writing</label><small class="form-text text-danger help-block"></small></div>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="control-group">
-                                        <div class="mb-0 form-floating controls pb-2"><input oninput="adder10()" class="form-control" type="text" id="myLjuly" required="" placeholder="Listening" name="num3"><label class="form-label" style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Listening</label><small class="form-text text-danger help-block"></small></div>
+                                        <div class="mb-0 form-floating controls pb-2"><input oninput="adder16()" class="form-control" type="text" id="myLjuly" required="" placeholder="Listening" name="num3"><label class="form-label" style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Listening</label><small class="form-text text-danger help-block"></small></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row" style="padding-top: 15px;">
                                 <div class="col">
                                     <div class="control-group">
-                                        <div class="mb-0 form-floating controls pb-2"><input oninput="adder10()" class="form-control" type="text" id="myRjuly" required="" placeholder="Reading" name="num4"><label class="form-label" style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Reading</label><small class="form-text text-danger help-block"></small></div>
+                                        <div class="mb-0 form-floating controls pb-2"><input oninput="adder16()" class="form-control" type="text" id="myRjuly" required="" placeholder="Reading" name="num4"><label class="form-label" style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Reading</label><small class="form-text text-danger help-block"></small></div>
                                     </div>
                                 </div>
                                 <div class="col">
@@ -2493,7 +2501,7 @@
                           <div class="row" style="padding-top: 15px;">
                             <div class="col">
                                 <div class="control-group">
-                                  <div class="mb-0 form-floating controls pb-2"><input oninput="divid10()" type="number" class="form-control" type="text" id="myScorejuly" required="true" placeholder="Score" name="num5"><label class="form-label" style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Score</label><small class="form-text text-danger help-block"></small></div>
+                                  <div class="mb-0 form-floating controls pb-2"><input oninput="divid16()" type="number" class="form-control" type="text" id="myScorejuly" required="true" placeholder="Score" name="num5"><label class="form-label" style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Score</label><small class="form-text text-danger help-block"></small></div>
                                 </div>
                             </div>
                             <div class="col">
@@ -2668,6 +2676,7 @@
 <script src="../assets/js/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="../assets/js/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="../assets/js/bootstrap4.0.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="./print/grade5A/18July.js"></script>
 <script src="./print/grade5A/17KhmerTwo.js"></script>
 <script src="./print/grade5A/15Annual.js"></script>
 <script src="./print/grade5A/14KhmerOne.js"></script>

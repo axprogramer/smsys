@@ -91,7 +91,7 @@ const firebaseConfig = {
     var readingjun = getElementVal('myRjun');
     var averagejun = getElementVal('myAjun');
     var rankjun = getElementVal('myKjun');
-    //June
+    //July
     var speakingjuly = getElementVal('mySjuly');
     var writingjuly = getElementVal('myWjuly');
     var listeningjuly = getElementVal('myLjuly');
@@ -138,7 +138,9 @@ const firebaseConfig = {
       readingma,averagema,rankma,speakingjun,writingjun,listeningjun,
       readingjun,averagejun,rankjun,myMar,myMay,myJune,myJuly,my2Score4,
       my2Se,my2Sa,my2SR,my2SM,my2SeR,my2MonR,my2SaR,
-      my2SeRa,my2SeRme,my1SaY,my2SaY,myAaY,myKy,myMy,myOy,myKh);
+      my2SeRa,my2SeRme,my1SaY,my2SaY,myAaY,myKy,myMy,myOy,myKh,
+      speakingjuly,writingjuly,listeningjuly,
+      readingjuly,averagejuly,rankjuly);
 
   }
 const saveData = (name,id,sex,grade,speaking,writing,listening,
@@ -153,7 +155,9 @@ const saveData = (name,id,sex,grade,speaking,writing,listening,
   readingma,averagema,rankma,speakingjun,writingjun,listeningjun,
   readingjun,averagejun,rankjun,myMar,myMay,myJune,myJuly,my2Score4,
   my2Se,my2Sa,my2SR,my2SM,my2SeR,my2MonR,my2SaR,
-  my2SeRa,my2SeRme,my1SaY,my2SaY,myAaY,myKy,myMy,myOy,myKh) => {
+  my2SeRa,my2SeRme,my1SaY,my2SaY,myAaY,myKy,myMy,myOy,myKh,
+  speakingjuly,writingjuly,listeningjuly,
+  readingjuly,averagejuly,rankjuly) => {
     var newData = my5aAll.push();
     newData.set({
         name: name,
@@ -225,13 +229,21 @@ const saveData = (name,id,sex,grade,speaking,writing,listening,
         readingma: readingma,
         averagema: averagema,
         rankma: rankma,
-        //March
+        //June
         speakingjun: speakingjun,
         writingjun: writingjun,
         listeningjun: listeningjun,
         readingjun: readingjun,
         averagejun: averagejun,
         rankjun: rankjun,
+        //July
+        speakingjuly: speakingjuly,
+        writingjuly: writingjuly,
+        listeningjuly: listeningjuly,
+        readingjuly: readingjuly,
+        averagejuly: averagejuly,
+        rankjuly: rankjuly,
+
         //2nd 4 months
         myMar: myMar,
         myMay: myMay,
@@ -394,7 +406,9 @@ function selectAllData(){
           readingma,averagema,rankma,speakingjun,writingjun,listeningjun,
           readingjun,averagejun,rankjun,myMar,myMay,myJune,myJuly,my2Score4,
           my2Se,my2Sa,my2SR,my2SM,my2SeR,my2MonR,my2SaR,
-          my2SeRa,my2SeRme,my1SaY,my2SaY,myAaY,myKy,myMy,myOy,myKh);
+          my2SeRa,my2SeRme,my1SaY,my2SaY,myAaY,myKy,myMy,myOy,myKh,
+          speakingjuly,writingjuly,listeningjuly,
+          readingjuly,averagejuly,rankjuly);
       }
     );
   });
@@ -414,7 +428,9 @@ function addItemsToTable(name,id,sex,grade,speaking,writing,listening,
   readingma,averagema,rankma,speakingjun,writingjun,listeningjun,
   readingjun,averagejun,rankjun,myMar,myMay,myJune,myJuly,my2Score4,
   my2Se,my2Sa,my2SR,my2SM,my2SeR,my2MonR,my2SaR,
-  my2SeRa,my2SeRme,my1SaY,my2SaY,myAaY,myKy,myMy,myOy,myKh){
+  my2SeRa,my2SeRme,my1SaY,my2SaY,myAaY,myKy,myMy,myOy,myKh,
+  speakingjuly,writingjuly,listeningjuly,
+  readingjuly,averagejuly,rankjuly){
   var tbody = document.getElementById('tbody1');
   var trow = document.createElement('tr');
   var td0 = document.createElement('td');
@@ -518,6 +534,14 @@ function addItemsToTable(name,id,sex,grade,speaking,writing,listening,
   var td86 = document.createElement('td');
   //Kh Name
   var td87 = document.createElement('td');
+  //July
+  var td88 = document.createElement('td');
+  var td89 = document.createElement('td');
+  var td90 = document.createElement('td');
+  var td91 = document.createElement('td');
+  var td92 = document.createElement('td');
+  var td93 = document.createElement('td');
+
 
 
   stdList.push([name,id,sex,grade,speaking,writing,listening,
@@ -532,7 +556,9 @@ function addItemsToTable(name,id,sex,grade,speaking,writing,listening,
     readingma,averagema,rankma,speakingjun,writingjun,listeningjun,
     readingjun,averagejun,rankjun,myMar,myMay,myJune,myJuly,my2Score4,
     my2Se,my2Sa,my2SR,my2SM,my2SeR,my2MonR,my2SaR,
-    my2SeRa,my2SeRme,my1SaY,my2SaY,myAaY,myKy,myMy,myOy,myKh]);
+    my2SeRa,my2SeRme,my1SaY,my2SaY,myAaY,myKy,myMy,myOy,myKh,
+    speakingjuly,writingjuly,listeningjuly,
+    readingjuly,averagejuly,rankjuly]);
   td0.innerHTML = ++studentN0;
   td1.innerHTML = name;
   td2.innerHTML = id;
@@ -636,6 +662,14 @@ function addItemsToTable(name,id,sex,grade,speaking,writing,listening,
   td86.innerHTML = myOy;
   //Khmer Name
   td87.innerHTML = myKh;
+  //July
+  td88.innerHTML = speakingjuly;
+  td89.innerHTML = writingjuly;
+  td90.innerHTML = listeningjuly;
+  td91.innerHTML = readingjuly;
+  td92.innerHTML = averagejuly;
+  td93.innerHTML = rankjuly;
+
 
 
 
@@ -731,7 +765,7 @@ function addItemsToTable(name,id,sex,grade,speaking,writing,listening,
   trow.appendChild(td78);
   trow.appendChild(td79);
   trow.appendChild(td80);
-  //June
+  //Annual Year
   trow.appendChild(td81);
   trow.appendChild(td82);
   trow.appendChild(td83);
@@ -740,6 +774,13 @@ function addItemsToTable(name,id,sex,grade,speaking,writing,listening,
   trow.appendChild(td86);
   //Khmer Name
   trow.appendChild(td87);
+  //July
+  trow.appendChild(td88);
+  trow.appendChild(td89);
+  trow.appendChild(td90);
+  trow.appendChild(td91);
+  trow.appendChild(td92);
+  trow.appendChild(td93);
 
 
 
@@ -851,6 +892,13 @@ var MmentionY = document.getElementById('myMy');
 var MotherY = document.getElementById('myOy');
 //Khmer Name
 var MmyKh = document.getElementById('myKhname');
+//June
+var Mspeakingjuly = document.getElementById('mySjuly');
+var Mwritingjuly = document.getElementById('myWjuly');
+var Mlisteningjuly = document.getElementById('myLjuly');
+var Mreadiingjuly = document.getElementById('myRjuly');
+var Maveragejuly = document.getElementById('myAjuly');
+var Mrankjuly = document.getElementById('myKjuly');
 
 
 var BtnSubmit = document.getElementById('mySubmit');
@@ -975,6 +1023,13 @@ function Fillbox(index){
     MotherY.value = stdList[index][85];
     //Khmer Name
     MmyKh.value = stdList[index][86];
+    //July
+    Mspeakingjuly.value = stdList[index][87];
+    Mwritingjuly.value = stdList[index][88];
+    Mlisteningjuly.value = stdList[index][89];
+    Mreadiingjuly.value = stdList[index][90];
+    Maveragejuly.value = stdList[index][91];
+    Mrankjuly.value = stdList[index][92];
 
 
 
@@ -1093,6 +1148,13 @@ function AddStd(){
       myOy: MotherY.value,
       //Khmer Name
       myKh: MmyKh.value,
+      //July
+      speakingjuly: Mspeakingjuly.value,
+      writingjuly: Mwritingjuly.value,
+      listeningjuly: Mlisteningjuly.value,
+      readingjuly: Mreadiingjuly.value,
+      averagejuly: Maveragejuly.value,
+      rankjuly: Mrankjuly.value,
      
 
   }, 
@@ -1205,6 +1267,13 @@ function UpStd(){
       myOy: MotherY.value,
       //Khmer Name
       myKh: MmyKh.value,
+      //July
+      speakingjuly: Mspeakingjuly.value,
+      writingjuly: Mwritingjuly.value,
+      listeningjuly: Mlisteningjuly.value,
+      readingjuly: Mreadiingjuly.value,
+      averagejuly: Maveragejuly.value,
+      rankjuly: Mrankjuly.value,
 
     }, 
   )
@@ -1446,6 +1515,29 @@ function divid10(){
   document.getElementById("myRjun").value = get2;
 
 }
+//July
+function adder16() {
+  var num5 = parseFloat(document.getElementById('mySjuly').value);
+  var num6 = parseFloat(document.getElementById('myWjuly').value);
+  var num7 = parseFloat(document.getElementById('myLjuly').value);
+  var num8 = parseFloat(document.getElementById('myRjuly').value);
+
+  var get2 = num5 + num6 + num7 + num8;
+  var total1 = get2 / 4;
+  total1 = parseFloat(total1).toFixed(2);
+  document.getElementById("myAjuly").value = total1;
+
+}
+function divid16(){
+  var num6 = parseFloat(document.getElementById('myScorejuly').value);
+  var score1 = num6;
+  var get2 = score1 / 3;
+  get2 = parseFloat(get2).toFixed(2);
+  document.getElementById("myWjuly").value = get2;
+  document.getElementById("myLjuly").value = get2;
+  document.getElementById("myRjuly").value = get2;
+
+}
 
 //2nd 4 months
 function adder11() {
@@ -1477,7 +1569,7 @@ function adder13() {
 
 }
 
-//June
+//Annual Year
 function adder14() {
   var num5 = parseFloat(document.getElementById('my1SaY').value);
   var num6 = parseFloat(document.getElementById('my2SaY').value);
