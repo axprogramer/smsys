@@ -264,8 +264,8 @@ function myPrintSeOneR(){
     td2.innerHTML = sex;
     td3.innerHTML = grade;
     td4.innerHTML = my1Sa;
-    td5.innerHTML = total;
-    td6.innerHTML = finall;
+    td5.innerHTML = parseFloat(total).toFixed(2);
+    td6.innerHTML = parseFloat(finall).toFixed(2);
     td7.innerHTML = my1SeRa;
   
   
