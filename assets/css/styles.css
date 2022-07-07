@@ -107,6 +107,7 @@ table {
 
 #tbody2 td:nth-child(2){
   text-align: left;
+  padding: 5px;
 }
 #tbody2 td:nth-child(9){
   color: red;
@@ -121,6 +122,7 @@ table {
 
 #tbody3 td:nth-child(2){
   text-align: left;
+  padding: 5px;
 }
 #tbody3 td:nth-child(9){
   color: red;
@@ -134,6 +136,7 @@ table {
 
 #tbody4 td:nth-child(2){
   text-align: left;
+  padding: 5px;
 }
 #tbody4 td:nth-child(9){
   color: red;
@@ -147,6 +150,7 @@ table {
 
 #tbody5 td:nth-child(2){
   text-align: left;
+  padding: 5px;
 }
 #tbody5 td:nth-child(9){
   color: red;
@@ -160,6 +164,7 @@ table {
 
 #tbody6 td:nth-child(2){
   text-align: left;
+  padding: 5px;
 }
 #tbody6 td:nth-child(9){
   color: red;
@@ -173,6 +178,7 @@ table {
 
 #tbody7 td:nth-child(2){
   text-align: left;
+  padding: 5px;
 }
 #tbody7 td:nth-child(7){
   color: red;
@@ -191,6 +197,7 @@ table {
 
 #tbody8 td:nth-child(2){
   text-align: left;
+  padding: 5px;
 }
 #tbody8 td:nth-child(8){
   color: red;
@@ -208,6 +215,7 @@ table {
 
 #tbody9 td:nth-child(2){
   text-align: left;
+  padding: 5px;
 }
 #tbody9 td:nth-child(9){
   color: red;
@@ -221,6 +229,7 @@ table {
 
 #tbody10 td:nth-child(2){
   text-align: left;
+  padding: 5px;
 }
 #tbody10 td:nth-child(9){
   color: red;
@@ -234,6 +243,7 @@ table {
 
 #tbody11 td:nth-child(2){
   text-align: left;
+  padding: 5px;
 }
 #tbody11 td:nth-child(9){
   color: red;
@@ -249,6 +259,7 @@ table {
 
 #tbody12 td:nth-child(2){
   text-align: left;
+  padding: 5px;
 }
 #tbody12 td:nth-child(7){
   color: red;
@@ -266,6 +277,7 @@ table {
 
 #tbody13 td:nth-child(2){
   text-align: left;
+  padding: 5px;
 }
 #tbody13 td:nth-child(8){
   color: red;
@@ -277,6 +289,7 @@ table {
 
 #tbody15 td:nth-child(2){
   text-align: left;
+  padding: 5px;
 }
 #tbody15 td:nth-child(7){
   color: red;
@@ -289,18 +302,21 @@ table {
 }
 #tbody16 td:nth-child(2){
   text-align: left;
+  padding: 5px;
 }
 #tbody17 td:nth-child(7){
   color: red;
 }
 #tbody17 td:nth-child(2){
   text-align: left;
+  padding: 5px;
 }
 #tbody18 td:nth-child(9){
   color: red;
 }
 #tbody18 td:nth-child(2){
   text-align: left;
+  padding: 5px;
 }
 
 .modal-title
