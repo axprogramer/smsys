@@ -93,10 +93,6 @@ table {
 }
 .myTable{
   text-align: center;
-  border: 1px solid black;
-  border-collapse: collapse;
-  border-spacing: 0 150px;
-  width: 100%;
 }
 #myOctober, th{
   border: 1px solid black;
