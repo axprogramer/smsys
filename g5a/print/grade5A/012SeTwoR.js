@@ -17,7 +17,7 @@ function myPrintSeTwoR(){
           
           var my2Sa = CurrentRecord.val().my2Sa;
 
-          var averagefeb = CurrentRecord.val().averagefeb;
+          var averagejuly = CurrentRecord.val().averagejuly;
           var averagemar = CurrentRecord.val().averagemar;
           var averagema = CurrentRecord.val().averagema;
           var averagejun = CurrentRecord.val().averagejun;
@@ -27,7 +27,7 @@ function myPrintSeTwoR(){
 
 
           addItemsToSeTwoRT(name,sex,grade,my2SeR,my2MonR,my2SaR,
-            my2SeRa,my2SeRme,my2Sa,averagefeb,averagemar,averagema,
+            my2SeRa,my2SeRme,my2Sa,averagejuly,averagemar,averagema,
             averagejun);
             addClassTwoR();
         }
@@ -38,7 +38,7 @@ function myPrintSeTwoR(){
   var stdNumber;
   var stdListPrint = [];
   function addItemsToSeTwoRT(name,sex,grade,my2SeR,my2MonR,my2SaR,
-    my2SeRa,my2SeRme,my2Sa,averagefeb,averagemar,averagema,
+    my2SeRa,my2SeRme,my2Sa,averagejuly,averagemar,averagema,
     averagejun){
     var tbody = document.getElementById('tbody13');
     var trow = document.createElement('tr');
@@ -53,10 +53,10 @@ function myPrintSeTwoR(){
     var td8 = document.createElement('td');
   
     stdListPrint.push([name,sex,grade,my2SeR,my2MonR,my2SaR,
-      my2SeRa,my2SeRme,my2Sa,averagefeb,averagemar,averagema,
+      my2SeRa,my2SeRme,my2Sa,averagejuly,averagemar,averagema,
       averagejun]);
 
-      var get = parseFloat(averagefeb) + parseFloat(averagemar) + parseFloat(averagema) + parseFloat(averagejun);
+      var get = parseFloat(averagejuly) + parseFloat(averagemar) + parseFloat(averagema) + parseFloat(averagejun);
       var total = parseFloat(get) / 4;
       var last = parseFloat(my2Sa) + parseFloat(total);
       var finall = parseFloat(last) / 2;

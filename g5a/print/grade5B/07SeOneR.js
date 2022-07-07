@@ -18,14 +18,14 @@ function myPrintSeOneR(){
           var my1Sa = CurrentRecord.val().my1Sa;
 
 
-          var average = CurrentRecord.val().average;
+          var averagefeb = CurrentRecord.val().averagefeb;
           var averageNov = CurrentRecord.val().averageNov;
           var averageDec = CurrentRecord.val().averageDec;
           var averageJan = CurrentRecord.val().averageJan;
     
           
           addItemsToSeOneRT(name,sex,grade,my1SeR,my1MonR,my1SaR,
-            my1SeRa,my1SeRme,average,averageNov,averageDec,averageJan,
+            my1SeRa,my1SeRme,averagefeb,averageNov,averageDec,averageJan,
             my1Sa);
             addClassOneR();
         }
@@ -36,7 +36,7 @@ function myPrintSeOneR(){
   var stdNumber;
   var stdListPrint = [];
   function addItemsToSeOneRT(name,sex,grade,my1SeR,my1MonR,my1SaR,
-    my1SeRa,my1SeRme,average,averageNov,averageDec,averageJan,
+    my1SeRa,my1SeRme,averagefeb,averageNov,averageDec,averageJan,
     my1Sa){
     var tbody = document.getElementById('tbody8');
     var trow = document.createElement('tr');
@@ -51,9 +51,9 @@ function myPrintSeOneR(){
     var td8 = document.createElement('td');
   
     stdListPrint.push([name,sex,grade,my1SeR,my1MonR,my1SaR,
-      my1SeRa,my1SeRme,average,averageNov,averageDec,averageJan,
+      my1SeRa,my1SeRme,averagefeb,averageNov,averageDec,averageJan,
     my1Sa]);
-    var get = parseInt(average) + parseInt(averageNov) + parseInt(averageDec) + parseInt(averageJan);
+    var get = parseInt(averagefeb) + parseInt(averageNov) + parseInt(averageDec) + parseInt(averageJan);
     var total = parseInt(get) / 4;
     var last = parseInt(my1Sa) + parseInt(total);
     var finall = parseInt(last) / 2;
