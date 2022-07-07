@@ -45,8 +45,8 @@
     stdListPrint.push([name,sex,my1SaY,my2SaY,
       myAaY,myKy,myMy,myOy,my1Sa,my2Sa]);
 
-      var last = parseInt(my1Sa) + parseInt(my2Sa);
-      var finall = parseInt(last) / 2;
+      var last = parseFloat(my1Sa) + parseFloat(my2Sa);
+      var finall = parseFloat(last) / 2;
       var my = parseFloat(finall);
       if(my < 5){
         td7.innerHTML = "Poor";
@@ -161,7 +161,7 @@
       td2.innerHTML = sex;
       td3.innerHTML = my1Sa;
       td4.innerHTML = my2Sa;
-      td5.innerHTML = finall;
+      td5.innerHTML = parseFloat(finall).toFixed(2);
       td8.innerHTML = myOy;
 
       trow.appendChild(td0);

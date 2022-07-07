@@ -161,7 +161,7 @@
       td2.innerHTML = sex;
       td3.innerHTML = my1Sa;
       td4.innerHTML = my2Sa;
-      td5.innerHTML = finall;
+      td5.innerHTML = parseFloat(finall).toFixed(2);;
       td8.innerHTML = myOy;
 
       trow.appendChild(td0);

@@ -56,10 +56,10 @@ function myPrintSeTwoR(){
       my2SeRa,my2SeRme,my2Sa,averagejuly,averagemar,averagema,
       averagejun]);
 
-      var get = parseInt(averagejuly) + parseInt(averagemar) + parseInt(averagema) + parseInt(averagejun);
-      var total = parseInt(get) / 4;
-      var last = parseInt(my2Sa) + parseInt(total);
-      var finall = parseInt(last) / 2;
+      var get = parseFloat(averagejuly) + parseFloat(averagemar) + parseFloat(averagema) + parseFloat(averagejun);
+      var total = parseFloat(get) / 4;
+      var last = parseFloat(my2Sa) + parseFloat(total);
+      var finall = parseFloat(last) / 2;
       var my = parseFloat(finall);
     if(my < 5){
       td8.innerHTML = "Poor";
