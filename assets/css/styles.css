@@ -1,8 +1,9 @@
+
 .name{
   width: 30vh;
 }
 .button-62 {
-  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  background: linear-gradient(to bottom right, #000000, #504a46);
   border: 0;
   border-radius: 12px;
   color: #FFFFFF;
@@ -71,8 +72,8 @@ table {
 #input5aOct tr:nth-child(2n) td { background-color: #ffffff; }
 
 .collapsible {
-  background-color: rgb(255, 255, 255);
-  color: rgb(143, 103, 44);
+  background-color: rgb(31, 29, 29);
+  color: rgb(255, 255, 255);
   cursor: pointer;
   width: 100%;
   height: 3vh;
@@ -82,8 +83,13 @@ table {
   font-size: 15px;
 }
 
-.active, .collapsible:hover {
-  background-color: rgba(255, 188, 101, 0.1);
+.collapsible:hover {
+  background-color: rgb(36, 35, 34);
+  border-radius: 20px;
+}
+.active {
+  background-color: rgba(182, 175, 168, 0.137);
+  border-radius: 8px;
 }
 
 .content {
@@ -315,15 +321,12 @@ table {
   padding: 5px;
 }
 
-.modal-title
-
-
 .button-85 {
   padding: 0.6em 2em;
   border: none;
   outline: none;
   color: rgb(255, 255, 255);
-  background: rgb(32, 30, 30);
+  background: transparent;
   cursor: pointer;
   position: relative;
   z-index: 0;
@@ -379,18 +382,10 @@ table {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(236, 251, 255, 0.438);
+  background: rgb(31, 29, 29);
   left: 0;
   top: 0;
   border-radius: 10px;
-}
-.glass{
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 20px;
-  border:1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 /* CSS */
