@@ -327,13 +327,13 @@ table {
   background: linear-gradient(
     45deg,
     #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
+    #000000,
+    #000000,
+    #9900ff,
     #00ffd5,
     #002bff,
-    #7a00ff,
-    #ff00c8,
+    #000000,
+    #000000,
     #ff0000
   );
   position: absolute;
@@ -342,10 +342,10 @@ table {
   background-size: 400%;
   z-index: -1;
   filter: blur(5px);
-  -webkit-filter: blur(15px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing-button-85 20s linear infinite;
+  -webkit-filter: blur(25px);
+  width: calc(100% + 24px);
+  height: calc(100% + 24px);
+  animation: glowing-button-85 5s linear infinite;
   transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
 }
