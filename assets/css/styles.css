@@ -329,9 +329,21 @@ table {
     #ff0000,
     #000000,
     #000000,
+    #000000,
+    #000000,
+    #000000,
+    #000000,
+    #000000,
+    #000000,
     #9900ff,
     #00ffd5,
     #002bff,
+    #000000,
+    #000000,
+    #000000,
+    #000000,
+    #000000,
+    #000000,
     #000000,
     #000000,
     #ff0000
@@ -768,7 +780,7 @@ table {
   -webkit-user-select: none;
   touch-action: manipulation;
   height: 35px;
-  width: 90px;
+  width: 110px;
 }
 
 .button-88:hover:before {
@@ -796,7 +808,7 @@ table {
   -webkit-filter: blur(2px);
   width: calc(100% + 4px);
   height: calc(100% + 4px);
-  animation: glowing-button-88 15s linear infinite;
+  animation: glowing-button-88 13s linear infinite;
   transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
 }
@@ -831,4 +843,3 @@ table {
 .myfix{
   height: 15px;
 }
-
