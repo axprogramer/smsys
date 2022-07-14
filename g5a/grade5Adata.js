@@ -597,7 +597,115 @@ var BtnDele = document.getElementById('myDele');
 var BtnClearBox = document.getElementById('myClearBox');
 var BtnClearAll = document.getElementById('myClearAll');
 
+function clearBox(){
+  getElementVal('mySoct').innerHTML = "";
+  getElementVal('myWoct').innerHTML = "";
+  getElementVal('myLoct').innerHTML = "";
+  getElementVal('myRoct').innerHTML = "";
+  getElementVal('myAoct').innerHTML = "";
+  getElementVal('myKoct').innerHTML = "";
+  //November
+  getElementVal('mySnov').innerHTML = "";
+  getElementVal('myWnov').innerHTML = "";
+  getElementVal('myLnov').innerHTML = "";
+  getElementVal('myRnov').innerHTML = "";
+  getElementVal('myAnov').innerHTML = "";
+  getElementVal('myKnov').innerHTML = "";
+  //December
+  getElementVal('mySdec').innerHTML = "";
+  getElementVal('myWdec').innerHTML = "";
+  getElementVal('myLdec').innerHTML = "";
+  getElementVal('myRdec').innerHTML = "";
+  getElementVal('myAdec').innerHTML = "";
+  getElementVal('myKdec').innerHTML = "";
+  //January
+  getElementVal('mySjan').innerHTML = "";
+  getElementVal('myWjan').innerHTML = "";
+  getElementVal('myLjan').innerHTML = "";
+  getElementVal('myRjan').innerHTML = "";
+  getElementVal('myAjan').innerHTML = "";
+  getElementVal('myKjan').innerHTML = "";
+  //Febuary
+  getElementVal('mySfeb').innerHTML = "";
+  getElementVal('myWfeb').innerHTML = "";
+  getElementVal('myLfeb').innerHTML = "";
+  getElementVal('myRfeb').innerHTML = "";
+  getElementVal('myAfeb').innerHTML = "";
+  getElementVal('myKfeb').innerHTML = "";
+  //1st 4 months
+  getElementVal('myNov').innerHTML = "";
+  getElementVal('myDec').innerHTML = "";
+  getElementVal('myJan').innerHTML = "";
+  getElementVal('myFeb').innerHTML = "";
+  getElementVal('my1Score4').innerHTML = "";
+  //1st Semester Exam
+  getElementVal('my1Se').innerHTML = "";
+  getElementVal('my1Sa').innerHTML = "";
+  getElementVal('my1SR').innerHTML = "";
+  getElementVal('my1SM').innerHTML = "";
+  //1st Semester Result
+  getElementVal('my1SeR').innerHTML = "";
+  getElementVal('my1MonR').innerHTML = "";
+  getElementVal('my1SaR').innerHTML = "";
+  getElementVal('my1SeRa').innerHTML = "";
+  getElementVal('my1SeRme').innerHTML = "";
+  //March
+  getElementVal('mySmar').innerHTML = "";
+  getElementVal('myWmar').innerHTML = "";
+  getElementVal('myLmar').innerHTML = "";
+  getElementVal('myRmar').innerHTML = "";
+  getElementVal('myAmar').innerHTML = "";
+  getElementVal('myKmar').innerHTML = "";
+  //April-May
+  getElementVal('mySma').innerHTML = "";
+  getElementVal('myWma').innerHTML = "";
+  getElementVal('myLma').innerHTML = "";
+  getElementVal('myRma').innerHTML = "";
+  getElementVal('myAma').innerHTML = "";
+  getElementVal('myKma').innerHTML = "";
+  //June
+  getElementVal('mySjun').innerHTML = "";
+  getElementVal('myWjun').innerHTML = "";
+  getElementVal('myLjun').innerHTML = "";
+  getElementVal('myRjun').innerHTML = "";
+  getElementVal('myAjun').innerHTML = "";
+  getElementVal('myKjun').innerHTML = "";
+  //July
+  getElementVal('mySjuly').innerHTML = "";
+  getElementVal('myWjuly').innerHTML = "";
+  getElementVal('myLjuly').innerHTML = "";
+  getElementVal('myRjuly').innerHTML = "";
+  getElementVal('myAjuly').innerHTML = "";
+  getElementVal('myKjuly').innerHTML = "";
 
+  //2nd 4 months
+  getElementVal('myMar').innerHTML = "";
+  getElementVal('myMay').innerHTML = "";
+  getElementVal('myJune').innerHTML = "";
+  getElementVal('myJuly').innerHTML = "";
+  getElementVal('my2Score4').innerHTML = "";
+  //2nd Semester Exam
+  getElementVal('my2Se').innerHTML = "";
+  getElementVal('my2Sa').innerHTML = "";
+  getElementVal('my2SR').innerHTML = "";
+  getElementVal('my2SM').innerHTML = "";
+  //2nd Semester Result
+  getElementVal('my2SeR').innerHTML = "";
+  getElementVal('my2MonR').innerHTML = "";
+  getElementVal('my2SaR').innerHTML = "";
+  getElementVal('my2SeRa').innerHTML = "";
+  getElementVal('my2SeRme').innerHTML = "";
+  //Annual Year
+  getElementVal('my1SaY').innerHTML = "";
+  getElementVal('my2SaY').innerHTML = "";
+  getElementVal('myAaY').innerHTML = "";
+  vgetElementVal('myKy').innerHTML = "";
+  getElementVal('myMy').innerHTML = "";
+  getElementVal('myOy').innerHTML = "";
+  //Khmer Name
+  getElementVal('myKhname').innerHTML = "";
+
+}
 
 function Fillbox(index){
   if(index==null){
