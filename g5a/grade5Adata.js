@@ -597,123 +597,124 @@ var BtnClearBox = document.getElementById('myClearBox');
 var BtnClearAll = document.getElementById('myClearAll');
 
 function clearBox(){
-  getElementVal('mySoct').innerHTML = "";
-  getElementVal('myWoct').innerHTML = "";
-  getElementVal('myLoct').innerHTML = "";
-  getElementVal('myRoct').innerHTML = "";
-  getElementVal('myAoct').innerHTML = "";
-  getElementVal('myKoct').innerHTML = "";
+  document.getElementById('myName').innerHTML = "";
+  document.getElementById('myKhname').innerHTML = "";
+  document.getElementById('myID').innerHTML = "";
+  document.getElementById('mySex').innerHTML = "";
+  document.getElementById('mySoct').innerHTML = "";
+  document.getElementById('myWoct').innerHTML = "";
+  document.getElementById('myLoct').innerHTML = "";
+  document.getElementById('myRoct').innerHTML = "";
+  document.getElementById('myAoct').innerHTML = "";
+  document.getElementById('myKoct').innerHTML = "";
   //November
-  getElementVal('mySnov').innerHTML = "";
-  getElementVal('myWnov').innerHTML = "";
-  getElementVal('myLnov').innerHTML = "";
-  getElementVal('myRnov').innerHTML = "";
-  getElementVal('myAnov').innerHTML = "";
-  getElementVal('myKnov').innerHTML = "";
+  document.getElementById('mySnov').innerHTML = "";
+  document.getElementById('myWnov').innerHTML = "";
+  document.getElementById('myLnov').innerHTML = "";
+  document.getElementById('myRnov').innerHTML = "";
+  document.getElementById('myAnov').innerHTML = "";
+  document.getElementById('myKnov').innerHTML = "";
   //December
-  getElementVal('mySdec').innerHTML = "";
-  getElementVal('myWdec').innerHTML = "";
-  getElementVal('myLdec').innerHTML = "";
-  getElementVal('myRdec').innerHTML = "";
-  getElementVal('myAdec').innerHTML = "";
-  getElementVal('myKdec').innerHTML = "";
+  document.getElementById('mySdec').innerHTML = "";
+  document.getElementById('myWdec').innerHTML = "";
+  document.getElementById('myLdec').innerHTML = "";
+  document.getElementById('myRdec').innerHTML = "";
+  document.getElementById('myAdec').innerHTML = "";
+  document.getElementById('myKdec').innerHTML = "";
   //January
-  getElementVal('mySjan').innerHTML = "";
-  getElementVal('myWjan').innerHTML = "";
-  getElementVal('myLjan').innerHTML = "";
-  getElementVal('myRjan').innerHTML = "";
-  getElementVal('myAjan').innerHTML = "";
-  getElementVal('myKjan').innerHTML = "";
+  document.getElementById('mySjan').innerHTML = "";
+  document.getElementById('myWjan').innerHTML = "";
+  document.getElementById('myLjan').innerHTML = "";
+  document.getElementById('myRjan').innerHTML = "";
+  document.getElementById('myAjan').innerHTML = "";
+  document.getElementById('myKjan').innerHTML = "";
   //Febuary
-  getElementVal('mySfeb').innerHTML = "";
-  getElementVal('myWfeb').innerHTML = "";
-  getElementVal('myLfeb').innerHTML = "";
-  getElementVal('myRfeb').innerHTML = "";
-  getElementVal('myAfeb').innerHTML = "";
-  getElementVal('myKfeb').innerHTML = "";
+  document.getElementById('mySfeb').innerHTML = "";
+  document.getElementById('myWfeb').innerHTML = "";
+  document.getElementById('myLfeb').innerHTML = "";
+  document.getElementById('myRfeb').innerHTML = "";
+  document.getElementById('myAfeb').innerHTML = "";
+  document.getElementById('myKfeb').innerHTML = "";
   //1st 4 months
-  getElementVal('myNov').innerHTML = "";
-  getElementVal('myDec').innerHTML = "";
-  getElementVal('myJan').innerHTML = "";
-  getElementVal('myFeb').innerHTML = "";
-  getElementVal('my1Score4').innerHTML = "";
+  document.getElementById('myNov').innerHTML = "";
+  document.getElementById('myDec').innerHTML = "";
+  document.getElementById('myJan').innerHTML = "";
+  document.getElementById('myFeb').innerHTML = "";
+  document.getElementById('my1Score4').innerHTML = "";
   //1st Semester Exam
-  getElementVal('my1Se').innerHTML = "";
-  getElementVal('my1Sa').innerHTML = "";
-  getElementVal('my1SR').innerHTML = "";
-  getElementVal('my1SM').innerHTML = "";
+  document.getElementById('my1Se').innerHTML = "";
+  document.getElementById('my1Sa').innerHTML = "";
+  document.getElementById('my1SR').innerHTML = "";
+  document.getElementById('my1SM').innerHTML = "";
   //1st Semester Result
-  getElementVal('my1SeR').innerHTML = "";
-  getElementVal('my1MonR').innerHTML = "";
-  getElementVal('my1SaR').innerHTML = "";
-  getElementVal('my1SeRa').innerHTML = "";
-  getElementVal('my1SeRme').innerHTML = "";
+  document.getElementById('my1SeR').innerHTML = "";
+  document.getElementById('my1MonR').innerHTML = "";
+  document.getElementById('my1SaR').innerHTML = "";
+  document.getElementById('my1SeRa').innerHTML = "";
+  document.getElementById('my1SeRme').innerHTML = "";
   //March
-  getElementVal('mySmar').innerHTML = "";
-  getElementVal('myWmar').innerHTML = "";
-  getElementVal('myLmar').innerHTML = "";
-  getElementVal('myRmar').innerHTML = "";
-  getElementVal('myAmar').innerHTML = "";
-  getElementVal('myKmar').innerHTML = "";
+  document.getElementById('mySmar').innerHTML = "";
+  document.getElementById('myWmar').innerHTML = "";
+  document.getElementById('myLmar').innerHTML = "";
+  document.getElementById('myRmar').innerHTML = "";
+  document.getElementById('myAmar').innerHTML = "";
+  document.getElementById('myKmar').innerHTML = "";
   //April-May
-  getElementVal('mySma').innerHTML = "";
-  getElementVal('myWma').innerHTML = "";
-  getElementVal('myLma').innerHTML = "";
-  getElementVal('myRma').innerHTML = "";
-  getElementVal('myAma').innerHTML = "";
-  getElementVal('myKma').innerHTML = "";
+  document.getElementById('mySma').innerHTML = "";
+  document.getElementById('myWma').innerHTML = "";
+  document.getElementById('myLma').innerHTML = "";
+  document.getElementById('myRma').innerHTML = "";
+  document.getElementById('myAma').innerHTML = "";
+  document.getElementById('myKma').innerHTML = "";
   //June
-  getElementVal('mySjun').innerHTML = "";
-  getElementVal('myWjun').innerHTML = "";
-  getElementVal('myLjun').innerHTML = "";
-  getElementVal('myRjun').innerHTML = "";
-  getElementVal('myAjun').innerHTML = "";
-  getElementVal('myKjun').innerHTML = "";
+  document.getElementById('mySjun').innerHTML = "";
+  document.getElementById('myWjun').innerHTML = "";
+  document.getElementById('myLjun').innerHTML = "";
+  document.getElementById('myRjun').innerHTML = "";
+  document.getElementById('myAjun').innerHTML = "";
+  document.getElementById('myKjun').innerHTML = "";
   //July
-  getElementVal('mySjuly').innerHTML = "";
-  getElementVal('myWjuly').innerHTML = "";
-  getElementVal('myLjuly').innerHTML = "";
-  getElementVal('myRjuly').innerHTML = "";
-  getElementVal('myAjuly').innerHTML = "";
-  getElementVal('myKjuly').innerHTML = "";
+  document.getElementById('mySjuly').innerHTML = "";
+  document.getElementById('myWjuly').innerHTML = "";
+  document.getElementById('myLjuly').innerHTML = "";
+  document.getElementById('myRjuly').innerHTML = "";
+  document.getElementById('myAjuly').innerHTML = "";
+  document.getElementById('myKjuly').innerHTML = "";
 
   //2nd 4 months
-  getElementVal('myMar').innerHTML = "";
-  getElementVal('myMay').innerHTML = "";
-  getElementVal('myJune').innerHTML = "";
-  getElementVal('myJuly').innerHTML = "";
-  getElementVal('my2Score4').innerHTML = "";
+  document.getElementById('myMar').innerHTML = "";
+  document.getElementById('myMay').innerHTML = "";
+  document.getElementById('myJune').innerHTML = "";
+  document.getElementById('myJuly').innerHTML = "";
+  document.getElementById('my2Score4').innerHTML = "";
   //2nd Semester Exam
-  getElementVal('my2Se').innerHTML = "";
-  getElementVal('my2Sa').innerHTML = "";
-  getElementVal('my2SR').innerHTML = "";
-  getElementVal('my2SM').innerHTML = "";
+  document.getElementById('my2Se').innerHTML = "";
+  document.getElementById('my2Sa').innerHTML = "";
+  document.getElementById('my2SR').innerHTML = "";
+  document.getElementById('my2SM').innerHTML = "";
   //2nd Semester Result
-  getElementVal('my2SeR').innerHTML = "";
-  getElementVal('my2MonR').innerHTML = "";
-  getElementVal('my2SaR').innerHTML = "";
-  getElementVal('my2SeRa').innerHTML = "";
-  getElementVal('my2SeRme').innerHTML = "";
+  document.getElementById('my2SeR').innerHTML = "";
+  document.getElementById('my2MonR').innerHTML = "";
+  document.getElementById('my2SaR').innerHTML = "";
+  document.getElementById('my2SeRa').innerHTML = "";
+  document.getElementById('my2SeRme').innerHTML = "";
   //Annual Year
-  getElementVal('my1SaY').innerHTML = "";
-  getElementVal('my2SaY').innerHTML = "";
-  getElementVal('myAaY').innerHTML = "";
-  vgetElementVal('myKy').innerHTML = "";
-  getElementVal('myMy').innerHTML = "";
-  getElementVal('myOy').innerHTML = "";
+  document.getElementById('my1SaY').innerHTML = "";
+  document.getElementById('my2SaY').innerHTML = "";
+  document.getElementById('myAaY').innerHTML = "";
+  vdocument.getElementById('myKy').innerHTML = "";
+  document.getElementById('myMy').innerHTML = "";
+  document.getElementById('myOy').innerHTML = "";
   //Khmer Name
-  getElementVal('myKhname').innerHTML = "";
+  document.getElementById('myKhname').innerHTML = "";
 
 }
 
 function Fillbox(index){
-  clearBox();
   if(index==null){
     BtnSubmit.style.display='inline-block';
-    BtnClearAll.style.display='inline-block';
     BtnUpdate.style.display='none';
     BtnDele.style.display='none';
-    BtnClearBox.style.display='none';
   }
   else{
     --index;
@@ -831,14 +832,238 @@ function Fillbox(index){
 
 
 
-    BtnClearAll.style.display='none';
     BtnSubmit.style.display='none';
     BtnUpdate.style.display='inline-block';
     BtnDele.style.display='inline-block';
-    BtnClearBox.style.display='inline-block';
 
 
   }
+}
+function NewBox(){
+    BtnSubmit.style.display='inline-block';
+    BtnUpdate.style.display='none';
+    BtnDele.style.display='none';
+  var Mname = document.getElementById('myName');
+  var Mid = document.getElementById('myID');
+  var Msex = document.getElementById('mySex');
+  var Mgrade = document.getElementById('myGrade');
+  var Mspeaking = document.getElementById('mySoct');
+  var Mwriting = document.getElementById('myWoct');
+  var Mlistening = document.getElementById('myLoct');
+  var Mreadiing = document.getElementById('myRoct');
+  var Maverage = document.getElementById('myAoct');
+  var Mrank = document.getElementById('myKoct');
+  //November
+  var MspeakingNov = document.getElementById('mySnov');
+  var MwritingNov = document.getElementById('myWnov');
+  var MlisteningNov = document.getElementById('myLnov');
+  var MreadiingNov = document.getElementById('myRnov');
+  var MaverageNov = document.getElementById('myAnov');
+  var MrankNov = document.getElementById('myKnov');
+  //December
+  var MspeakingDec = document.getElementById('mySdec');
+  var MwritingDec = document.getElementById('myWdec');
+  var MlisteningDec = document.getElementById('myLdec');
+  var MreadiingDec = document.getElementById('myRdec');
+  var MaverageDec = document.getElementById('myAdec');
+  var MrankDec = document.getElementById('myKdec');
+  //January
+  var MspeakingJan = document.getElementById('mySjan');
+  var MwritingJan = document.getElementById('myWjan');
+  var MlisteningJan = document.getElementById('myLjan');
+  var MreadiingJan = document.getElementById('myRjan');
+  var MaverageJan = document.getElementById('myAjan');
+  var MrankJan = document.getElementById('myKjan');
+  //February
+  var Mspeakingfeb = document.getElementById('mySfeb');
+  var Mwritingfeb = document.getElementById('myWfeb');
+  var Mlisteningfeb = document.getElementById('myLfeb');
+  var Mreadiingfeb = document.getElementById('myRfeb');
+  var Maveragefeb = document.getElementById('myAfeb');
+  var Mrankfeb = document.getElementById('myKfeb');
+  //1st 4 months
+  var MmyNov = document.getElementById('myNov');
+  var MmyDec = document.getElementById('myDec');
+  var MmyJan = document.getElementById('myJan');
+  var MmyFeb = document.getElementById('myFeb');
+  var Mmy1Score4 = document.getElementById('my1Score4');
+  //1st Semester Exam
+  var Mmy1Se = document.getElementById('my1Se');
+  var Mmy1Sa = document.getElementById('my1Sa');
+  var Mmy1SR = document.getElementById('my1SR');
+  var Mmy1SM = document.getElementById('my1SM');
+  //1st Semester Result
+  var Mmy1SeR = document.getElementById('my1SeR');
+  var Mmy1MonR = document.getElementById('my1MonR');
+  var Mmy1SaR = document.getElementById('my1SaR');
+  var Mmy1SeRa = document.getElementById('my1SeRa');
+  var Mmy1SeRme = document.getElementById('my1SeRme');
+  //March
+  var Mspeakingmar = document.getElementById('mySmar');
+  var Mwritingmar = document.getElementById('myWmar');
+  var Mlisteningmar = document.getElementById('myLmar');
+  var Mreadiingmar = document.getElementById('myRmar');
+  var Maveragemar = document.getElementById('myAmar');
+  var Mrankmar = document.getElementById('myKmar');
+  //April-May
+  var Mspeakingma = document.getElementById('mySma');
+  var Mwritingma = document.getElementById('myWma');
+  var Mlisteningma = document.getElementById('myLma');
+  var Mreadiingma = document.getElementById('myRma');
+  var Maveragema = document.getElementById('myAma');
+  var Mrankma = document.getElementById('myKma');
+  //June
+  var Mspeakingjun = document.getElementById('mySjun');
+  var Mwritingjun = document.getElementById('myWjun');
+  var Mlisteningjun = document.getElementById('myLjun');
+  var Mreadiingjun = document.getElementById('myRjun');
+  var Maveragejun = document.getElementById('myAjun');
+  var Mrankjun = document.getElementById('myKjun');
+  //2ns 4 months
+  var MmyMar = document.getElementById('myMar');
+  var MmyMay = document.getElementById('myMay');
+  var MmyJune = document.getElementById('myJune');
+  var MmyJuly = document.getElementById('myJuly');
+  var Mmy2Score4 = document.getElementById('my2Score4');
+  //2ns Semester Exam
+  var Mmy2Se = document.getElementById('my2Se');
+  var Mmy2Sa = document.getElementById('my2Sa');
+  var Mmy2SR = document.getElementById('my2SR');
+  var Mmy2SM = document.getElementById('my2SM');
+  //2ns Semester Result
+  var Mmy2SeR = document.getElementById('my2SeR');
+  var Mmy2MonR = document.getElementById('my2MonR');
+  var Mmy2SaR = document.getElementById('my2SaR');
+  var Mmy2SeRa = document.getElementById('my2SeRa');
+  var Mmy2SeRme = document.getElementById('my2SeRme');
+  //Annual Year
+  var MfirstY = document.getElementById('my1SaY');
+  var MsecondY = document.getElementById('my2SaY');
+  var MannualTotal = document.getElementById('myAaY');
+  var MrankY = document.getElementById('myKy');
+  var MmentionY = document.getElementById('myMy');
+  var MotherY = document.getElementById('myOy');
+  //Khmer Name
+  var MmyKh = document.getElementById('myKhname');
+  //July
+  var Mspeakingjuly = document.getElementById('mySjuly');
+  var Mwritingjuly = document.getElementById('myWjuly');
+  var Mlisteningjuly = document.getElementById('myLjuly');
+  var Mreadiingjuly = document.getElementById('myRjuly');
+  var Maveragejuly = document.getElementById('myAjuly');
+  var Mrankjuly = document.getElementById('myKjuly');
+  
+  Mname.value = "";
+  Mid.value =  "";
+  Msex.value =  "";
+  Mgrade.value =  "";
+  Mspeaking.value =  "";
+  Mwriting.value =  "";
+  Mlistening.value =  "";
+  Mreadiing.value =  "";
+  Maverage.value =  "";
+  Mrank.value =  "";
+  //November
+  MspeakingNov.value =  "";
+  MwritingNov.value =  "";
+  MlisteningNov.value =  "";
+  MreadiingNov.value =  "";
+  MaverageNov.value =  "";
+  MrankNov.value =  "";
+  //December
+  MspeakingDec.value =  "";
+  MwritingDec.value =  "";
+  MlisteningDec.value =  "";
+  MreadiingDec.value =  "";
+  MaverageDec.value =  "";
+  MrankDec.value =  "";
+  //January
+  MspeakingJan.value =  "";
+  MwritingJan.value =  "";
+  MlisteningJan.value =  "";
+  MreadiingJan.value =  "";
+  MaverageJan.value =  "";
+  MrankJan.value =  "";
+  //February
+  Mspeakingfeb.value =  "";
+  Mwritingfeb.value =  "";
+  Mlisteningfeb.value =  "";
+  Mreadiingfeb.value =  "";
+  Maveragefeb.value =  "";
+  Mrankfeb.value =  "";
+  //1st 4 months
+  MmyNov.value =  "";
+  MmyDec.value =  "";
+  MmyJan.value =  "";
+  MmyFeb.value =  "";
+  Mmy1Score4.value =  "";
+  
+  //1st Semester Exam
+  Mmy1Se.value =  "";
+  Mmy1Sa.value =  "";
+  Mmy1SR.value =  "";
+  Mmy1SM.value =  "";
+  //1st Semester Result
+  Mmy1SeR.value =  "";
+  Mmy1MonR.value =  "";
+  Mmy1SaR.value =  "";
+  Mmy1SeRa.value =  "";
+  Mmy1SeRme.value =  "";
+  //March
+  Mspeakingmar.value =  "";
+  Mwritingmar.value =  "";
+  Mlisteningmar.value =  "";
+  Mreadiingmar.value =  "";
+  Maveragemar.value =  "";
+  Mrankmar.value =  "";
+  //April-May
+  Mspeakingma.value =  "";
+  Mwritingma.value =  "";
+  Mlisteningma.value =  "";
+  Mreadiingma.value =  "";
+  Maveragema.value =  "";
+  Mrankma.value =  "";
+  //June
+  Mspeakingjun.value =  "";
+  Mwritingjun.value =  "";
+  Mlisteningjun.value =  "";
+  Mreadiingjun.value =  "";
+  Maveragejun.value =  "";
+  Mrankjun.value =  "";
+  //2nd 4 months
+  MmyMar.value =  "";
+  MmyMay.value =  "";
+  MmyJune.value =  "";
+  MmyJuly.value =  "";
+  Mmy2Score4.value =  "";
+  
+  //2nd Semester Exam
+  Mmy2Se.value =  "";
+  Mmy2Sa.value =  "";
+  Mmy2SR.value =  "";
+  Mmy2SM.value =  "";
+  //2nd Semester Result
+  Mmy2SeR.value =  "";
+  Mmy2MonR.value =  "";
+  Mmy2SaR.value =  "";
+  Mmy2SeRa.value =  "";
+  Mmy2SeRme.value =  "";
+  //Annual Year
+  MfirstY.value =  "";
+  MsecondY.value =  "";
+  MannualTotal.value =  "";
+  MrankY.value =  "";
+  MmentionY.value =  "";
+  MotherY.value =  "";
+  //Khmer Name
+  MmyKh.value =  "";
+  //July
+  Mspeakingjuly.value =  "";
+  Mwritingjuly.value =  "";
+  Mlisteningjuly.value =  "";
+  Mreadiingjuly.value =  "";
+  Maveragejuly.value =  "";
+  Mrankjuly.value =  "";
 }
 
 function AddStd(){
