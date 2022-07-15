@@ -393,7 +393,6 @@ function selectAllData(){
       var myOy = CurrentRecord.val().myOy;
       //Khmer Name
       var myKh = CurrentRecord.val().myKh;
-
         addItemsToTable(name,id,sex,grade,speaking,writing,listening,
           reading,average,rank,speakingNov,writingNov,listeningNov,
           readingNov,averageNov,rankNOv,speakingDec,writingDec,listeningDec,
@@ -708,6 +707,7 @@ function clearBox(){
 }
 
 function Fillbox(index){
+  clearBox();
   if(index==null){
     BtnSubmit.style.display='inline-block';
     BtnClearAll.style.display='inline-block';
