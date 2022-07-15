@@ -590,18 +590,12 @@ var Mrankjuly = document.getElementById('myKjuly');
 var BtnSubmit = document.getElementById('mySubmit');
 var BtnUpdate = document.getElementById('myUpdate');
 var BtnDele = document.getElementById('myDele');
-var BtnClearBox = document.getElementById('myClearBox');
-var BtnClearAll = document.getElementById('myClearAll');
-
-
 
 function Fillbox(index){
   if(index==null){
     BtnSubmit.style.display='inline-block';
-    BtnClearAll.style.display='inline-block';
     BtnUpdate.style.display='none';
     BtnDele.style.display='none';
-    BtnClearBox.style.display='none';
   }
   else{
     --index;
@@ -719,15 +713,241 @@ function Fillbox(index){
 
 
 
-    BtnClearAll.style.display='none';
     BtnSubmit.style.display='none';
     BtnUpdate.style.display='inline-block';
     BtnDele.style.display='inline-block';
-    BtnClearBox.style.display='inline-block';
 
 
   }
 }
+
+function NewBox(){
+  BtnSubmit.style.display='inline-block';
+  BtnUpdate.style.display='none';
+  BtnDele.style.display='none';
+var Mname = document.getElementById('myName');
+var Mid = document.getElementById('myID');
+var Msex = document.getElementById('mySex');
+var Mgrade = document.getElementById('myGrade');
+var Mspeaking = document.getElementById('mySoct');
+var Mwriting = document.getElementById('myWoct');
+var Mlistening = document.getElementById('myLoct');
+var Mreadiing = document.getElementById('myRoct');
+var Maverage = document.getElementById('myAoct');
+var Mrank = document.getElementById('myKoct');
+//November
+var MspeakingNov = document.getElementById('mySnov');
+var MwritingNov = document.getElementById('myWnov');
+var MlisteningNov = document.getElementById('myLnov');
+var MreadiingNov = document.getElementById('myRnov');
+var MaverageNov = document.getElementById('myAnov');
+var MrankNov = document.getElementById('myKnov');
+//December
+var MspeakingDec = document.getElementById('mySdec');
+var MwritingDec = document.getElementById('myWdec');
+var MlisteningDec = document.getElementById('myLdec');
+var MreadiingDec = document.getElementById('myRdec');
+var MaverageDec = document.getElementById('myAdec');
+var MrankDec = document.getElementById('myKdec');
+//January
+var MspeakingJan = document.getElementById('mySjan');
+var MwritingJan = document.getElementById('myWjan');
+var MlisteningJan = document.getElementById('myLjan');
+var MreadiingJan = document.getElementById('myRjan');
+var MaverageJan = document.getElementById('myAjan');
+var MrankJan = document.getElementById('myKjan');
+//February
+var Mspeakingfeb = document.getElementById('mySfeb');
+var Mwritingfeb = document.getElementById('myWfeb');
+var Mlisteningfeb = document.getElementById('myLfeb');
+var Mreadiingfeb = document.getElementById('myRfeb');
+var Maveragefeb = document.getElementById('myAfeb');
+var Mrankfeb = document.getElementById('myKfeb');
+//1st 4 months
+var MmyNov = document.getElementById('myNov');
+var MmyDec = document.getElementById('myDec');
+var MmyJan = document.getElementById('myJan');
+var MmyFeb = document.getElementById('myFeb');
+var Mmy1Score4 = document.getElementById('my1Score4');
+//1st Semester Exam
+var Mmy1Se = document.getElementById('my1Se');
+var Mmy1Sa = document.getElementById('my1Sa');
+var Mmy1SR = document.getElementById('my1SR');
+var Mmy1SM = document.getElementById('my1SM');
+//1st Semester Result
+var Mmy1SeR = document.getElementById('my1SeR');
+var Mmy1MonR = document.getElementById('my1MonR');
+var Mmy1SaR = document.getElementById('my1SaR');
+var Mmy1SeRa = document.getElementById('my1SeRa');
+var Mmy1SeRme = document.getElementById('my1SeRme');
+//March
+var Mspeakingmar = document.getElementById('mySmar');
+var Mwritingmar = document.getElementById('myWmar');
+var Mlisteningmar = document.getElementById('myLmar');
+var Mreadiingmar = document.getElementById('myRmar');
+var Maveragemar = document.getElementById('myAmar');
+var Mrankmar = document.getElementById('myKmar');
+//April-May
+var Mspeakingma = document.getElementById('mySma');
+var Mwritingma = document.getElementById('myWma');
+var Mlisteningma = document.getElementById('myLma');
+var Mreadiingma = document.getElementById('myRma');
+var Maveragema = document.getElementById('myAma');
+var Mrankma = document.getElementById('myKma');
+//June
+var Mspeakingjun = document.getElementById('mySjun');
+var Mwritingjun = document.getElementById('myWjun');
+var Mlisteningjun = document.getElementById('myLjun');
+var Mreadiingjun = document.getElementById('myRjun');
+var Maveragejun = document.getElementById('myAjun');
+var Mrankjun = document.getElementById('myKjun');
+//2ns 4 months
+var MmyMar = document.getElementById('myMar');
+var MmyMay = document.getElementById('myMay');
+var MmyJune = document.getElementById('myJune');
+var MmyJuly = document.getElementById('myJuly');
+var Mmy2Score4 = document.getElementById('my2Score4');
+//2ns Semester Exam
+var Mmy2Se = document.getElementById('my2Se');
+var Mmy2Sa = document.getElementById('my2Sa');
+var Mmy2SR = document.getElementById('my2SR');
+var Mmy2SM = document.getElementById('my2SM');
+//2ns Semester Result
+var Mmy2SeR = document.getElementById('my2SeR');
+var Mmy2MonR = document.getElementById('my2MonR');
+var Mmy2SaR = document.getElementById('my2SaR');
+var Mmy2SeRa = document.getElementById('my2SeRa');
+var Mmy2SeRme = document.getElementById('my2SeRme');
+//Annual Year
+var MfirstY = document.getElementById('my1SaY');
+var MsecondY = document.getElementById('my2SaY');
+var MannualTotal = document.getElementById('myAaY');
+var MrankY = document.getElementById('myKy');
+var MmentionY = document.getElementById('myMy');
+var MotherY = document.getElementById('myOy');
+//Khmer Name
+var MmyKh = document.getElementById('myKhname');
+//July
+var Mspeakingjuly = document.getElementById('mySjuly');
+var Mwritingjuly = document.getElementById('myWjuly');
+var Mlisteningjuly = document.getElementById('myLjuly');
+var Mreadiingjuly = document.getElementById('myRjuly');
+var Maveragejuly = document.getElementById('myAjuly');
+var Mrankjuly = document.getElementById('myKjuly');
+
+Mname.value = "";
+Mid.value =  "";
+Msex.value =  "";
+Mgrade.value =  "";
+Mspeaking.value =  "";
+Mwriting.value =  "";
+Mlistening.value =  "";
+Mreadiing.value =  "";
+Maverage.value =  "";
+Mrank.value =  "";
+//November
+MspeakingNov.value =  "";
+MwritingNov.value =  "";
+MlisteningNov.value =  "";
+MreadiingNov.value =  "";
+MaverageNov.value =  "";
+MrankNov.value =  "";
+//December
+MspeakingDec.value =  "";
+MwritingDec.value =  "";
+MlisteningDec.value =  "";
+MreadiingDec.value =  "";
+MaverageDec.value =  "";
+MrankDec.value =  "";
+//January
+MspeakingJan.value =  "";
+MwritingJan.value =  "";
+MlisteningJan.value =  "";
+MreadiingJan.value =  "";
+MaverageJan.value =  "";
+MrankJan.value =  "";
+//February
+Mspeakingfeb.value =  "";
+Mwritingfeb.value =  "";
+Mlisteningfeb.value =  "";
+Mreadiingfeb.value =  "";
+Maveragefeb.value =  "";
+Mrankfeb.value =  "";
+//1st 4 months
+MmyNov.value =  "";
+MmyDec.value =  "";
+MmyJan.value =  "";
+MmyFeb.value =  "";
+Mmy1Score4.value =  "";
+
+//1st Semester Exam
+Mmy1Se.value =  "";
+Mmy1Sa.value =  "";
+Mmy1SR.value =  "";
+Mmy1SM.value =  "";
+//1st Semester Result
+Mmy1SeR.value =  "";
+Mmy1MonR.value =  "";
+Mmy1SaR.value =  "";
+Mmy1SeRa.value =  "";
+Mmy1SeRme.value =  "";
+//March
+Mspeakingmar.value =  "";
+Mwritingmar.value =  "";
+Mlisteningmar.value =  "";
+Mreadiingmar.value =  "";
+Maveragemar.value =  "";
+Mrankmar.value =  "";
+//April-May
+Mspeakingma.value =  "";
+Mwritingma.value =  "";
+Mlisteningma.value =  "";
+Mreadiingma.value =  "";
+Maveragema.value =  "";
+Mrankma.value =  "";
+//June
+Mspeakingjun.value =  "";
+Mwritingjun.value =  "";
+Mlisteningjun.value =  "";
+Mreadiingjun.value =  "";
+Maveragejun.value =  "";
+Mrankjun.value =  "";
+//2nd 4 months
+MmyMar.value =  "";
+MmyMay.value =  "";
+MmyJune.value =  "";
+MmyJuly.value =  "";
+Mmy2Score4.value =  "";
+
+//2nd Semester Exam
+Mmy2Se.value =  "";
+Mmy2Sa.value =  "";
+Mmy2SR.value =  "";
+Mmy2SM.value =  "";
+//2nd Semester Result
+Mmy2SeR.value =  "";
+Mmy2MonR.value =  "";
+Mmy2SaR.value =  "";
+Mmy2SeRa.value =  "";
+Mmy2SeRme.value =  "";
+//Annual Year
+MfirstY.value =  "";
+MsecondY.value =  "";
+MannualTotal.value =  "";
+MrankY.value =  "";
+MmentionY.value =  "";
+MotherY.value =  "";
+//Khmer Name
+MmyKh.value =  "";
+//July
+Mspeakingjuly.value =  "";
+Mwritingjuly.value =  "";
+Mlisteningjuly.value =  "";
+Mreadiingjuly.value =  "";
+Maveragejuly.value =  "";
+Mrankjuly.value =  "";
+}
+
 
 function AddStd(){
   firebase.database().ref("5bAllData/"+Mid.value).set(
