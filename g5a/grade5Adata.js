@@ -1,12 +1,12 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyAOX5I_BB9soXF4yHMp9NCPVk2Z-d3DEPE",
-    authDomain: "teachingrecord-6b575.firebaseapp.com",
-    databaseURL: "https://teachingrecord-6b575-default-rtdb.firebaseio.com",
-    projectId: "teachingrecord-6b575",
-    storageBucket: "teachingrecord-6b575.appspot.com",
-    messagingSenderId: "1097574891233",
-    appId: "1:1097574891233:web:d69ed85c4f4b83daad41a0"
-  };
+  apiKey: "AIzaSyAOX5I_BB9soXF4yHMp9NCPVk2Z-d3DEPE",
+  authDomain: "teachingrecord-6b575.firebaseapp.com",
+  databaseURL: "https://teachingrecord-6b575-default-rtdb.firebaseio.com",
+  projectId: "teachingrecord-6b575",
+  storageBucket: "teachingrecord-6b575.appspot.com",
+  messagingSenderId: "1097574891233",
+  appId: "1:1097574891233:web:d69ed85c4f4b83daad41a0"
+};
   
   firebase.initializeApp(firebaseConfig);
 
