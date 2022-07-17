@@ -11,7 +11,6 @@ const firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
 
   var my5aAll = firebase.database().ref('5aAllData');
-
   function submitForm(e){
     e.preventDefault();
     var name = getElementVal('myName');
