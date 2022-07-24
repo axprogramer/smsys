@@ -299,3 +299,12 @@ else if(my == 9.5){
 
 //Print Button
 <button onclick="saveOct()" class="btn btn-primary" type="button" style="background: var(--bs-red); margin-left: 15px;">Save<i i class="bi bi-cloud-download" style="padding-left: 5px;"></i></button>
+
+
+// Performance test, sum of an array
+var array = [3,5,4];
+var M = 1, F=1;
+var result = 0;
+result = array.reduce(function(M, F) { return M + parseFloat(F); }, 0);
+console.log(array);
+console.log(result);
