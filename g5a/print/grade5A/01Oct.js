@@ -62,7 +62,6 @@ function myPrintOctober(){
     trow.appendChild(td7);
     trow.appendChild(td8);
     tbody.appendChild(trow);
-
     $(function() {
       //Get all total values, sort and remove duplicates
       let totalList = $('.myScoreOct')
@@ -75,7 +74,6 @@ function myPrintOctober(){
         $('.myScoreOct').filter(function() {return $(this).text() == v;}).next().text(i + 1);
       })
     });
-  
   }
   function myOct() {
     var newstr = document.getElementById("myOctoberPrint").innerHTML;
