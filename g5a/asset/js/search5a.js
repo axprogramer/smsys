@@ -61,3 +61,33 @@ function clickKh(){
 
 }
 clickEng();
+
+$(document).ready(function ()
+{
+    var Sm = "M";
+    var Sf = "F";
+    $("input[type=button]").click(function ()
+    {
+        getOccurance(Sm);
+    });
+
+    function getOccurance(word)
+    {
+        var noOfOccurance = 0;
+
+        $("#tbody3 td:gt(2)").each(function (ind, obj)
+        {
+            if (word == $.trim($(obj).text())) noOfOccurance++;
+
+        });
+
+        var show = document.getElementById("TotalSF");
+        show.innerHTML = noOfOccurance;
+        //alert(noOfOccurance);
+
+    }
+
+})
+tbody3.querySelectorAll("tr").forEach(function(e){
+    console.log( e.querySelectorAll("td").length )
+   })
