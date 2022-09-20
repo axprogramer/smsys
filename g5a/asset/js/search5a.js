@@ -61,14 +61,58 @@ function clickKh(){
 
 }
 clickEng();
-
+//Count Total st and Female
+//October
 $(document).ready(function ()
 {
-    var Sm = "M";
+    var Sf = "F";
+    $("#btnTotalOct").click(function ()
+    {
+        getOccurance(Sf);
+        var rowCount = $("#tbody2 td").closest("tr").length;
+        var show = document.getElementById("TotalSsOct");
+        show.innerHTML = rowCount;
+        var show2 = document.getElementById("TotalSs2Oct");
+        show2.innerHTML = rowCount;
+
+
+
+    });
+
+    function getOccurance(word)
+    {
+        var noOfOccurance = 0;
+
+        $("#tbody2 td:gt(2)").each(function (ind, obj)
+        {
+            if (word == $.trim($(obj).text())) noOfOccurance++;
+
+        });
+
+        var show = document.getElementById("TotalSFoct");
+        show.innerHTML = noOfOccurance;
+        var show3 = document.getElementById("TotalSF2oct");
+        show3.innerHTML = noOfOccurance;
+
+    }
+
+})
+
+//November
+$(document).ready(function ()
+{
     var Sf = "F";
     $("input[type=button]").click(function ()
     {
-        getOccurance(Sm);
+        getOccurance(Sf);
+        var rowCount = $("#tbody3 td").closest("tr").length;
+        var show = document.getElementById("TotalSs");
+        show.innerHTML = rowCount;
+        var show2 = document.getElementById("TotalSs2");
+        show2.innerHTML = rowCount;
+
+
+
     });
 
     function getOccurance(word)
@@ -83,11 +127,10 @@ $(document).ready(function ()
 
         var show = document.getElementById("TotalSF");
         show.innerHTML = noOfOccurance;
-        //alert(noOfOccurance);
+        var show3 = document.getElementById("TotalSF2");
+        show3.innerHTML = noOfOccurance;
 
     }
 
 })
-tbody3.querySelectorAll("tr").forEach(function(e){
-    console.log( e.querySelectorAll("td").length )
-   })
+
