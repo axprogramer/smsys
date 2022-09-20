@@ -69,7 +69,14 @@
 
     <button onclick="ExportToExcel('xlsx')" class="button-87" type="button">Save Data<i i class="bi bi-cloud-download" style="padding-left: 5px;"></i></button>
     </div>
-    
+    <div class="mySearch5a">
+        <input type="text" id="myInputEn" class="mySearch" placeholder="Search English" onkeyup="tableSearchEng()">
+        <input type="text" id="myInputKh" class="mySearch" placeholder="Search Khmer" onkeyup="tableSearchKh()">
+        <button id="Eng" class="button-91" onclick="clickEng()">Eng</button>
+        <button id="Kh" class="button-91" onclick="clickKh()">Kh</button>
+
+    </div>
+
     <!--Print October-->
     <div>
       <div class="modal fade" id="myOctober" tabindex="-1" role="dialog" aria-labelledby="myOctober" aria-hidden="true">
@@ -2590,5 +2597,6 @@
 <script src="./print/grade5B/02Nov.js"></script>
 <script src="./print/grade5B/01Oct.js"></script>
 <script src="./grade5Bdata.js"></script>
+<script src="./asset/js/search5b.js"></script>
 </body>
 </html>

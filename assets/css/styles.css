@@ -891,3 +891,39 @@ table {
   text-align: center;
   font-weight: bold;
 }
+.mySearch5a{
+  padding: 10px;
+  text-align: center;
+  height: auto;
+  width: 100%;
+}
+.mySearch{
+  width: 35vh;
+  height: 4vh;
+  border-radius: 5px;
+  border-color: #eed8a7;
+  border-block-end-color: #9b6a00;
+  box-shadow: 2px 3px 4px;
+  text-align: center;
+  color: #5e3737;
+  font-weight: bold;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-shadow: 1px 2px 4px;
+  text-transform: uppercase;
+  padding-left: 25px;
+  background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+  background-size: 20px;
+}
+
+#Eng{
+  border-radius: 5px;
+  background-color: #3f2900;
+  color: #f1f1f1;
+  box-shadow: 2px 3px 4px;
+}
+#Kh{
+  border-radius: 5px;
+  background-color: #3f2900;
+  color: #f1f1f1;
+  box-shadow: 2px 3px 4px;
+}
