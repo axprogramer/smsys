@@ -308,3 +308,15 @@ var result = 0;
 result = array.reduce(function(M, F) { return M + parseFloat(F); }, 0);
 console.log(array);
 console.log(result);
+
+<input type="button" value="Total St" id="btnTotalFirSemRe"/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Number of Student: <a id="TotalSsFirSemRe" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a> <a style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">Female:</a>
+<a id="TotalSFFirSemRe" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  
+Number of grades higher than the average: <a id="TotalSs2FirSemRe" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a> <a style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">Female:</a>
+<a id="TotalSF2FirSemRe" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a></p>

@@ -321,6 +321,7 @@
                     <h5 class="modal-title" id="exampleModalLabel">Print</h5>
                     <button onclick="myDec()" class="btn2 btn-primary" type="button" style="background: var(--bs-green); margin-left: 15px;">Print<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button>
                     <button onclick="saveDec()" class="btn2 btn-primary" type="button" style="background: var(--bs-red); margin-left: 15px;">Save<i i class="bi bi-cloud-download" style="padding-left: 5px;"></i></button>
+                    <input type="button" value="Total St" id="btnTotalDec"/>
       
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                       
@@ -378,15 +379,17 @@
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                  Number of Student: ........ Female: ........</p>
-                              <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  Number of Student: <a id="TotalSsDec" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a> <a style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">Female:</a>
+                                  <a id="TotalSFDec" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a>
+                                                                <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   
-                                  Number of grades higher than the average: ........ Female: ........</p>
-                              <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  Number of grades higher than the average: <a id="TotalSs2Dec" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a> <a style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">Female:</a>
+                                  <a id="TotalSF2Dec" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a></p>
+                                                                <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -438,6 +441,7 @@
                     <h5 class="modal-title" id="exampleModalLabel">Print</h5>
                     <button onclick="myJan()" class="btn2 btn-primary" type="button" style="background: var(--bs-green); margin-left: 15px;">Print<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button>
                     <button onclick="saveJan()" class="btn2 btn-primary" type="button" style="background: var(--bs-red); margin-left: 15px;">Save<i i class="bi bi-cloud-download" style="padding-left: 5px;"></i></button>
+                    <input type="button" value="Total St" id="btnTotalJan"/>
 
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                       
@@ -495,15 +499,17 @@
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                  Number of Student: ........ Female: ........</p>
-                              <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  Number of Student: <a id="TotalSsJan" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a> <a style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">Female:</a>
+                                  <a id="TotalSFJan" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a>
+                                                                <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   
-                                  Number of grades higher than the average: ........ Female: ........</p>
-                              <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  Number of grades higher than the average: <a id="TotalSs2Jan" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a> <a style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">Female:</a>
+                                  <a id="TotalSF2Jan" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a></p>
+                                                                <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -555,6 +561,7 @@
                     <h5 class="modal-title" id="exampleModalLabel">Print</h5>
                     <button onclick="myFeb()" class="btn2 btn-primary" type="button" style="background: var(--bs-green); margin-left: 15px;">Print<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button>
                     <button onclick="saveFeb()" class="btn2 btn-primary" type="button" style="background: var(--bs-red); margin-left: 15px;">Save<i i class="bi bi-cloud-download" style="padding-left: 5px;"></i></button>
+                    <input type="button" value="Total St" id="btnTotalFeb"/>
      
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                       
@@ -612,15 +619,17 @@
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                  Number of Student: ........ Female: ........</p>
-                              <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  Number of Student: <a id="TotalSsFeb" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a> <a style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">Female:</a>
+                                  <a id="TotalSFFeb" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a>
+                                                                <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   
-                                  Number of grades higher than the average: ........ Female: ........</p>
-                              <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  Number of grades higher than the average: <a id="TotalSs2Feb" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a> <a style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">Female:</a>
+                                  <a id="TotalSF2Feb" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a></p>
+                                                                <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -672,7 +681,8 @@
                     <h5 class="modal-title" id="exampleModalLabel">Print</h5>
                     <button onclick="mySeOne()" class="btn2 btn-primary" type="button" style="background: var(--bs-green); margin-left: 15px;">Print<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button>
                     <button onclick="saveOne()" class="btn2 btn-primary" type="button" style="background: var(--bs-red); margin-left: 15px;">Save<i i class="bi bi-cloud-download" style="padding-left: 5px;"></i></button>
-      
+                    <input type="button" value="Total St" id="btnTotalFirSem"/>
+     
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                       
                     </button>
@@ -728,15 +738,17 @@
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                  Number of Student: ........ Female: ........</p>
-                              <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  Number of Student: <a id="TotalSsFirSem" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a> <a style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">Female:</a>
+                                  <a id="TotalSFFirSem" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a>
+                                                                <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   
-                                  Number of grades higher than the average: ........ Female: ........</p>
-                              <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  Number of grades higher than the average: <a id="TotalSs2FirSem" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a> <a style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">Female:</a>
+                                  <a id="TotalSF2FirSem" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a></p>
+                                                                <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -788,7 +800,7 @@
                     <h5 class="modal-title" id="exampleModalLabel">Print</h5>
                     <button onclick="mySeOneR()" class="btn2 btn-primary" type="button" style="background: var(--bs-green); margin-left: 15px;">Print<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button>
                     <button onclick="saveOneR()" class="btn2 btn-primary" type="button" style="background: var(--bs-red); margin-left: 15px;">Save<i i class="bi bi-cloud-download" style="padding-left: 5px;"></i></button>
-     
+                    <input type="button" value="Total St" id="btnTotalFirSemRe"/>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                       
                     </button>
@@ -845,15 +857,17 @@
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                  Number of Student: ........ Female: ........</p>
-                              <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  Number of Student: <a id="TotalSsFirSemRe" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a> <a style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">Female:</a>
+                                  <a id="TotalSFFirSemRe" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a>
+                                                                <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   
-                                  Number of grades higher than the average: ........ Female: ........</p>
-                              <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  Number of grades higher than the average: <a id="TotalSs2FirSemRe" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a> <a style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">Female:</a>
+                                  <a id="TotalSF2FirSemRe" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a></p>
+                                                                <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
