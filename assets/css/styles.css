@@ -917,17 +917,77 @@ table {
 
 #Eng{
   border-radius: 5px;
-  background-color: #3f2900;
+  background-color: transparent;
   color: #f1f1f1;
-  box-shadow: 2px 3px 4px;
+  border: 0;
+  box-shadow: 2px 5px 3px;
 }
 #Kh{
   border-radius: 5px;
-  background-color: #3f2900;
+  background-color: transparent;
   color: #f1f1f1;
-  box-shadow: 2px 3px 4px;
+  border: 0;
+  box-shadow: 2px 5px 3px;
+
 }
 #myBtnAddClose{
   color: white;
   background-color: white;
+}
+.title {
+  position: relative;
+}
+.img1{
+  width: 15%;
+  position: absolute;
+  top: 75%;
+  left: 70%;
+}
+.myTable{
+  font-size: 1.5vw;
+}
+#tbody3{
+  font-size: 1.5vw;
+}
+#tbody4{
+  font-size: 1.5vw;
+}
+#tbody5{
+  font-size: 1.5vw;
+}
+#tbody6{
+  font-size: 1.5vw;
+}
+#tbody7{
+  font-size: 1.5vw;
+}
+#tbody8{
+  font-size: 1.5vw;
+}
+#tbody9{
+  font-size: 1.5vw;
+}
+#tbody10{
+  font-size: 1.5vw;
+}
+#tbody11{
+  font-size: 1.5vw;
+}
+#tbody18{
+  font-size: 1.5vw;
+}
+#tbody12{
+  font-size: 1.5vw;
+}
+#tbody13{
+  font-size: 1.5vw;
+}
+#tbody15{
+  font-size: 1.5vw;
+}
+#tbody16{
+  font-size: 1.5vw;
+}
+#tbody17{
+  font-size: 1.5vw;
 }
