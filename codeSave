@@ -309,14 +309,14 @@ result = array.reduce(function(M, F) { return M + parseFloat(F); }, 0);
 console.log(array);
 console.log(result);
 
-<input class="myTotalBtn" type="button" value="Total St" id="btnTotalOct"/>
+<input class="btn2 btn-primary" type="button" value="Total St" id="btnTotalAnnYear"/>
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Number of Student: <a id="TotalSsOct" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a> <a style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">Female:</a>
-<a id="TotalSFOct" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a>
+Number of Student: <a id="TotalSsAnnYear" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a> <a style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">Female:</a>
+<a id="TotalSFAnnYear" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   
-Number of grades higher than the average: <a id="TotalSs2Oct" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a> <a style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">Female:</a>
-<a id="TotalSF2Oct" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a></p>
+Number of grades higher than the average: <a id="TotalSs2AnnYear" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a> <a style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">Female:</a>
+<a id="TotalSF2AnnYear" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a></p>

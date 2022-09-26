@@ -106,9 +106,9 @@ $(document).ready(function ()
     {
         getOccurance(Sf);
         var rowCount = $("#tbody3 td").closest("tr").length;
-        var show = document.getElementById("TotalSs");
+        var show = document.getElementById("TotalSsNov");
         show.innerHTML = rowCount;
-        var show2 = document.getElementById("TotalSs2");
+        var show2 = document.getElementById("TotalSs2Nov");
         show2.innerHTML = rowCount;
 
 
@@ -125,9 +125,9 @@ $(document).ready(function ()
 
         });
 
-        var show = document.getElementById("TotalSF");
+        var show = document.getElementById("TotalSFNov");
         show.innerHTML = noOfOccurance;
-        var show3 = document.getElementById("TotalSF2");
+        var show3 = document.getElementById("TotalSF2Nov");
         show3.innerHTML = noOfOccurance;
 
     }
@@ -251,9 +251,9 @@ $(document).ready(function ()
     {
         getOccurance(Sf);
         var rowCount = $("#tbody7 td").closest("tr").length;
-        var show = document.getElementById("TotalSsFirSem");
+        var show = document.getElementById("TotalSsFirstSeme");
         show.innerHTML = rowCount;
-        var show2 = document.getElementById("TotalSs2FirSem");
+        var show2 = document.getElementById("TotalSs2FirstSeme");
         show2.innerHTML = rowCount;
 
 
@@ -270,9 +270,9 @@ $(document).ready(function ()
 
         });
 
-        var show = document.getElementById("TotalSFFirSem");
+        var show = document.getElementById("TotalSFFirstSeme");
         show.innerHTML = noOfOccurance;
-        var show3 = document.getElementById("TotalSF2FirSem");
+        var show3 = document.getElementById("TotalSF2FirstSeme");
         show3.innerHTML = noOfOccurance;
 
     }
@@ -287,9 +287,9 @@ $(document).ready(function ()
     {
         getOccurance(Sf);
         var rowCount = $("#tbody8 td").closest("tr").length;
-        var show = document.getElementById("TotalSsFirSemRe");
+        var show = document.getElementById("TotalSsFirstSemeR");
         show.innerHTML = rowCount;
-        var show2 = document.getElementById("TotalSs2FirSemRe");
+        var show2 = document.getElementById("TotalSs2FirstSemeR");
         show2.innerHTML = rowCount;
 
 
@@ -306,9 +306,9 @@ $(document).ready(function ()
 
         });
 
-        var show = document.getElementById("TotalSFFirSemRe");
+        var show = document.getElementById("TotalSFFirstSemeR");
         show.innerHTML = noOfOccurance;
-        var show3 = document.getElementById("TotalSF2FirSemRe");
+        var show3 = document.getElementById("TotalSF2FirstSemeR");
         show3.innerHTML = noOfOccurance;
 
     }
@@ -463,9 +463,9 @@ $(document).ready(function ()
     {
         getOccurance(Sf);
         var rowCount = $("#tbody12 td").closest("tr").length;
-        var show = document.getElementById("TotalSsSeTwo");
+        var show = document.getElementById("TotalSsSeSeme");
         show.innerHTML = rowCount;
-        var show2 = document.getElementById("TotalSs2SeTwo");
+        var show2 = document.getElementById("TotalSs2SeSeme");
         show2.innerHTML = rowCount;
 
 
@@ -482,9 +482,9 @@ $(document).ready(function ()
 
         });
 
-        var show = document.getElementById("TotalSFSeTwo");
+        var show = document.getElementById("TotalSFSeSeme");
         show.innerHTML = noOfOccurance;
-        var show3 = document.getElementById("TotalSF2SeTwo");
+        var show3 = document.getElementById("TotalSF2SeSeme");
         show3.innerHTML = noOfOccurance;
 
     }
@@ -498,9 +498,9 @@ $(document).ready(function ()
     {
         getOccurance(Sf);
         var rowCount = $("#tbody13 td").closest("tr").length;
-        var show = document.getElementById("TotalSsSeTwoR");
+        var show = document.getElementById("TotalSsSeSemeR");
         show.innerHTML = rowCount;
-        var show2 = document.getElementById("TotalSs2SeTwoR");
+        var show2 = document.getElementById("TotalSs2SeSemeR");
         show2.innerHTML = rowCount;
 
 
@@ -517,9 +517,9 @@ $(document).ready(function ()
 
         });
 
-        var show = document.getElementById("TotalSFSeTwoR");
+        var show = document.getElementById("TotalSFSeSemeR");
         show.innerHTML = noOfOccurance;
-        var show3 = document.getElementById("TotalSF2SeTwoR");
+        var show3 = document.getElementById("TotalSF2SeSemeR");
         show3.innerHTML = noOfOccurance;
 
     }
@@ -533,9 +533,9 @@ $(document).ready(function ()
     {
         getOccurance(Sf);
         var rowCount = $("#tbody15 td").closest("tr").length;
-        var show = document.getElementById("TotalSsAnYear");
+        var show = document.getElementById("TotalSsAnnYear");
         show.innerHTML = rowCount;
-        var show2 = document.getElementById("TotalSs2AnYear");
+        var show2 = document.getElementById("TotalSs2AnnYear");
         show2.innerHTML = rowCount;
 
 
@@ -552,9 +552,9 @@ $(document).ready(function ()
 
         });
 
-        var show = document.getElementById("TotalSFAnYear");
+        var show = document.getElementById("TotalSFAnnYear");
         show.innerHTML = noOfOccurance;
-        var show3 = document.getElementById("TotalSF2AnYear");
+        var show3 = document.getElementById("TotalSF2AnnYear");
         show3.innerHTML = noOfOccurance;
 
     }
