@@ -440,6 +440,7 @@ function addItemsToTable(name,id,sex,grade,speaking,writing,listening,
 
 
 
+
   stdList.push([name,id,sex,grade,speaking,writing,listening,
     reading,average,rank,speakingNov,writingNov,listeningNov,
     readingNov,averageNov,rankNOv,speakingDec,writingDec,listeningDec,
@@ -476,6 +477,23 @@ function addItemsToTable(name,id,sex,grade,speaking,writing,listening,
   tbody.appendChild(trow);
 }
 
+$(function(){
+  $('input[name="rad"]').click(function(){
+      var $radio = $(this);
+      
+      // if this was previously checked
+      if ($radio.data('waschecked') == true)
+      {
+          $radio.prop('checked', false);
+          $radio.data('waschecked', false);
+      }
+      else
+          $radio.data('waschecked', true);
+      
+      // remove was checked from other radios
+      $radio.siblings('input[name="rad"]').data('waschecked', false);
+  });
+});
 
 var Mname = document.getElementById('myName');
 var Mid = document.getElementById('myID');
@@ -1591,3 +1609,11 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+function myPicAdd(){
+  var img = document.getElementById("imgView");
+  var inputLink = document.getElementById("picLink");
+  var getLink = inputLink.value;
+  img.src = getLink;
+}
+window.onload = myPicAdd;

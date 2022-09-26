@@ -991,3 +991,13 @@ table {
 #tbody17{
   font-size: 1.5vw;
 }
+.StPic{
+  padding: 5px;
+  width: 13rem;
+  border-radius: 15px;
+}
+.PicContener{
+  text-align: center;
+  align-items: center;
+
+}
