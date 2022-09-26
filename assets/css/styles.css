@@ -927,3 +927,7 @@ table {
   color: #f1f1f1;
   box-shadow: 2px 3px 4px;
 }
+#myBtnAddClose{
+  color: white;
+  background-color: white;
+}
