@@ -10,7 +10,7 @@ const firebaseConfig = {
   
   firebase.initializeApp(firebaseConfig);
 
-  var my5aAll = firebase.database().ref('5aAllData');
+  var my5bAll = firebase.database().ref('5bAllData');
   function submitForm(e){
     e.preventDefault();
     var name = getElementVal('myName');
@@ -38,7 +38,7 @@ const saveData = (name,id,sex,grade,
   address,phone1,phone2,
   facebook1,facebook2,email,
   comment,linkUrl,myKh) => {
-    var newData = my5aAll.push();
+    var newData = my5bAll.push();
     newData.set({
         name: name,
         id: id,
@@ -61,7 +61,7 @@ const saveData = (name,id,sex,grade,
 function selectAllData(){
   document.getElementById('tbody5A').innerHTML="";
   studentN0=0;
-  firebase.database().ref('5aAllData').once('value',
+  firebase.database().ref('5bAllData').once('value',
   function(AllRecords){
     AllRecords.forEach(
       function(CurrentRecord){
@@ -88,6 +88,7 @@ function selectAllData(){
   });
 }
 window.onload = selectAllData;
+
 var studentN0;
 var stdList = [];
 function addItemsToTable(name,id,sex,grade,
@@ -171,10 +172,12 @@ var BtnClearAll = document.getElementById('myClearAll');
 
 
 function Fillbox(index){
+
   if(index==null){
     BtnSubmit.style.display='inline-block';
     BtnUpdate.style.display='none';
     BtnDele.style.display='none';
+
   }
   else{
     --index;
@@ -192,6 +195,7 @@ function Fillbox(index){
     MlinkUrl.value = stdList[index][11];
     MmyKh.value = stdList[index][12];
     myPicAdd();
+
     BtnSubmit.style.display='none';
     BtnUpdate.style.display='inline-block';
     BtnDele.style.display='inline-block';
@@ -199,6 +203,7 @@ function Fillbox(index){
 
   }
 }
+
 function NewBox(){
     BtnSubmit.style.display='inline-block';
     BtnUpdate.style.display='none';
@@ -233,7 +238,7 @@ function NewBox(){
 }
 
 function AddStd(){
-  firebase.database().ref("5aAllData/"+Mid.value).set(
+  firebase.database().ref("5bAllData/"+Mid.value).set(
     {
       name: Mname.value,
       id: Mid.value,
@@ -255,7 +260,7 @@ function AddStd(){
 
 }
 function UpStd(){
-  firebase.database().ref("5aAllData/"+Mid.value).update(
+  firebase.database().ref("5bAllData/"+Mid.value).update(
     {
       name: Mname.value,
       id: Mid.value,
@@ -279,7 +284,7 @@ function UpStd(){
 }
 
 function DelStd(){
-  firebase.database().ref("5aAllData/"+Mid.value).remove().then(
+  firebase.database().ref("5bAllData/"+Mid.value).remove().then(
     function(){
       selectAllData();
       window.location.reload();
@@ -288,7 +293,7 @@ function DelStd(){
   )
 }
 function DelStdAll(){
-  firebase.database().ref("5aAllData").remove();
+  firebase.database().ref("5bAllData").remove();
 
       window.location.reload();
 }
@@ -350,7 +355,9 @@ function myPicAdd(){
     img.src = getLink;
   }
 }
-
 $("input[name='phone']").keyup(function() {
   $(this).val($(this).val().replace(/^(\d{3})(\d{3})(\d+)$/, "($1)$2-$3"));
 });
+function mymy(){
+  console.log("Hi my boy");
+}
