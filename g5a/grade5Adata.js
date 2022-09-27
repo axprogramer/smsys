@@ -1616,4 +1616,3 @@ function myPicAdd(){
   var getLink = inputLink.value;
   img.src = getLink;
 }
-window.onload = myPicAdd;

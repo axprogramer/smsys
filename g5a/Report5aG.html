@@ -64,8 +64,16 @@
                         <th>ID</th>
                         <th>Sex</th>
                         <th>Grade</th>
+                        <th>Address</th>
+                        <th>Phone 1</th>
+                        <th>Phone 2</th>
+                        <th>Facebook 1</th>
+                        <th>Facebook 2</th>
+                        <th>Email</th>
+                        <th>Comment</th>
+
                 </thead>
-                <tbody id="tbody1">
+                <tbody id="tbody5A">
                 </tbody>
             </table>
         </div>
@@ -83,7 +91,9 @@
             <form id="contactForm" name="sentMessage" novalidate="novalidate">
                 <div class="PicContener">
                     <img src="" class="StPic" id="imgView">
-                    <input type="text" id="picLink" onclick="myPicAdd()" placeholder="Link Picture">
+                </div>
+                <div class="control-group">
+                    <input class="form-control " type="text" id="picLink" onclick="myPicAdd()" placeholder="Link Picture" style="font-size: 14px;font-weight: bold;color: #ffffff; background-color: rgb(31, 29, 29);">
                 </div>
                 <div class="control-group">
                     <div class="mb-0 form-floating controls pb-2"><input class="form-control" type="text" id="myName" required="" placeholder="Name" style="font-size: 14px;font-weight: bold;color: #ffffff; height: 45px;background-color: rgb(31, 29, 29);"><label class="form-label" style="color: #ffffff;font-size: 14px;font-family: 'Comic Neue', serif;">Full Name</label><small class="form-text text-danger help-block"></small></div>
@@ -93,21 +103,31 @@
                 <div class="row" style="padding-top: 15px;">
                     <div class="col">
                         <div class="control-group">
-                            <div class="mb-0 form-floating pb-2 myfix"><input class="form-control" type="text" id="myID" required="" placeholder="ID" style="color: #7d4e39; height: 45px;"><label class="form-label" style="font-size: 14px;color: #7d4e39;font-family: 'Comic Neue', serif;">ID</label><small class="form-text text-danger help-block"></small></div>
+                            <div class="mb-0 form-floating pb-2 myfix"><input class="form-control" type="text" id="myID" required="" placeholder="ID" style="font-size: 14px;font-weight: bold;color: #ffffff; height: 45px;background-color: rgb(31, 29, 29);"><label class="form-label" style="font-size: 14px;color: #ffffff;font-family: 'Comic Neue', serif;">ID</label><small class="form-text text-danger help-block"></small></div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="control-group" style="text-align: center;"><select class="form-select" id="mySex" style="height: 58px;color: #7d4e39;font-size: 14px; height: 45px;">
+                        <div class="control-group" style="text-align: center;"><select class="form-select" id="mySex" style="font-size: 14px;font-weight: bold;color: #ffffff; height: 45px;background-color: rgb(31, 29, 29);">
                                 <option value="M">M</option>
                                 <option value="F">F</option>
                             </select></div>
                     </div>
                     <div class="col">
-                      <div class="control-group" style="text-align: center;"><select class="form-select" id="myGrade" style="height: 58px;color: #7d4e39;font-size: 14px; height: 45px;">
+                      <div class="control-group" style="text-align: center;"><select class="form-select" id="myGrade" style="font-size: 14px;font-weight: bold;color: #ffffff; height: 45px;background-color: rgb(31, 29, 29);">
                               <option value="5A">5A</option>
                               <option value="5B">5B</option>
                           </select></div>
                   </div>
+                  <div class="control-group">
+                    <div class="mb-0 form-floating controls pb-2"><input class="form-control" type="text" id="myAddress" required=""  style="font-size: 14px;font-weight: bold;color: #ffffff; height: 45px;background-color: rgb(31, 29, 29);"><label class="form-label" style="color: #ffffff;font-size: 14px;font-family: 'Comic Neue', serif;">Address</label><small class="form-text text-danger help-block"></small></div>
+                    <div class="mb-0 form-floating controls pb-2"><input class="form-control" type="text" name="phone" id="myPhone1" required="" style="font-size: 14px;font-weight: bold;color: #ffffff; height: 45px;background-color: rgb(31, 29, 29);"><label class="form-label" style="color: #ffffff;font-size: 14px;font-family: 'Comic Neue', serif;">Phone Number 1</label><small class="form-text text-danger help-block"></small></div>
+                    <div class="mb-0 form-floating controls pb-2"><input class="form-control" type="text" name="phone" id="myPhone2" required="" style="font-size: 14px;font-weight: bold;color: #ffffff; height: 45px;background-color: rgb(31, 29, 29);"><label class="form-label" style="color: #ffffff;font-size: 14px;font-family: 'Comic Neue', serif;">Phone Number 2</label><small class="form-text text-danger help-block"></small></div>
+                    <div class="mb-0 form-floating controls pb-2"><input class="form-control" type="text" name="facebook" id="myFacebook1" required="" style="font-size: 14px;font-weight: bold;color: #ffffff; height: 45px;background-color: rgb(31, 29, 29);"><label class="form-label" style="color: #ffffff;font-size: 14px;font-family: 'Comic Neue', serif;">Facebook 1</label><small class="form-text text-danger help-block"></small></div>
+                    <div class="mb-0 form-floating controls pb-2"><input class="form-control" type="text" name="facebook" id="myFacebook2" required="" style="font-size: 14px;font-weight: bold;color: #ffffff; height: 45px;background-color: rgb(31, 29, 29);"><label class="form-label" style="color: #ffffff;font-size: 14px;font-family: 'Comic Neue', serif;">Facebook 2</label><small class="form-text text-danger help-block"></small></div>
+                    <div class="mb-0 form-floating controls pb-2"><input class="form-control" type="email" name="email" id="myEmail" required="" style="font-size: 14px;font-weight: bold;color: #ffffff; height: 45px;background-color: rgb(31, 29, 29);"><label class="form-label" style="color: #ffffff;font-size: 14px;font-family: 'Comic Neue', serif;">E-mail</label><small class="form-text text-danger help-block"></small></div>
+                    <div class="mb-0 form-floating controls pb-2"><textarea cols="10" rows="10" class="form-control" type="text" name="Comment1" id="myComment" required="" style="font-size: 14px;font-weight: bold;color: #ffffff; height: auto;background-color: rgb(31, 29, 29);"></textarea><label class="form-label" style="color: #ffffff;font-size: 14px;font-family: 'Comic Neue', serif;">Comment</label><small class="form-text text-danger help-block"></small></div>
+                </div>
+
                   <div class="btnCon">
                     <button id="mySubmit" onclick="AddStd()" class="button-88" role="button" type="submit">Submit<i class="bi bi-cloud-download-fill" style="padding-left: 5px;"></i></button>
                     <button id="myUpdate" onclick="UpStd()" class="button-88" role="button"name="update_data" >Update<i class="bi bi-arrow-bar-up" style="padding-left: 5px;"></i></button>
@@ -132,23 +152,7 @@
 <script src="../assets/js/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="../assets/js/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="../assets/js/bootstrap4.0.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="./print/grade5A/18July.js"></script>
-<script src="./print/grade5A/17KhmerTwo.js"></script>
-<script src="./print/grade5A/15Annual.js"></script>
-<script src="./print/grade5A/14KhmerOne.js"></script>
-<script src="./print/grade5A/012SeTwoR.js"></script>
-<script src="./print/grade5A/11SeTwo.js"></script>
-<script src="./print/grade5A/11SeTwo.js"></script>
-<script src="./print/grade5A/10June.js"></script>
-<script src="./print/grade5A/09May.js"></script>
-<script src="./print/grade5A/08March.js"></script>
-<script src="./print/grade5A/07SeOneR.js"></script>
-<script src="./print/grade5A/06SeOne.js"></script><script src="./print/grade5A/05Feb.js"></script>
-<script src="./print/grade5A/04Jan.js"></script>
-<script src="./print/grade5A/03Dec.js"></script>
-<script src="./print/grade5A/02Nov.js"></script>
-<script src="./print/grade5A/01Oct.js"></script>
-<script src="./grade5Adata.js"></script>
+<script src="./asset/js/stInfo5A.js"></script>
 <script src="./asset/js/search5a.js"></script>
 </body>
 </html>

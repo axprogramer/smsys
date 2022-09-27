@@ -320,3 +320,14 @@ Number of Student: <a id="TotalSsAnnYear" style="margin-bottom:0in;line-height:1
                                   
 Number of grades higher than the average: <a id="TotalSs2AnnYear" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a> <a style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">Female:</a>
 <a id="TotalSF2AnnYear" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a></p>
+
+
+address: address,
+phone1: phone1,
+phone2: phone2,
+facebook1: facebook1,
+facebook2: facebook2,
+email: email,
+//November
+comment: comment,
+linkUrl: linkUrl,
