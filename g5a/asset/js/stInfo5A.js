@@ -354,3 +354,13 @@ function myPicAdd(){
 $("input[name='phone']").keyup(function() {
   $(this).val($(this).val().replace(/^(\d{3})(\d{3})(\d+)$/, "($1)$2-$3"));
 });
+
+$('#tbody5A').find('th, td').each(function(){
+  if(!this.previousElementSibling){ //New Row?
+      row = [];
+      results.push(row);
+  }
+  if(!(this.textContent == '')){
+      row.push(this.textContent || this.innerText);            
+  }
+}); 
