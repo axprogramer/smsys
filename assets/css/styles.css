@@ -463,9 +463,9 @@ table {
   font-family: 'Bebas Neue', sans-serif;
   background: linear-gradient(45deg, transparent 5%, #0145ff 5%);
   border: 0;
-  color: rgb(255, 60, 1);
+  color: rgb(255, 255, 255);
   letter-spacing: 3px;
-  box-shadow: 6px 0px 0px #f60000;
+  box-shadow: 6px 0px 0px #0099ff;
   outline: transparent;
   position: relative;
   user-select: none;
@@ -488,8 +488,8 @@ table {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent 3%, #e8f805 3%, #e8f805 5%, #f82105 5%);
-  text-shadow: -3px -3px 0px #f82105, 3px 3px 0px #e8f805;
+  background: linear-gradient(45deg, transparent 3%, #e8f805 3%, #e8f805 5%, #0145ff 5%);
+  text-shadow: -3px -3px 0px #0145ff, 3px 3px 0px #e8f805;
   clip-path: var(--slice-0);
 }
 
@@ -640,7 +640,7 @@ table {
   border: 0;
   color: rgb(18, 1, 255);
   letter-spacing: 3px;
-  box-shadow: 6px 0px 0px #f60000;
+  box-shadow: 6px 0px 0px #ffae00;
   outline: transparent;
   position: relative;
   user-select: none;
