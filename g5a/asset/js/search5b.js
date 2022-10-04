@@ -2,7 +2,7 @@ function tableSearchEng(){
     let input, filter, table, tr, td, textValue;
     input = document.getElementById("myInputEn");
     filter = input.value.toUpperCase();
-    table = document.getElementById("tbody1");
+    table = document.getElementById("tbody5A");
     tr = table.getElementsByTagName("tr");
 
     for (let i = 0; i < tr.length; i++){
@@ -26,7 +26,7 @@ function tableSearchKh(){
     let input, filter, table, tr, td, textValue;
     input = document.getElementById("myInputKh");
     filter = input.value.toUpperCase();
-    table = document.getElementById("tbody1");
+    table = document.getElementById("tbody5A");
     tr = table.getElementsByTagName("tr");
 
     for (let i = 0; i < tr.length; i++){
