@@ -52,6 +52,9 @@
         <div style="padding-top: 25px;">
     </div>
     <button class="button-90"  type="button" data-toggle="modal" data-target="#exampleModal" onclick="NewBox()">(+) New<i class="fa fa-address-card" style="padding-left: 5px;"></i></button>
+    <button class="button-90"  type="button" onclick="myPrintG5B()">Print<i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button>
+    <button class="button-90"  type="button" onclick="mySaveG5B()">Save<i class="bi bi-cloud-download-fill" style="padding-left: 5px;"></i></button>
+
     </div>
     <div class="mySearch5a">
         <input type="text" id="myInputEn" class="mySearch" placeholder="Search English" onkeyup="tableSearchEng()">
@@ -61,9 +64,9 @@
 
     </div> 
     <!--Table Show Data-->
-    <div>
+    <div id="myStinfo5b">
         <div class="table-responsive" style="padding: 20px;">
-            <table class="table-responsive table-bordered table-sortable border-secondary text-center" id="input5aOct" data-filter-control="true" data-show-search-clear-button="true">
+            <table class="table-responsive table-bordered table-sortable border-secondary text-center" id="mySaveinfo5b" data-filter-control="true" data-show-search-clear-button="true">
                 <thead class="table-success border-secondary" id="myShowingTA">
                     <th style="width: 5vh;">N0</th>
                         <th class="name">Full Name</th>
@@ -161,5 +164,6 @@
 <script src="../assets/js/bootstrap4.0.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="./asset/js/stInfo5B.js"></script>
 <script src="./asset/js/search5b.js"></script>
+<script src="./print/grade5A/stdinfo5a.js"></script>
 </body>
 </html>

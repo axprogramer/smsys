@@ -1118,10 +1118,28 @@ table {
 
 }
 #tbody5A td:nth-child(7){
-  width: 35vh;
+  width: 20vh;
+
+}
+
+#tbody5A td:nth-child(8){
+  width: 20vh;
+
+}
+#tbody5A td:nth-child(9){
+  width: 20vh;
 
 }
 
 .button-6{
-  width: 25vh;
+  width: auto;
+}
+#tbody1 td:nth-child(2){
+  text-align: left;
+  padding: 5px;
+}
+
+#tbody1 td:nth-child(3){
+  text-align: left;
+  padding: 5px;
 }

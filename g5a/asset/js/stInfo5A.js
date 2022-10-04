@@ -146,6 +146,8 @@ function addItemsToTable(name,id,sex,grade,
   trow.appendChild(td12);
 
   td1.innerHTML = `<button type="button" class="button-6" role="button" data-toggle="modal" data-target="#exampleModal" onclick="Fillbox(${studentN0})">${name}</button>`;
+  td2.innerHTML = `<button type="button" class="button-6" role="button" data-toggle="modal" data-target="#exampleModal" onclick="Fillbox(${studentN0})">${myKh}</button>`;
+
   tbody.appendChild(trow);
 }
 
