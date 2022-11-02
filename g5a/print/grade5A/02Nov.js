@@ -71,7 +71,8 @@ function myPrintNov(){
         .reduce(function(a, b) {if (b != a[0]) a.unshift(b);return a}, [])
       //Assign rank
       totalList.forEach((v, i) => {
-        $('.myScoreNov').filter(function() {return $(this).text() == v;}).next().text(i + 1);
+        $('.myScoreNov').filter(function() {
+          return $(this).text() == v;}).next().text(i + 1);
       })
     });
 
