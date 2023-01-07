@@ -172,7 +172,7 @@ table {
   color: red;
 }
 #tbody7 td:nth-child(8){
-  font-size: 12px;
+  text-align: center;
   color: red;
 }
 
@@ -271,7 +271,7 @@ table {
   color: red;
 }
 #tbody13 td:nth-child(9){
-  font-size: 12px;
+  text-align: center;
   color: red;
 }
 

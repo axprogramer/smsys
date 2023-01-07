@@ -48,114 +48,18 @@
       var last = parseFloat(my1Sa) + parseFloat(my2Sa);
       var finall = parseFloat(last) / 2;
       var my = parseFloat(finall);
-      if(my < 5){
-        td7.innerHTML = "Poor";
-      }else if(my == 5){
-        td7.innerHTML = "Faily Good";
-      }else if(my == 5.1){
-        td7.innerHTML = "Faily Good";
-      }else if(my == 5.2){
-        td7.innerHTML = "Faily Good";
-      }else if(my == 5.3){
-        td7.innerHTML = "Faily Good";
-      }else if(my == 5.4){
-        td7.innerHTML = "Faily Good";
-      }else if(my == 5.5){
-        td7.innerHTML = "Faily Good";
-      }else if(my == 5.6){
-        td7.innerHTML = "Faily Good";
-      }else if(my == 5.7){
-        td7.innerHTML = "Faily Good";
-      }else if(my == 5.8){
-        td7.innerHTML = "Faily Good";
-      }else if(my == 5.9){
-        td7.innerHTML = "Faily Good";
-      }else if(my == 6){
-        td7.innerHTML = "Faily Good";
-      }else if(my == 6.1){
-        td7.innerHTML = "Faily Good";
-      }else if(my == 6.2){
-        td7.innerHTML = "Faily Good";
-      }else if(my == 6.3){
-        td7.innerHTML = "Faily Good";
-      }else if(my == 6.4){
-        td7.innerHTML = "Faily Good";
-      }
-      else if(my == 6.5){
-        td7.innerHTML = "Good";
-      }else if(my == 6.6){
-        td7.innerHTML = "Good";
-      }else if(my == 6.7){
-        td7.innerHTML = "Good";
-      }else if(my == 6.8){
-        td7.innerHTML = "Good";
-      }else if(my == 6.9){
-        td7.innerHTML = "Good";
-      }else if(my == 7){
-        td7.innerHTML = "Good";
-      }else if(my == 7.1){
-        td7.innerHTML = "Good";
-      }else if(my == 7.2){
-        td7.innerHTML = "Good";
-      }else if(my == 7.3){
-        td7.innerHTML = "Good";
-      }else if(my == 7.4){
-        td7.innerHTML = "Good";
-      }else if(my == 7.5){
-        td7.innerHTML = "Good";
-      }else if(my == 7.6){
-        td7.innerHTML = "Good";
-      }else if(my == 7.7){
-        td7.innerHTML = "Good";
-      }else if(my == 7.8){
-        td7.innerHTML = "Good";
-      }else if(my == 7.9){
-        td7.innerHTML = "Good";
-      }
-      else if(my == 8){
-        td7.innerHTML = "Vary Good";
-      }else if(my == 8.1){
-        td7.innerHTML = "Vary Good";
-      }else if(my == 8.2){
-        td7.innerHTML = "Vary Good";
-      }else if(my == 8.3){
-        td7.innerHTML = "Vary Good";
-      }else if(my == 8.4){
-        td7.innerHTML = "Vary Good";
-      }else if(my == 8.5){
-        td7.innerHTML = "Vary Good";
-      }else if(my == 8.6){
-        td7.innerHTML = "Vary Good";
-      }else if(my == 8.7){
-        td7.innerHTML = "Vary Good";
-      }else if(my == 8.8){
-        td7.innerHTML = "Vary Good";
-      }else if(my == 8.9){
-        td7.innerHTML = "Vary Good";
-      }else if(my == 9){
-        td7.innerHTML = "Vary Good";
-      }else if(my == 9.1){
-        td7.innerHTML = "Vary Good";
-      }else if(my == 9.2){
-        td7.innerHTML = "Vary Good";
-      }else if(my == 9.3){
-        td7.innerHTML = "Vary Good";
-      }else if(my == 9.4){
-        td7.innerHTML = "Vary Good";
-      }
-      else if(my == 9.5){
-        td7.innerHTML = "Excellent";
-      }else if(my == 9.6){
-        td7.innerHTML = "Excellent";
-      }else if(my == 9.7){
-        td7.innerHTML = "Excellent";
-      }else if(my == 9.8){
-        td7.innerHTML = "Excellent";
-      }else if(my == 9.9){
-        td7.innerHTML = "Excellent";
-      }else if(my == 10){
-        td7.innerHTML = "Excellent";
-      }
+      if(my <=5){
+        td7.innerHTML = "Poor"
+    }else if(my <=6.4){
+        td7.innerHTML = "Faily Good"
+    }else if(my <=7.9){
+        td7.innerHTML = "Good"
+    }else if(my <=9.4){
+        td7.innerHTML = "Very Good"
+    }else if(my <=10){
+        td7.innerHTML = "Excellent"
+    }
+
       td0.innerHTML = ++stdNumber;
       td1.innerHTML = name;
       td2.innerHTML = sex;
