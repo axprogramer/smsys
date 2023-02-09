@@ -557,7 +557,9 @@ table {
 #myShowingTA{
   background-color: #242431;
   color: #f3bf7b;
+  width: auto;
 }
+
 #tbody1{
   font-family: 'Times New Roman', Times, serif;
 }
@@ -567,6 +569,7 @@ table {
 #myShowingTB{
   background-color: #242431;
   color: #f3bf7b;
+  width: auto;
 }
 
 .button-90 {
