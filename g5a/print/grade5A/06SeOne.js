@@ -104,3 +104,4 @@ function myPrintSeOne(){
       XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):
       XLSX.writeFile(wb, fn || ('Grade 5A 1st Semester.' + (type || 'xlsx')));
   }
+  
