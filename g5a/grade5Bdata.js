@@ -1336,6 +1336,7 @@ function adder5() {
 function adder6() {
   var num5 = parseFloat(document.getElementById('my1Se').value);
   var total1 = num5 / 4;
+  total1 = parseFloat(total1).toFixed(2);
   document.getElementById("my1Sa").value = total1;
 
 }
@@ -1346,6 +1347,7 @@ function adder7() {
 
   var get2 = num5 + num6;
   var total1 = get2 / 2;
+  total1 = parseFloat(total1).toFixed(2);
   document.getElementById("my1SaR").value = total1;
 
 }
@@ -1459,6 +1461,7 @@ function adder11() {
 function adder12() {
   var num5 = parseFloat(document.getElementById('my2Se').value);
   var total1 = num5 / 4;
+  total1 = parseFloat(total1).toFixed(2);
   document.getElementById("my2Sa").value = total1;
 
 }
@@ -1469,6 +1472,7 @@ function adder13() {
 
   var get2 = num5 + num6;
   var total1 = get2 / 2;
+  total1 = parseFloat(total1).toFixed(2);
   document.getElementById("my2SaR").value = total1;
 
 }
