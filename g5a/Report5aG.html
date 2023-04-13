@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comic+Neue&amp;display=swap">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="../assets/fonts/fontawesome5-overrides.min.css">
@@ -24,7 +26,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid navHome">
-          <a class="navbar-brand" href="../index.html">SM Sys</a>
+          <a class="navbar-brand" href="../index.html"id="subtitle">SM Sys</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -54,7 +56,7 @@
         </div>
       </nav>  
       <div class="myAddBtn">
-        <h1 style="padding-top: 25px;">Student Information<br>GRADE 5A</h1>
+        <h1 style="padding-top: 25px;"id="subtitle"class="neonText">Student Information<br>GRADE 5A</h1>
         <div style="padding-top: 25px;">
     </div>
     <button class="button-90"  type="button" data-toggle="modal" data-target="#exampleModal" onclick="NewBox()">(+) New<i class="fa fa-address-card" style="padding-left: 5px;"></i></button>
@@ -73,7 +75,7 @@
     <!--Table Show Data-->
     <div id="myStinfo5a"> 
         <div class="table-responsive" style="padding: 20px;">
-            <table class="table-responsive table-bordered table-sortable border-secondary text-center" id="mySaveinfo5a" data-filter-control="true" data-show-search-clear-button="true">
+            <table class="freeze table-responsive table-bordered table-sortable border-secondary text-center" id="mySaveinfo5a" data-filter-control="true" data-show-search-clear-button="true">
                 <thead id="myShowingTA">
                     <th>N0</th>
                         <th class="name">Full Name</th>

@@ -1248,3 +1248,49 @@ table {
   text-align: left;
   padding: 5px;
 }
+
+.freeze thead tr{
+  display:block;
+}
+
+.freeze th,.freeze td{
+  width: 50rem;
+}
+
+
+.freeze  tbody{
+display:block;
+height:22vw;
+overflow:auto;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+#subtitle{
+  font-family: 'DynaPuff', cursive;
+}
+/*NeonText*/
+.neonText {
+  animation: flicker 1.5s infinite alternate;
+  color: #000000;
+}
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #000000,
+      0 0 19px #000000,
+      0 0 40px #ff00ea,
+      0 0 80px #ff00ea,
+      0 0 90px #ff00ea,
+      0 0 100px #ff00ea,
+      0 0 150px #ff00ea;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
