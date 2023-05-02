@@ -284,6 +284,7 @@ table {
 }
 #tbody15 td:nth-child(8){
   color: red;
+  text-transform: uppercase;
 }
 #tbody16 td:nth-child(7){
   color: red;

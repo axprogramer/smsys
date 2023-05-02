@@ -6,76 +6,132 @@ function myPrintJan(){
     function(AllRecordsPrint){
       AllRecordsPrint.forEach(
         function(CurrentRecord){
-          var name = CurrentRecord.val().name;
-          var sex = CurrentRecord.val().sex;
-          var speakingJan = CurrentRecord.val().speakingJan;
-          var writingJan = CurrentRecord.val().writingJan;
-          var listeningJan = CurrentRecord.val().listeningJan;
-          var readingJan = CurrentRecord.val().readingJan;
-          var averageJan = CurrentRecord.val().averageJan;
-          var rankJan = CurrentRecord.val().rankJan;
+          // var name = CurrentRecord.val().name;
+          // var sex = CurrentRecord.val().sex;
+          // var speakingJan = CurrentRecord.val().speakingJan;
+          // var writingJan = CurrentRecord.val().writingJan;
+          // var listeningJan = CurrentRecord.val().listeningJan;
+          // var readingJan = CurrentRecord.val().readingJan;
+          // var averageJan = CurrentRecord.val().averageJan;
+          // var rankJan = CurrentRecord.val().rankJan;
                     
-          addItemsToJan(name,sex,speakingJan,writingJan,listeningJan,
-            readingJan,averageJan,rankJan);
+          // addItemsToJan(name,sex,speakingJan,writingJan,listeningJan,
+          //   readingJan,averageJan,rankJan);
             addClassJan();
         }
       );
-    });
-  }
-  
-  var stdNumber;
-  var stdListPrint = [];
-  function addItemsToJan(name,sex,speakingJan,writingJan,listeningJan,
-    readingJan,averageJan,rankJan){
-    var tbody = document.getElementById('tbody5');
-    var trow = document.createElement('tr');
-    var td0 = document.createElement('td');
-    var td1 = document.createElement('td');
-    var td2 = document.createElement('td');
-    var td3 = document.createElement('td');
-    var td4 = document.createElement('td');
-    var td5 = document.createElement('td');
-    var td6 = document.createElement('td');
-    var td7 = document.createElement('td');
-    var td8 = document.createElement('td');
-  
-    stdListPrint.push([name,sex,speakingJan,writingJan,listeningJan,
-      readingJan,averageJan,rankJan]);
-    td0.innerHTML = ++stdNumber;
-    td1.innerHTML = name;
-    td2.innerHTML = sex;
-    td3.innerHTML = speakingJan;
-    td4.innerHTML = writingJan;
-    td5.innerHTML = listeningJan;
-    td6.innerHTML = readingJan;
-    td7.innerHTML = averageJan;
-    td8.innerHTML = rankJan;
-  
-  
-    trow.appendChild(td0);
-    trow.appendChild(td1);
-    trow.appendChild(td2);
-    trow.appendChild(td3);
-    trow.appendChild(td4);
-    trow.appendChild(td5);
-    trow.appendChild(td6);
-    trow.appendChild(td7);
-    trow.appendChild(td8);
-    tbody.appendChild(trow);
-    $(function() {
-      //Get all total values, sort and remove duplicates
-      let totalList = $('.myScoreJan')
-        .map(function() {return $(this).text()})
-        .get()
-        .sort(function(a,b){return a - b })
-        .reduce(function(a, b) {if (b != a[0]) a.unshift(b);return a}, [])
-      //Assign rank
-      totalList.forEach((v, i) => {
-        $('.myScoreJan').filter(function() {return $(this).text() == v;}).next().text(i + 1);
-      })
-    });
+      GetData4(AllRecordsPrint);
 
+    });
   }
+  function GetData4(datas) {
+    let tbody = document.getElementById("tbody5");
+    let No = 0;
+    let students = [];
+  
+    datas.forEach((data) => {
+      var name = data.val().name;
+      var sex = data.val().sex;
+      var speakingJan = data.val().speakingJan;
+      var writingJan = data.val().writingJan;
+      var listeningJan = data.val().listeningJan;
+      var readingJan = data.val().readingJan;
+      var averageJan = data.val().averageJan;
+  
+      students.push({
+        name,
+        sex,
+        speakingJan,
+        writingJan,
+        listeningJan,
+        readingJan,
+        averageJan,
+      });
+    });
+  
+    students.sort((a, b) => b.averageJan - a.averageJan);
+  
+    for (let i = 0; i < students.length; i++) {
+      let avg = students[i].averageJan;
+      let studentsWithRank = students.filter(
+        (student) => student.averageJan === avg
+      );
+      for (let student of studentsWithRank) {
+        student.Rank = i + 1;
+      }
+      i += studentsWithRank.length - 1;
+    }
+  
+    students.forEach((student) => {
+      No++;
+      let tr = `
+              <td>${No}</td>
+              <td>${student.name}</td>
+              <td>${student.sex}</td>
+              <td>${student.speakingJan}</td>
+              <td>${student.writingJan}</td>
+              <td>${student.listeningJan}</td>
+              <td>${student.readingJan}</td>
+              <td>${student.averageJan}</td>
+              <td>${student.Rank}</td>
+      `;
+      tbody.innerHTML += tr;
+    });
+  }
+  
+  // var stdNumber;
+  // var stdListPrint = [];
+  // function addItemsToJan(name,sex,speakingJan,writingJan,listeningJan,
+  //   readingJan,averageJan,rankJan){
+  //   var tbody = document.getElementById('tbody5');
+  //   var trow = document.createElement('tr');
+  //   var td0 = document.createElement('td');
+  //   var td1 = document.createElement('td');
+  //   var td2 = document.createElement('td');
+  //   var td3 = document.createElement('td');
+  //   var td4 = document.createElement('td');
+  //   var td5 = document.createElement('td');
+  //   var td6 = document.createElement('td');
+  //   var td7 = document.createElement('td');
+  //   var td8 = document.createElement('td');
+  
+  //   stdListPrint.push([name,sex,speakingJan,writingJan,listeningJan,
+  //     readingJan,averageJan,rankJan]);
+  //   td0.innerHTML = ++stdNumber;
+  //   td1.innerHTML = name;
+  //   td2.innerHTML = sex;
+  //   td3.innerHTML = speakingJan;
+  //   td4.innerHTML = writingJan;
+  //   td5.innerHTML = listeningJan;
+  //   td6.innerHTML = readingJan;
+  //   td7.innerHTML = averageJan;
+  //   td8.innerHTML = rankJan;
+  
+  
+  //   trow.appendChild(td0);
+  //   trow.appendChild(td1);
+  //   trow.appendChild(td2);
+  //   trow.appendChild(td3);
+  //   trow.appendChild(td4);
+  //   trow.appendChild(td5);
+  //   trow.appendChild(td6);
+  //   trow.appendChild(td7);
+  //   trow.appendChild(td8);
+  //   tbody.appendChild(trow);
+  //   $(function() {
+  //     //Get all total values, sort and remove duplicates
+  //     let totalList = $('.myScoreJan')
+  //       .map(function() {return $(this).text()})
+  //       .get()
+  //       .sort(function(a,b){return a - b })
+  //       .reduce(function(a, b) {if (b != a[0]) a.unshift(b);return a}, [])
+  //     //Assign rank
+  //     totalList.forEach((v, i) => {
+  //       $('.myScoreJan').filter(function() {return $(this).text() == v;}).next().text(i + 1);
+  //     })
+  //   });
+
+  // }
   function myJan() {
     var newstr = document.getElementById("myJanPrint").innerHTML;
     var oldstr = document.body.innerHTML;
