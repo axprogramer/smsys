@@ -219,7 +219,9 @@
                   <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Print</h5>
                     <button onclick="myNov()" class="btn2 btn-primary" type="button" style="background: var(--bs-green); margin-left: 15px;">Print<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button>
-                    <button onclick="saveNov()" class="btn2 btn-primary" type="button" style="background: var(--bs-red); margin-left: 15px;">Save<i i class="bi bi-cloud-download" style="padding-left: 5px;"></i></button>
+                    <button data-toggle="modal" data-target="#saveNov1"class="btn2 btn-primary" type="button" style="background: var(--bs-red); margin-left: 15px;">Open Save<i i class="bi bi-cloud-download" style="padding-left: 5px;"></i></button>
+
+                    <!-- <button onclick="saveNov()" class="btn2 btn-primary" type="button" style="background: var(--bs-red); margin-left: 15px;">Save<i i class="bi bi-cloud-download" style="padding-left: 5px;"></i></button> -->
                     <input type="button" class="btn2 btn-primary" value="Total St"/>
 
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
@@ -327,6 +329,130 @@
                     </div>
                   </div>
                 </div>
+                <!-- Save November -->
+                <div>
+                    <div class="modal fade" id="saveNov1" tabindex="-1" role="dialog" aria-labelledby="T" aria-hidden="true">
+                      <div class="modal-dialog modal-fullscreen" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Print</h5>
+                            <button onclick="myNov()" class="btn2 btn-primary" type="button" style="background: var(--bs-green); margin-left: 15px;">Print<i i class="bi bi-printer-fill" style="padding-left: 5px;"></i></button>
+                            <!-- <button data-toggle="modal" data-target="#myOctober" class="btn" type="button" >Save<i i class="bi bi-cloud-download" style="padding-left: 5px;"></i></button> -->
+        
+                            <button onclick="saveNov()" class="btn2 btn-primary" type="button" style="background: var(--bs-red); margin-left: 15px;">Save<i i class="bi bi-cloud-download" style="padding-left: 5px;"></i></button>
+                            <input type="button" class="btn2 btn-primary" value="Total St"/>
+        
+                            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                            </button>
+                          </div>
+                          <!--November-->
+                          <div class="modal-body">
+              
+                            <div  style="padding: 20px;" id="myNovPrint">
+                              <div>
+                                <div class="WordSection1 title" contenteditable>
+              
+                                  <p class="MsoNormal" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif"><b>Department of
+                                  Education of Sen <span class="MsoNormal" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif">Sok</span>&nbsp; &nbsp; &nbsp; &nbsp;
+                                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span >&nbsp; </span><span >&nbsp;&nbsp;</span><span > </span><span >&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kingdom
+                                  of Cambodia<o:p></o:p></b></p>
+                                  
+                                  <p class="MsoNormal" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif"><span class="SpellE"><b>SlalaMOM</b></span><b> School&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Monthly Test in November<o:p id="textMonth"></o:p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span ></span><span >&nbsp;</span>&nbsp; &nbsp;<span >
+                                  </span><span >&nbsp;</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Nation
+                                  Religion King<o:p></o:p></b></p>
+                                  
+                                  <p class="MsoNormal" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif"><b>Grade 5A&nbsp; &nbsp; &nbsp; &nbsp;
+                                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Academic Year &nbsp;<o:p>2022-2023</o:p><o:p></o:p></b></p>
+                                  
+                                  
+                                  </div>
+                                  <!--Table of October-->
+                                  <div style="overflow-x: auto;font-family:Times New Roman,serif" id="myNovemberSaveT">
+                                      <table  class="myTable">
+                                          <thead>
+                                              <th>N0</th>
+                                              <th>Name</th>
+                                              <th>Sex</th>
+                                              <th>Speaking</th>
+                                              <th>Writing</th>
+                                              <th>Listening</th>
+                                              <th>Reading</th>
+                                              <th>Average</th>
+                                              <th>Rank</th>
+                  
+                                          </thead>
+                                          <tbody id="tbodySave3" contenteditable>
+                                          </tbody>
+                                      </table>
+                  
+                                  </div>
+                                  <div class="title" contenteditable>
+                                      <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          Number of Student: <a id="TotalSs" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a> <a style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">Female:</a><a id="TotalSF" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a>
+                                      <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          
+                                         Number of grades higher than the average: <a id="TotalSs2" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a> <a style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">Female:</a><a id="TotalSF2" style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;"></a></p>
+                                      <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          &nbsp;&nbsp;&nbsp;
+                                          Number of grades lower than the average: 00 Female: 00</p>
+              
+                                  </div>
+                                  <div class="title" contenteditable>
+                                      <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          Phnom Penh, Date: ..........................</p>
+                                      <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          Approved by
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         Signature of class teacher</p>
+                                         <p style="margin-bottom:0in;line-height:150%;font-family:Times New Roman,serif;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          Principal of SalaMOM</p>
+                                          <img src="./pic/My signature.png" alt="" class="img1">
+                                
+                                  </div>
+                                      </div>
+                  
+              
+                                  <div>
+              
+                              </div>
+                          </div>
+                          </div>
+                            </div>
+                          </div>
+                        </div>
+        
+        
+                        
+                  </div>
+        
+                
           </div>
         <!--Print December-->
         <div>
