@@ -1,6 +1,8 @@
   //November
 function myPrintFeb(){
     document.getElementById('tbody6').innerHTML="";
+    document.getElementById('tbody6Save').innerHTML="";
+
     stdNumber=0;
     firebase.database().ref('5aAllData').once('value',
     function(AllRecordsPrint){
@@ -21,6 +23,7 @@ function myPrintFeb(){
         }
       );
       GetData5(AllRecordsPrint);
+      GetData5Save(AllRecordsPrint);
 
     });
   }
@@ -78,7 +81,62 @@ function myPrintFeb(){
       tbody.innerHTML += tr;
     });
   }
+  function GetData5Save(datas) {
+    let tbody = document.getElementById("tbody6Save");
+    let No = 0;
+    let students = [];
   
+    datas.forEach((data) => {
+      var name = data.val().name;
+      var sex = data.val().sex;
+      var speakingfeb = data.val().speakingfeb;
+      var writingfeb = data.val().writingfeb;
+      var listeningfeb = data.val().listeningfeb;
+      var readingfeb = data.val().readingfeb;
+      var averagefeb = data.val().averagefeb;
+      var myKh = data.val().myKh;
+ 
+      students.push({
+        name,
+        sex,
+        speakingfeb,
+        writingfeb,
+        listeningfeb,
+        readingfeb,
+        averagefeb,
+        myKh,
+      });
+    });
+  
+    // students.sort((a, b) => b.averagefeb - a.averagefeb);
+  
+    for (let i = 0; i < students.length; i++) {
+      let avg = students[i].averagefeb;
+      let studentsWithRank = students.filter(
+        (student) => student.averagefeb === avg
+      );
+      for (let student of studentsWithRank) {
+        student.Rank = i + 1;
+      }
+      i += studentsWithRank.length - 1;
+    }
+  
+    students.forEach((student) => {
+      No++;
+      let tr = `
+              <td>${No}</td>
+              <td>${student.myKh}</td>
+              <td>${student.sex}</td>
+              <td>${student.speakingfeb}</td>
+              <td>${student.writingfeb}</td>
+              <td>${student.listeningfeb}</td>
+              <td>${student.readingfeb}</td>
+              <td>${student.averagefeb}</td>
+      `;
+      tbody.innerHTML += tr;
+    });
+  }
+
   // var stdNumber;
   // var stdListPrint = [];
   // function addItemsToFeb(name,sex,speakingfeb,writingfeb,
@@ -148,7 +206,7 @@ function myPrintFeb(){
     }
   }
   function saveFeb(type, fn, dl) {
-    var elt = document.getElementById('myFebruaryT');
+    var elt = document.getElementById('myFebruaryTSave');
     var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
     return dl ?
       XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):
