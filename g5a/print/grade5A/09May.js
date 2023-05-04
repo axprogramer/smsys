@@ -1,6 +1,8 @@
   //November
 function myPrintMay(){
     document.getElementById('tbody10').innerHTML="";
+    document.getElementById('tbody10Save').innerHTML="";
+
     stdNumber=0;
     firebase.database().ref('5aAllData').once('value',
     function(AllRecordsPrint){
@@ -21,6 +23,7 @@ function myPrintMay(){
         }
       );
       GetData9(AllRecordsPrint);
+      GetData9Save(AllRecordsPrint);
 
     });
   }
@@ -78,7 +81,62 @@ function myPrintMay(){
       tbody.innerHTML += tr;
     });
   }
-   
+  function GetData9Save(datas) {
+    let tbody = document.getElementById("tbody10Save");
+    let No = 0;
+    let students = [];
+  
+    datas.forEach((data) => {
+      var name = data.val().name;
+      var sex = data.val().sex;
+      var speakingma = data.val().speakingma;
+      var writingma = data.val().writingma;
+      var listeningma = data.val().listeningma;
+      var readingma = data.val().readingma;
+      var averagema = data.val().averagema;
+      var myKh = data.val().myKh;
+  
+      students.push({
+        name,
+        sex,
+        speakingma,
+        writingma,
+        listeningma,
+        readingma,
+        averagema,
+        myKh,
+      });
+    });
+  
+    // students.sort((a, b) => b.averagema - a.averagema);
+  
+    for (let i = 0; i < students.length; i++) {
+      let avg = students[i].averagema;
+      let studentsWithRank = students.filter(
+        (student) => student.averagema === avg
+      );
+      for (let student of studentsWithRank) {
+        student.Rank = i + 1;
+      }
+      i += studentsWithRank.length - 1;
+    }
+  
+    students.forEach((student) => {
+      No++;
+      let tr = `
+              <td>${No}</td>
+              <td>${student.myKh}</td>
+              <td>${student.sex}</td>
+              <td>${student.speakingma}</td>
+              <td>${student.writingma}</td>
+              <td>${student.listeningma}</td>
+              <td>${student.readingma}</td>
+              <td>${student.averagema}</td>
+      `;
+      tbody.innerHTML += tr;
+    });
+  }
+  
   // var stdNumber;
   // var stdListPrint = [];
   // function addItemsToMay(name,sex,speakingma,writingma,listeningma,
@@ -148,7 +206,7 @@ function myPrintMay(){
     }
   }
   function saveMay(type, fn, dl) {
-    var elt = document.getElementById('myMayT');
+    var elt = document.getElementById('myMayTSave');
     var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
     return dl ?
       XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):

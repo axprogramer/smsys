@@ -13,7 +13,7 @@ function myPrintNov() {
       });
       GetData2(AllRecordsPrint);
       GetDataSave2(AllRecordsPrint);
-v
+      v
     });
 }
 
@@ -45,7 +45,7 @@ function GetData2(datas) {
     });
   });
 
-  students.sort(function(a,b){return b.averageNov - a.averageNov });
+  students.sort(function (a, b) { return b.averageNov - a.averageNov });
 
   for (let i = 0; i < students.length; i++) {
     let avg = students[i].averageNov;
