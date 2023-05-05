@@ -1,6 +1,7 @@
   //November
 function myPrintjuly(){
     document.getElementById('tbody18').innerHTML="";
+    document.getElementById('tbody18Save').innerHTML="";
     stdNumber=0;
     firebase.database().ref('5bAllData').once('value',
     function(AllRecordsPrint){
@@ -21,6 +22,7 @@ function myPrintjuly(){
         }
       );
       GetData18(AllRecordsPrint);
+      GetData18Save(AllRecordsPrint);
 
     });
   }
@@ -74,6 +76,60 @@ function myPrintjuly(){
               <td>${student.readingjuly}</td>
               <td>${student.averagejuly}</td>
               <td>${student.Rank}</td>
+      `;
+      tbody.innerHTML += tr;
+    });
+  }
+  function GetData18Save(datas) {
+    let tbody = document.getElementById("tbody18Save");
+    let No = 0;
+    let students = [];
+  
+    datas.forEach((data) => {
+      var name = data.val().name;
+      var sex = data.val().sex;
+      var speakingjuly = data.val().speakingjuly;
+      var writingjuly = data.val().writingjuly;
+      var listeningjuly = data.val().listeningjuly;
+      var readingjuly = data.val().readingjuly;
+      var averagejuly = data.val().averagejuly;
+      var myKh = data.val().myKh;
+      students.push({
+        name,
+        sex,
+        speakingjuly,
+        writingjuly,
+        listeningjuly,
+        readingjuly,
+        averagejuly,
+        myKh,
+      });
+    });
+  
+    // students.sort((a, b) => b.averagejuly - a.averagejuly);
+  
+    for (let i = 0; i < students.length; i++) {
+      let avg = students[i].averagejuly;
+      let studentsWithRank = students.filter(
+        (student) => student.averagejuly === avg
+      );
+      for (let student of studentsWithRank) {
+        student.Rank = i + 1;
+      }
+      i += studentsWithRank.length - 1;
+    }
+  
+    students.forEach((student) => {
+      No++;
+      let tr = `
+              <td>${No}</td>
+              <td>${student.myKh}</td>
+              <td>${student.sex}</td>
+              <td>${student.speakingjuly}</td>
+              <td>${student.writingjuly}</td>
+              <td>${student.listeningjuly}</td>
+              <td>${student.readingjuly}</td>
+              <td>${student.averagejuly}</td>
       `;
       tbody.innerHTML += tr;
     });
@@ -148,7 +204,7 @@ function myPrintjuly(){
     }
   }
   function savejuly(type, fn, dl) {
-    var elt = document.getElementById('myJulyT');
+    var elt = document.getElementById('myJulyTSave');
     var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
     return dl ?
       XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):

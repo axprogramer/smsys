@@ -1,6 +1,7 @@
   //November
 function myPrintMar(){
     document.getElementById('tbody9').innerHTML="";
+    document.getElementById('tbody9Save').innerHTML="";
     stdNumber=0;
     firebase.database().ref('5bAllData').once('value',
     function(AllRecordsPrint){
@@ -21,6 +22,7 @@ function myPrintMar(){
         }
       );
       GetData8(AllRecordsPrint);
+      GetData8Save(AllRecordsPrint);
 
     });
   }
@@ -67,6 +69,62 @@ function myPrintMar(){
       let tr = `
               <td>${No}</td>
               <td>${student.name}</td>
+              <td>${student.sex}</td>
+              <td>${student.speakingmar}</td>
+              <td>${student.writingmar}</td>
+              <td>${student.listeningmar}</td>
+              <td>${student.readingmar}</td>
+              <td>${student.averagemar}</td>
+              <td>${student.Rank}</td>
+      `;
+      tbody.innerHTML += tr;
+    });
+  }
+
+  function GetData8Save(datas) {
+    let tbody = document.getElementById("tbody9Save");
+    let No = 0;
+    let students = [];
+  
+    datas.forEach((data) => {
+      var name = data.val().name;
+      var sex = data.val().sex;
+      var speakingmar = data.val().speakingmar;
+      var writingmar = data.val().writingmar;
+      var listeningmar = data.val().listeningmar;
+      var readingmar = data.val().readingmar;
+      var averagemar = data.val().averagemar;
+      var myKh = data.val().myKh;
+      students.push({
+        name,
+        sex,
+        speakingmar,
+        writingmar,
+        listeningmar,
+        readingmar,
+        averagemar,
+        myKh,
+      });
+    });
+  
+    // students.sort((a, b) => b.averagemar - a.averagemar);
+  
+    for (let i = 0; i < students.length; i++) {
+      let avg = students[i].averagemar;
+      let studentsWithRank = students.filter(
+        (student) => student.averagemar === avg
+      );
+      for (let student of studentsWithRank) {
+        student.Rank = i + 1;
+      }
+      i += studentsWithRank.length - 1;
+    }
+  
+    students.forEach((student) => {
+      No++;
+      let tr = `
+              <td>${No}</td>
+              <td>${student.myKh}</td>
               <td>${student.sex}</td>
               <td>${student.speakingmar}</td>
               <td>${student.writingmar}</td>
@@ -148,9 +206,9 @@ function myPrintMar(){
     }
   }
   function saveMar(type, fn, dl) {
-    var elt = document.getElementById('myMarchT');
+    var elt = document.getElementById('myMarchTSave');
     var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
     return dl ?
       XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):
-      XLSX.writeFile(wb, fn || ('Grade 5A March.' + (type || 'xlsx')));
+      XLSX.writeFile(wb, fn || ('Grade 5B March.' + (type || 'xlsx')));
   }

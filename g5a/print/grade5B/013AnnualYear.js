@@ -1,6 +1,7 @@
   //November
   function myPrintYear(){
     document.getElementById('tbody15').innerHTML="";
+    document.getElementById('tbody15Save').innerHTML="";
     stdNumber=0;
     firebase.database().ref('5bAllData').once('value',
     function(AllRecordsPrint){
@@ -24,6 +25,7 @@
         }
       );
       GetData15(AllRecordsPrint);
+      GetData15Save(AllRecordsPrint);
 
     });
   }
@@ -101,6 +103,93 @@
       let tr = `
               <td>${No}</td>
               <td>${student.name}</td>
+              <td>${student.sex}</td>
+              <td>${student.my1Sa}</td>
+              <td>${student.my2Sa}</td>
+              <td>${student.showTotal}</td>
+              <td>${student.Rank}</td>
+              <td>${mention}</td>
+              <td></td>
+
+      `;
+      tbody.innerHTML += tr;
+    });
+  }
+  function GetData15Save(datas) {
+    let tbody = document.getElementById("tbody15Save");
+    let No = 0;
+    let students = [];
+  
+    datas.forEach((data) => {
+      var name = data.val().name;
+      var sex = data.val().sex;
+      var grade = data.val().grade;
+      var my1Sa = data.val().my1Sa;
+      var myKh = data.val().myKh;
+          var my2Sa = data.val().my2Sa;
+          console.log(my2Sa);
+          //4 months total
+          var total4m = parseFloat(my1Sa)+parseFloat(my2Sa);
+          var allTotal = parseFloat(total4m)/2;
+          var showTotal = parseFloat(allTotal).toFixed(2);
+          // All total Score
+          // var total2m = parseFloat(showTotal)+parseFloat(my1Sa);
+          // var alltotal2m = parseFloat(total2m)/2;
+          // var last2m = parseFloat(alltotal2m).toFixed(2);
+        // console.log(last2m);
+
+      students.push({
+        name,
+        sex,
+        grade,
+        my1Sa,
+        showTotal,
+        my2Sa,
+        myKh,
+      });
+    });
+  
+    // students.sort((a, b) => b.showTotal - a.showTotal);
+  
+    for (let i = 0; i < students.length; i++) {
+      let avg = students[i].showTotal;
+      let studentsWithRank = students.filter(
+        (student) => student.showTotal === avg
+      );
+      for (let student of studentsWithRank) {
+        student.Rank = i + 1;
+      }
+      i += studentsWithRank.length - 1;
+    }
+  
+    students.forEach((student) => {
+      No++;
+        // var get2 = parseFloat(student.averagefeb) + parseFloat(student.averageNov) + parseFloat(student.averageDec) + parseFloat(student.averageJan);
+        // var get = parseFloat(get2)/4;
+        // var total = parseFloat(get).toFixed(2);
+        // var last = parseFloat(student.my1Sa) + parseFloat(total);
+        // var finall = parseFloat(last) / 2;
+        // var last2 = parseFloat(finall).toFixed(2);
+
+        // console.log(total);
+
+        var mention = "";
+        var my = parseFloat(student.showTotal);
+        if(my <=5){
+            mention = "Poor"
+        }else if(my <=6.4){
+            mention = "Faily Good";
+        }else if(my <=7.9){
+            mention = "Good";
+        }else if(my <=9.4){
+            mention = "Very Good";
+        }else if(my <=10){
+            mention = "Excellent";
+        }
+        // console.log(student.my1Sa);
+      let tr = `
+              <td>${No}</td>
+              <td>${student.myKh}</td>
               <td>${student.sex}</td>
               <td>${student.my1Sa}</td>
               <td>${student.my2Sa}</td>
@@ -197,7 +286,7 @@
     }
   }
   function saveYear(type, fn, dl) {
-    var elt = document.getElementById('myAnnualT');
+    var elt = document.getElementById('myAnnualTSave');
     var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
     return dl ?
       XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):

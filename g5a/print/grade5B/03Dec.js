@@ -1,6 +1,8 @@
   //November
 function myPrintDec(){
     document.getElementById('tbody4').innerHTML="";
+  document.getElementById('tbody4Save').innerHTML = "";
+
     stdNumber=0;
     firebase.database().ref('5bAllData').once('value',
     function(AllRecordsPrint){
@@ -21,6 +23,7 @@ function myPrintDec(){
         }
       );
       GetData3(AllRecordsPrint);
+      GetData3Save(AllRecordsPrint);
 
     });
   }
@@ -78,6 +81,61 @@ function myPrintDec(){
       tbody.innerHTML += tr;
     });
   }
+function GetData3Save(datas) {
+  let tbody = document.getElementById("tbody4Save");
+  let No = 0;
+  let students = [];
+
+  datas.forEach((data) => {
+    var name = data.val().name;
+    var sex = data.val().sex;
+    var speakingDec = data.val().speakingDec;
+    var writingDec = data.val().writingDec;
+    var listeningDec = data.val().listeningDec;
+    var readingDec = data.val().readingDec;
+    var averageDec = data.val().averageDec;
+    var myKh = data.val().myKh;
+
+    students.push({
+      name,
+      sex,
+      speakingDec,
+      writingDec,
+      listeningDec,
+      readingDec,
+      averageDec,
+      myKh,
+    });
+  });
+
+  // students.sort((a, b) => b.averageDec - a.averageDec);
+
+  for (let i = 0; i < students.length; i++) {
+    let avg = students[i].averageDec;
+    let studentsWithRank = students.filter(
+      (student) => student.averageDec === avg
+    );
+    for (let student of studentsWithRank) {
+      student.Rank = i + 1;
+    }
+    i += studentsWithRank.length - 1;
+  }
+
+  students.forEach((student) => {
+    No++;
+    let tr = `
+              <td>${No}</td>
+              <td>${student.myKh}</td>
+              <td>${student.sex}</td>
+              <td>${student.speakingDec}</td>
+              <td>${student.writingDec}</td>
+              <td>${student.listeningDec}</td>
+              <td>${student.readingDec}</td>
+              <td>${student.averageDec}</td>
+      `;
+    tbody.innerHTML += tr;
+  });
+}
 
   // var stdNumber;
   // var stdListPrint = [];
@@ -149,9 +207,9 @@ function myPrintDec(){
     }
   }
   function saveDec(type, fn, dl) {
-    var elt = document.getElementById('myDecemberT');
+    var elt = document.getElementById('myDecemberTSave');
     var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
     return dl ?
       XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):
-      XLSX.writeFile(wb, fn || ('Grade 5A December.' + (type || 'xlsx')));
+      XLSX.writeFile(wb, fn || ('Grade 5B December.' + (type || 'xlsx')));
   }

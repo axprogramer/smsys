@@ -1,6 +1,8 @@
   //November
 function myPrintNov(){
     document.getElementById('tbody3').innerHTML="";
+  document.getElementById('tbody3Save').innerHTML = "";
+
     stdNumber=0;
     firebase.database().ref('5bAllData').once('value',
     function(AllRecordsPrint){
@@ -21,6 +23,7 @@ function myPrintNov(){
         }
       );
       GetData2(AllRecordsPrint);
+      GetData2Save(AllRecordsPrint);
 
     });
   }
@@ -78,7 +81,61 @@ function myPrintNov(){
       tbody.innerHTML += tr;
     });
   }
-  
+function GetData2Save(datas) {
+  let tbody = document.getElementById("tbody3Save");
+  let No = 0;
+  let students = [];
+
+  datas.forEach((data) => {
+    var name = data.val().name;
+    var sex = data.val().sex;
+    var speakingNov = data.val().speakingNov;
+    var writingNov = data.val().writingNov;
+    var listeningNov = data.val().listeningNov;
+    var readingNov = data.val().readingNov;
+    var averageNov = data.val().averageNov;
+    var myKh = data.val().myKh;
+    students.push({
+      name,
+      sex,
+      speakingNov,
+      writingNov,
+      listeningNov,
+      readingNov,
+      averageNov,
+      myKh,
+    });
+  });
+
+  // students.sort((a, b) => b.averageNov - a.averageNov);
+
+  for (let i = 0; i < students.length; i++) {
+    let avg = students[i].averageNov;
+    let studentsWithRank = students.filter(
+      (student) => student.averageNov === avg
+    );
+    for (let student of studentsWithRank) {
+      student.Rank = i + 1;
+    }
+    i += studentsWithRank.length - 1;
+  }
+
+  students.forEach((student) => {
+    No++;
+    let tr = `
+              <td>${No}</td>
+              <td>${student.myKh}</td>
+              <td>${student.sex}</td>
+              <td>${student.speakingNov}</td>
+              <td>${student.writingNov}</td>
+              <td>${student.listeningNov}</td>
+              <td>${student.readingNov}</td>
+              <td>${student.averageNov}</td>
+      `;
+    tbody.innerHTML += tr;
+  });
+}
+
   // var stdNumber;
   // var stdListPrint = [];
   // function addItemsToNov(name,sex,speakingNov,writingNov,listeningNov,
@@ -148,10 +205,10 @@ function myPrintNov(){
     }
   }
   function saveNov(type, fn, dl) {
-    var elt = document.getElementById('myNovemberT');
+    var elt = document.getElementById('myNovemberTSave');
     var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
     return dl ?
       XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):
-      XLSX.writeFile(wb, fn || ('Grade 5A November.' + (type || 'xlsx')));
+      XLSX.writeFile(wb, fn || ('Grade 5B November.' + (type || 'xlsx')));
   }
   

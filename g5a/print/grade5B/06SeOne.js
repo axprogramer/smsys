@@ -1,6 +1,7 @@
   //November
 function myPrintSeOne(){
     document.getElementById('tbody7').innerHTML="";
+    document.getElementById('tbody7Save').innerHTML="";
     stdNumber=0;
     firebase.database().ref('5bAllData').once('value',
     function(AllRecordsPrint){
@@ -19,6 +20,7 @@ function myPrintSeOne(){
         }
       );
       GetData6(AllRecordsPrint);
+      GetData6Save(AllRecordsPrint);
 
     });
   }
@@ -79,6 +81,74 @@ function myPrintSeOne(){
       let tr = `
               <td>${No}</td>
               <td>${student.name}</td>
+              <td>${student.sex}</td>
+              <td>${student.grade}</td>
+              <td>${student.my1Se}</td>
+              <td>${student.my1Sa}</td>
+              <td>${student.Rank}</td>
+              <td>${mention}</td>
+      `;
+      tbody.innerHTML += tr;
+    });
+  }
+  function GetData6Save(datas) {
+    let tbody = document.getElementById("tbody7Save");
+    let No = 0;
+    let students = [];
+  
+    datas.forEach((data) => {
+      var name = data.val().name;
+      var sex = data.val().sex;
+      var grade = data.val().grade;
+      var my1Se = data.val().my1Se;
+      var my1Sa = data.val().my1Sa;
+      var my1SR = data.val().my1SR;
+      var my1SM = data.val().my1SM;
+      var myKh = data.val().myKh;
+      students.push({
+        name,
+        sex,
+        grade,
+        my1Se,
+        my1Sa,
+        my1SR,
+        my1SM,
+        myKh,
+      });
+    });
+  
+    // students.sort((a, b) => b.my1Sa - a.my1Sa);
+  
+    for (let i = 0; i < students.length; i++) {
+      let avg = students[i].my1Sa;
+      let studentsWithRank = students.filter(
+        (student) => student.my1Sa === avg
+      );
+      for (let student of studentsWithRank) {
+        student.Rank = i + 1;
+      }
+      i += studentsWithRank.length - 1;
+    }
+  
+    students.forEach((student) => {
+      No++;
+        var mention = "";
+        var my = parseFloat(student.my1Sa);
+        if(my <=5){
+            mention = "Poor"
+        }else if(my <=6.4){
+            mention = "Faily Good";
+        }else if(my <=7.9){
+            mention = "Good";
+        }else if(my <=9.4){
+            mention = "Very Good";
+        }else if(my <=10){
+            mention = "Excellent";
+        }
+        console.log(student.my1Sa);
+      let tr = `
+              <td>${No}</td>
+              <td>${student.myKh}</td>
               <td>${student.sex}</td>
               <td>${student.grade}</td>
               <td>${student.my1Se}</td>
@@ -167,9 +237,9 @@ function myPrintSeOne(){
     }
   }
   function saveOne(type, fn, dl) {
-    var elt = document.getElementById('mySeOneT');
+    var elt = document.getElementById('mySeOneTSave');
     var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
     return dl ?
       XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):
-      XLSX.writeFile(wb, fn || ('Grade 5A 1st Semester.' + (type || 'xlsx')));
+      XLSX.writeFile(wb, fn || ('Grade 5B 1st Semester.' + (type || 'xlsx')));
   }
