@@ -124,7 +124,7 @@ const firebaseConfig = {
     var myOy = getElementVal('myOy');
     //Khmer Name
     var myKh = getElementVal('myKhname');
-    window.location.reload();
+    // window.location.reload();
     saveData(name,id,sex,grade,speaking,writing,listening,
       reading,average,rank,speakingNov,writingNov,listeningNov,
       readingNov,averageNov,rankNOv,speakingDec,writingDec,listeningDec,
@@ -407,13 +407,32 @@ function selectAllData(){
           my2SeRa,my2SeRme,my1SaY,my2SaY,myAaY,myKy,myMy,myOy,myKh,
           speakingjuly,writingjuly,listeningjuly,
           readingjuly,averagejuly,rankjuly);
+        addItemsToTablePop(name,id,sex,grade,speaking,writing,listening,
+          reading,average,rank,speakingNov,writingNov,listeningNov,
+          readingNov,averageNov,rankNOv,speakingDec,writingDec,listeningDec,
+          readingDec,averageDec,rankDec,speakingJan,writingJan,listeningJan,
+          readingJan,averageJan,rankJan,speakingfeb,writingfeb,
+          listeningfeb,readingfeb,averagefeb,rankfeb,myNov,myDec,myJan,myFeb,
+          my1Score4,my1Se,my1Sa,my1SR,my1SM,my1SeR,my1MonR,my1SaR,
+          my1SeRa,my1SeRme,speakingmar,writingmar,listeningmar,
+          readingmar,averagemar,rankmar,speakingma,writingma,listeningma,
+          readingma,averagema,rankma,speakingjun,writingjun,listeningjun,
+          readingjun,averagejun,rankjun,myMar,myMay,myJune,myJuly,my2Score4,
+          my2Se,my2Sa,my2SR,my2SM,my2SeR,my2MonR,my2SaR,
+          my2SeRa,my2SeRme,my1SaY,my2SaY,myAaY,myKy,myMy,myOy,myKh,
+          speakingjuly,writingjuly,listeningjuly,
+          readingjuly,averagejuly,rankjuly);
       }
     );
   });
 }
 window.onload = selectAllData;
 var studentN0;
+var studentN0Pop;
+  studentN0Pop=0;
+
 var stdList = [];
+var stdListPop = [];
 function addItemsToTable(name,id,sex,grade,speaking,writing,listening,
   reading,average,rank,speakingNov,writingNov,listeningNov,
   readingNov,averageNov,rankNOv,speakingDec,writingDec,listeningDec,
@@ -429,7 +448,7 @@ function addItemsToTable(name,id,sex,grade,speaking,writing,listening,
   my2SeRa,my2SeRme,my1SaY,my2SaY,myAaY,myKy,myMy,myOy,myKh,
   speakingjuly,writingjuly,listeningjuly,
   readingjuly,averagejuly,rankjuly){
-  var tbody = document.getElementById('tbody1');
+  var tbody = document.getElementById('tbody21');
   var trow = document.createElement('tr');
   var td0 = document.createElement('td');
   var td1 = document.createElement('td');
@@ -437,7 +456,7 @@ function addItemsToTable(name,id,sex,grade,speaking,writing,listening,
   var td3 = document.createElement('td');
   var td4 = document.createElement('td');
   var td5 = document.createElement('td');
-
+  
 
 
 
@@ -464,8 +483,6 @@ function addItemsToTable(name,id,sex,grade,speaking,writing,listening,
   td5.innerHTML = grade;
 
 
-
-
   trow.appendChild(td0);
   trow.appendChild(td1);
   trow.appendChild(td2);
@@ -475,27 +492,54 @@ function addItemsToTable(name,id,sex,grade,speaking,writing,listening,
 
   td1.innerHTML = `<button type="button" class="button-6" role="button" data-toggle="modal" data-target="#exampleModal" onclick="Fillbox(${studentN0})">${name}</button>`;
   td2.innerHTML = `<button type="button" class="button-6" role="button" data-toggle="modal" data-target="#exampleModal" onclick="Fillbox(${studentN0})">${myKh}</button>`;
+  tbody.appendChild(trow);
+}
+function addItemsToTablePop(name,id,sex,grade,speaking,writing,listening,
+  reading,average,rank,speakingNov,writingNov,listeningNov,
+  readingNov,averageNov,rankNOv,speakingDec,writingDec,listeningDec,
+  readingDec,averageDec,rankDec,speakingJan,writingJan,listeningJan,
+  readingJan,averageJan,rankJan,speakingfeb,writingfeb,
+  listeningfeb,readingfeb,averagefeb,rankfeb,myNov,myDec,myJan,myFeb,
+  my1Score4,my1Se,my1Sa,my1SR,my1SM,my1SeR,my1MonR,my1SaR,
+  my1SeRa,my1SeRme,speakingmar,writingmar,listeningmar,
+  readingmar,averagemar,rankmar,speakingma,writingma,listeningma,
+  readingma,averagema,rankma,speakingjun,writingjun,listeningjun,
+  readingjun,averagejun,rankjun,myMar,myMay,myJune,myJuly,my2Score4,
+  my2Se,my2Sa,my2SR,my2SM,my2SeR,my2MonR,my2SaR,
+  my2SeRa,my2SeRme,my1SaY,my2SaY,myAaY,myKy,myMy,myOy,myKh,
+  speakingjuly,writingjuly,listeningjuly,
+  readingjuly,averagejuly,rankjuly){
+  var tbody = document.getElementById('tbody1');
+  var trow = document.createElement('tr');
+  var td0 = document.createElement('td');
+  var td1 = document.createElement('td');
+  
 
+  stdListPop.push([name,id,sex,grade,speaking,writing,listening,
+    reading,average,rank,speakingNov,writingNov,listeningNov,
+    readingNov,averageNov,rankNOv,speakingDec,writingDec,listeningDec,
+    readingDec,averageDec,rankDec,speakingJan,writingJan,listeningJan,
+    readingJan,averageJan,rankJan,speakingfeb,writingfeb,
+    listeningfeb,readingfeb,averagefeb,rankfeb,myNov,myDec,myJan,myFeb,
+    my1Score4,my1Se,my1Sa,my1SR,my1SM,my1SeR,my1MonR,my1SaR,
+    my1SeRa,my1SeRme,speakingmar,writingmar,listeningmar,
+    readingmar,averagemar,rankmar,speakingma,writingma,listeningma,
+    readingma,averagema,rankma,speakingjun,writingjun,listeningjun,
+    readingjun,averagejun,rankjun,myMar,myMay,myJune,myJuly,my2Score4,
+    my2Se,my2Sa,my2SR,my2SM,my2SeR,my2MonR,my2SaR,
+    my2SeRa,my2SeRme,my1SaY,my2SaY,myAaY,myKy,myMy,myOy,myKh,
+    speakingjuly,writingjuly,listeningjuly,
+    readingjuly,averagejuly,rankjuly]);
+  td0.innerHTML = ++studentN0Pop;
+
+
+
+  trow.appendChild(td0);
+
+  td0.innerHTML = `<button type="button" class="button-6" role="button" onclick="Fillbox(${studentN0Pop})">${myKh}</button>`;
   tbody.appendChild(trow);
 }
 
-$(function(){
-  $('input[name="rad"]').click(function(){
-      var $radio = $(this);
-      
-      // if this was previously checked
-      if ($radio.data('waschecked') == true)
-      {
-          $radio.prop('checked', false);
-          $radio.data('waschecked', false);
-      }
-      else
-          $radio.data('waschecked', true);
-      
-      // remove was checked from other radios
-      $radio.siblings('input[name="rad"]').data('waschecked', false);
-  });
-});
 
 var Mname = document.getElementById('myName');
 var Mid = document.getElementById('myID');
@@ -971,7 +1015,7 @@ function NewBox(){
   Mrankjuly.value =  "";
 }
 
-function AddStd(){
+function AddStd(e){
   firebase.database().ref("5aAllData/"+Mid.value).set(
     {
       name: Mname.value,
@@ -1088,10 +1132,12 @@ function AddStd(){
   }, 
   )
   selectAllData();
-  window.location.reload();
+  // window.location.reload();
+  e.preventDefault();
+
 
 }
-function UpStd(){
+function UpStd(e){
   firebase.database().ref("5aAllData/"+Mid.value).update(
     {
       name: Mname.value,
@@ -1206,22 +1252,24 @@ function UpStd(){
     }, 
   )
   selectAllData();
-  window.location.reload();
+  e.preventDefault();
+  // window.location.reload();
 
 }
-function DelStd(){
+function DelStd(e){
   firebase.database().ref("5aAllData/"+Mid.value).remove().then(
     function(){
       selectAllData();
-      window.location.reload();
-   
+      // window.location.reload();
+      e.preventDefault();
+
     }
   )
 }
 function DelStdAll(){
   firebase.database().ref("5aAllData").remove();
 
-      window.location.reload();
+      // window.location.reload();
 }
 
 //Divid score tables

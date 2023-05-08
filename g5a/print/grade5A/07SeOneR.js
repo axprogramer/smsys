@@ -234,7 +234,6 @@ function myPrintSeOneR(){
       tbody.innerHTML += tr;
     });
   }
-v
   // var stdNumber;
   // var stdListPrint = [];
   // function addItemsToSeOneRT(name,sex,grade,my1SeR,my1MonR,my1SaR,
