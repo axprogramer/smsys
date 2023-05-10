@@ -1417,19 +1417,22 @@ td {
 
 }
 
-.popupScore {
+/* .popupScore {
   position: fixed;
   margin-right: 85%;
   left: 0;
   top: 11%;
-}
+} */
 
 .freezePop {
   display: block;
-  height: 82vw;
-  overflow: auto;
-  position: fixed;
+  height: 33em;
+  overflow: scroll;
   left: 0;
+}
+
+.freezePop::-webkit-scrollbar {
+  display: none;
 }
 
 #tbody21 {
@@ -1439,21 +1442,27 @@ td {
 #tbody21 td:nth-child(1) {
   text-align: center;
 }
+
 #tbody21 td:nth-child(5) {
   text-align: center;
 }
+
 #tbody21 td:nth-child(6) {
   text-align: center;
 }
+
 #tbody1 td:nth-child(1) {
   text-align: center;
 }
+
 #tbody1 td:nth-child(5) {
   text-align: center;
 }
+
 #tbody1 td:nth-child(6) {
   text-align: center;
 }
+
 #tbody1 td:nth-child(4) {
   padding: 5px;
 }
