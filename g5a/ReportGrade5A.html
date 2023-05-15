@@ -113,7 +113,7 @@
         <button onclick="ExportToExcel('xlsx')" class="button-87" type="button">Save Data<i i
                 class="bi bi-cloud-download" style="padding-left: 5px;"></i></button>
     </div>
-    <div class="mySearch5a">
+    <div class="mySearch5a" style="display: none;">
         <input type="text" id="myInputEn" class="mySearch" placeholder="Search English" onkeyup="tableSearchEngA()">
         <input type="text" id="myInputKh" class="mySearch" placeholder="Search Khmer" onkeyup="tableSearchKhA()">
         <button id="Eng" class="button-91" onclick="clickEng()"><span class="fi fi-gb"></span></button>
@@ -5039,7 +5039,7 @@
     </div>
 
     <!--Table Show Data-->
-    <div>
+    <div style="display: none;">
         <div class="table-responsive" style="padding: 20px;">
             <table class="table-responsive table-bordered table-sortable border-secondary" id="input5aOct"
                 data-filter-control="true" data-show-search-clear-button="true">
@@ -5056,6 +5056,1306 @@
             </table>
         </div>
     </div>
+    <div class="modal-body">
+        <form id="contactForm" name="sentMessage" novalidate="novalidate">
+            <div class="control-group">
+                <div class="mb-0 form-floating controls pb-2"><input class="form-control" type="text" id="myName"
+                        required="" placeholder="Name"
+                        style="font-size: 14px;font-weight: bold;color: #ffffff; height: 45px;background-color:rgba(41, 36, 36, 0.718);"><label
+                        class="form-label" style="color: #ffffff;font-size: 14px;font-family: 'Comic Neue', serif;">Full
+                        Name</label><small class="form-text text-danger help-block"></small></div>
+                <div class="mb-0 form-floating controls pb-2"><input class="form-control" type="text" id="myKhname"
+                        required="" placeholder="Khname"
+                        style="font-size: 14px;font-weight: bold;color: #ffffff; height: 45px;background-color:rgba(41, 36, 36, 0.718);"><label
+                        class="form-label"
+                        style="color: #ffffff;font-size: 14px;font-family: 'Comic Neue', serif;">ឈ្មោះខ្មែរ</label><small
+                        class="form-text text-danger help-block"></small></div>
+
+            </div>
+            <div class="row" style="padding-top: 15px;">
+                <div class="col">
+                    <div class="control-group">
+                        <div class="mb-0 form-floating pb-2 myfix"><input class="form-control" type="text" id="myID"
+                                required="" placeholder="ID" style="color: #7d4e39; height: 45px;"><label
+                                class="form-label"
+                                style="font-size: 14px;color: #7d4e39;font-family: 'Comic Neue', serif;">ID</label><small
+                                class="form-text text-danger help-block"></small></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="control-group" style="text-align: center;"><select class="form-select" id="mySex"
+                            style="height: 58px;color: #7d4e39;font-size: 14px; height: 45px;">
+                            <option value="M">M</option>
+                            <option value="F">F</option>
+                        </select></div>
+                </div>
+                <div class="col">
+                    <div class="control-group" style="text-align: center;"><select class="form-select" id="myGrade"
+                            style="height: 58px;color: #7d4e39;font-size: 14px; height: 45px;">
+                            <option value="5A">5A</option>
+                            <option value="5B">5B</option>
+                        </select></div>
+                </div>
+                <div class="btnCon">
+                    <button id="mySubmit" onclick="AddStd(event)" class="button-88" role="button" type="submit">Submit<i
+                            class="bi bi-cloud-download-fill" style="padding-left: 5px;"></i></button>
+                    <button id="myUpdate" onclick="UpStd(event)" class="button-88" role="button"
+                        name="update_data">Update<i class="bi bi-arrow-bar-up" style="padding-left: 5px;"></i></button>
+                    <button id="myDele" onclick="DelStd(event)" class="button-88" role="button"
+                        name="clear_data">Delete<i class="bi bi-calendar-x-fill"
+                            style="padding-left: 5px;"></i></button>
+                </div>
+            </div>
+            <div>
+                <table class="myTb5a">
+                    <tr>
+                        <td>
+                            <div>
+                                <div class="table-responsive" style="padding: 20px;">
+                                    <table
+                                        class="freezePop table-responsive table-bordered table-sortable border-secondary text-center"
+                                        id="input5aOct" data-filter-control="true" data-show-search-clear-button="true">
+                                        <thead class="table-success border-secondary" id="myShowingTA">
+                                            <th>N0</th>
+                                            <th>Name</th>
+                                        </thead>
+                                        <tbody id="tbody1">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="mydata">
+                                <button type="button" class="collapsible"><i class="bi bi-caret-down-fill"
+                                        style="margin-right: 5px;"></i>01 -
+                                    October</button>
+                                <div class="content" id="myFormOCt">
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder()"
+                                                        class="form-control" type="text" id="mySoct" required=""
+                                                        placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Speaking-Oct</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder()"
+                                                        class="form-control" type="text" id="myWoct" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Writing-Oct</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder()"
+                                                        class="form-control" type="text" id="myLoct" required=""
+                                                        placeholder="Listening" name="num3"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Listening-Oct</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder()"
+                                                        class="form-control" type="text" id="myRoct" required=""
+                                                        placeholder="Reading" name="num4"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Reading-Oct</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input type="number"
+                                                        class="form-control" type="text" id="myAoct" required="true"
+                                                        placeholder="Average"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Average-Oct</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="divid()"
+                                                        onkeyup="adder()" type="number" class="form-control" type="text"
+                                                        id="myScoreoct" required="true" placeholder="Score"
+                                                        name="num5"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Score-Oct</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input type="number"
+                                                        class="form-control" type="text" id="myKoct" required="true"
+                                                        placeholder="Rank"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Rank-Oct</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--November-->
+                                <button type="button" class="collapsible"><i class="bi bi-caret-down-fill"
+                                        style="margin-right: 5px;"></i>02 -
+                                    November</button>
+                                <div class="content" id="myFormNov">
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder1()"
+                                                        class="form-control" type="text" id="mySnov" required=""
+                                                        placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Speaking-Nov</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder1()"
+                                                        class="form-control" type="text" id="myWnov" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Writing-Nov</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder1()"
+                                                        class="form-control" type="text" id="myLnov" required=""
+                                                        placeholder="Listening" name="num3"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Listening-Nov</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder1()"
+                                                        class="form-control" type="text" id="myRnov" required=""
+                                                        placeholder="Reading" name="num4"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Reading-Nov</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input type="number"
+                                                        class="form-control" type="text" id="myAnov" required="true"
+                                                        placeholder="Average"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Average-Nov</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="divid1()"
+                                                        onkeyup="adder1()" type="number" class="form-control"
+                                                        type="text" id="myScorenov" required="true" placeholder="Score"
+                                                        name="num5"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Score-Nov</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input type="number"
+                                                        class="form-control" type="text" id="myKnov" required="true"
+                                                        placeholder="Rank"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Rank-Nov</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--December-->
+                                <button type="button" class="collapsible"><i class="bi bi-caret-down-fill"
+                                        style="margin-right: 5px;"></i>03 -
+                                    December</button>
+                                <div class="content" id="myFormDec">
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder2()"
+                                                        class="form-control" type="text" id="mySdec" required=""
+                                                        placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Speaking-Dec</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder2()"
+                                                        class="form-control" type="text" id="myWdec" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Writing-Dec</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder2()"
+                                                        class="form-control" type="text" id="myLdec" required=""
+                                                        placeholder="Listening" name="num3"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Listening-Dec</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder2()"
+                                                        class="form-control" type="text" id="myRdec" required=""
+                                                        placeholder="Reading" name="num4"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Reading-Dec</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input type="number"
+                                                        class="form-control" type="text" id="myAdec" required="true"
+                                                        placeholder="Average"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Average-Dec</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="divid2()"
+                                                        onkeyup="adder2()" type="number" class="form-control"
+                                                        type="text" id="myScoredec" required="true" placeholder="Score"
+                                                        name="num5"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Score-Dec</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input type="number"
+                                                        class="form-control" type="text" id="myKdec" required="true"
+                                                        placeholder="Rank"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Rank-Dec</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--January-->
+                                <button type="button" class="collapsible"><i class="bi bi-caret-down-fill"
+                                        style="margin-right: 5px;"></i>04 -
+                                    January</button>
+                                <div class="content" id="myFormJan">
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder3()"
+                                                        class="form-control" type="text" id="mySjan" required=""
+                                                        placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Speaking-Jan</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder3()"
+                                                        class="form-control" type="text" id="myWjan" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Writing-Jan</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder3()"
+                                                        class="form-control" type="text" id="myLjan" required=""
+                                                        placeholder="Listening" name="num3"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Listening-Jan</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder3()"
+                                                        class="form-control" type="text" id="myRjan" required=""
+                                                        placeholder="Reading" name="num4"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Reading-Jan</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input type="number"
+                                                        class="form-control" type="text" id="myAjan" required="true"
+                                                        placeholder="Average"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Average-Jan</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="divid3()"
+                                                        onkeyup="adder3()" type="number" class="form-control"
+                                                        type="text" id="myScorejan" required="true" placeholder="Score"
+                                                        name="num5"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Score-Jan</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input type="number"
+                                                        class="form-control" type="text" id="myKjan" required="true"
+                                                        placeholder="Rank"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Rank-Jan</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--February-->
+                                <button type="button" class="collapsible"><i class="bi bi-caret-down-fill"
+                                        style="margin-right: 5px;"></i>05 -
+                                    February</button>
+                                <div class="content" id="myFormFeb">
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder4()"
+                                                        class="form-control" type="text" id="mySfeb" required=""
+                                                        placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Speaking</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder4()"
+                                                        class="form-control" type="text" id="myWfeb" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Writing</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder4()"
+                                                        class="form-control" type="text" id="myLfeb" required=""
+                                                        placeholder="Listening" name="num3"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Listening</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder4()"
+                                                        class="form-control" type="text" id="myRfeb" required=""
+                                                        placeholder="Reading" name="num4"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Reading</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input type="number"
+                                                        class="form-control" type="text" id="myAfeb" required="true"
+                                                        placeholder="Average"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Average</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="divid4()"
+                                                        onkeyup="adder4()" type="number" class="form-control"
+                                                        type="text" id="myScorefeb" required="true" placeholder="Score"
+                                                        name="num5"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Score</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input type="number"
+                                                        class="form-control" type="text" id="myKfeb" required="true"
+                                                        placeholder="Rank"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Rank</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--1st 4 months-->
+                                <button type="button" class="collapsible"><i class="bi bi-caret-down-fill"
+                                        style="margin-right: 5px;"></i>1st 4
+                                    Months
+                                    Total</button>
+                                <div class="content" id="myForm1Mon">
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder5()"
+                                                        class="form-control" type="text" id="myNov" required=""
+                                                        placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Score-Oct</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder5()"
+                                                        class="form-control" type="text" id="myDec" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Score-Nov</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder5()"
+                                                        class="form-control" type="text" id="myJan" required=""
+                                                        placeholder="Listening" name="num3"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Score-Dec</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder5()"
+                                                        class="form-control" type="text" id="myFeb" required=""
+                                                        placeholder="Reading" name="num4"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Score-Jan</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input type="number"
+                                                        class="form-control" type="text" id="my1Score4" required="true"
+                                                        placeholder="Rank"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">1
+                                                        Total 4 months</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--1st Semester-->
+                                <button type="button" class="collapsible"><i class="bi bi-caret-down-fill"
+                                        style="margin-right: 5px;"></i>1st
+                                    Semester</button>
+                                <div class="content" id="myForm1Semester">
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input
+                                                        class="form-control" type="number" oninput="adder6()" id="my1Se"
+                                                        required="" placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">1st
+                                                        Semester Exam</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input
+                                                        class="form-control" type="number" id="my1Sa" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">1st
+                                                        Semester Average</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input
+                                                        class="form-control" type="number" id="my1SR" required=""
+                                                        placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Rank</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input
+                                                        class="form-control" type="text" id="my1SM" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Mention</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--1st Semester Result-->
+                                <button type="button" class="collapsible"><i class="bi bi-caret-down-fill"
+                                        style="margin-right: 5px;"></i>1st
+                                    Semester
+                                    Result</button>
+                                <div class="content" id="myForm1SResult">
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder7()"
+                                                        class="form-control" type="number" id="my1SeR" required=""
+                                                        placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">1st
+                                                        Semester Exam Average </label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder7()"
+                                                        class="form-control" type="number" id="my1MonR" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">1st
+                                                        Monthly Average in Semester</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input
+                                                        class="form-control" type="number" id="my1SaR" required=""
+                                                        placeholder="Listening" name="num3"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">1st
+                                                        Semester Average</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input
+                                                        class="form-control" type="number" id="my1SeRa" required=""
+                                                        placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">1st
+                                                        Semester Exam Average </label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input
+                                                        class="form-control" type="number" id="my1SeRme" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">1st
+                                                        Monthly Average in Semester</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--March-->
+                                <button type="button" class="collapsible"><i class="bi bi-caret-down-fill"
+                                        style="margin-right: 5px;"></i>06 -
+                                    March</button>
+                                <div class="content" id="myFormMar">
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder8()"
+                                                        class="form-control" type="text" id="mySmar" required=""
+                                                        placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Speaking</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder8()"
+                                                        class="form-control" type="text" id="myWmar" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Writing</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder8()"
+                                                        class="form-control" type="text" id="myLmar" required=""
+                                                        placeholder="Listening" name="num3"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Listening</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder8()"
+                                                        class="form-control" type="text" id="myRmar" required=""
+                                                        placeholder="Reading" name="num4"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Reading</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input type="number"
+                                                        class="form-control" type="text" id="myAmar" required="true"
+                                                        placeholder="Average"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Average</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="divid8()"
+                                                        onkeyup="adder8()" type="number" class="form-control"
+                                                        type="text" id="myScoremar" required="true" placeholder="Score"
+                                                        name="num5"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Score</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input type="number"
+                                                        class="form-control" type="text" id="myKmar" required="true"
+                                                        placeholder="Rank"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Rank</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--April - May-->
+                                <button type="button" class="collapsible"><i class="bi bi-caret-down-fill"
+                                        style="margin-right: 5px;"></i>07 -
+                                    April-May</button>
+                                <div class="content" id="myFormMay">
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder9()"
+                                                        class="form-control" type="text" id="mySma" required=""
+                                                        placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Speaking</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder9()"
+                                                        class="form-control" type="text" id="myWma" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Writing</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder9()"
+                                                        class="form-control" type="text" id="myLma" required=""
+                                                        placeholder="Listening" name="num3"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Listening</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder9()"
+                                                        class="form-control" type="text" id="myRma" required=""
+                                                        placeholder="Reading" name="num4"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Reading</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input type="number"
+                                                        class="form-control" type="text" id="myAma" required="true"
+                                                        placeholder="Average"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Average</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="divid9()"
+                                                        onkeyup="adder9()" type="number" class="form-control"
+                                                        type="text" id="myScorema" required="true" placeholder="Score"
+                                                        name="num5"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Score</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input type="number"
+                                                        class="form-control" type="text" id="myKma" required="true"
+                                                        placeholder="Rank"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Rank</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--June-->
+                                <button type="button" class="collapsible"><i class="bi bi-caret-down-fill"
+                                        style="margin-right: 5px;"></i>08 -
+                                    June</button>
+                                <div class="content" id="myFormJun">
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder10()"
+                                                        class="form-control" type="text" id="mySjun" required=""
+                                                        placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Speaking</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder10()"
+                                                        class="form-control" type="text" id="myWjun" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Writing</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder10()"
+                                                        class="form-control" type="text" id="myLjun" required=""
+                                                        placeholder="Listening" name="num3"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Listening</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder10()"
+                                                        class="form-control" type="text" id="myRjun" required=""
+                                                        placeholder="Reading" name="num4"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Reading</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input type="number"
+                                                        class="form-control" type="text" id="myAjun" required="true"
+                                                        placeholder="Average"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Average</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="divid10()"
+                                                        onkeyup="adder10()" type="number" class="form-control"
+                                                        type="text" id="myScorejun" required="true" placeholder="Score"
+                                                        name="num5"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Score</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input type="number"
+                                                        class="form-control" type="text" id="myKjun" required="true"
+                                                        placeholder="Rank"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Rank</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--July-->
+                                <button type="button" class="collapsible"><i class="bi bi-caret-down-fill"
+                                        style="margin-right: 5px;"></i>09 -
+                                    July</button>
+                                <div class="content" id="myFormJun">
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder16()"
+                                                        class="form-control" type="text" id="mySjuly" required=""
+                                                        placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Speaking</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder16()"
+                                                        class="form-control" type="text" id="myWjuly" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Writing</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder16()"
+                                                        class="form-control" type="text" id="myLjuly" required=""
+                                                        placeholder="Listening" name="num3"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Listening</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder16()"
+                                                        class="form-control" type="text" id="myRjuly" required=""
+                                                        placeholder="Reading" name="num4"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Reading</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input type="number"
+                                                        class="form-control" type="text" id="myAjuly" required="true"
+                                                        placeholder="Average"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Average</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="divid16()"
+                                                        onkeyup="adder16()" type="number" class="form-control"
+                                                        type="text" id="myScorejuly" required="true" placeholder="Score"
+                                                        name="num5"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Score</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input type="number"
+                                                        class="form-control" type="text" id="myKjuly" required="true"
+                                                        placeholder="Rank"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Rank</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--2nd 4 Months-->
+                                <button type="button" class="collapsible"><i class="bi bi-caret-down-fill"
+                                        style="margin-right: 5px;"></i>2nd 4
+                                    Months
+                                    Total</button>
+                                <div class="content" id="myForm2Mon">
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder11()"
+                                                        class="form-control" type="text" id="myMar" required=""
+                                                        placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Score-Feb</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder11()"
+                                                        class="form-control" type="text" id="myMay" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Score-Mar</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder11()"
+                                                        class="form-control" type="text" id="myJune" required=""
+                                                        placeholder="Listening" name="num3"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Score-May</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder11()"
+                                                        class="form-control" type="text" id="myJuly" required=""
+                                                        placeholder="Reading" name="num4"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Score-June</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input type="number"
+                                                        class="form-control" type="text" id="my2Score4" required="true"
+                                                        placeholder="Rank"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">2
+                                                        Total 4 months</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--2nd Semester-->
+                                <button type="button" class="collapsible"><i class="bi bi-caret-down-fill"
+                                        style="margin-right: 5px;"></i>2nd
+                                    Semester</button>
+                                <div class="content" id="myForm2Semester">
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder12()"
+                                                        class="form-control" type="text" id="my2Se" required=""
+                                                        placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">2nd
+                                                        Semester Exam</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder12()"
+                                                        class="form-control" type="text" id="my2Sa" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">2nd
+                                                        Semester Average</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input
+                                                        class="form-control" type="number" id="my2SR" required=""
+                                                        placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Rank</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input
+                                                        class="form-control" type="text" id="my2SM" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Mention</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <!--2nd Semester Result-->
+                                <button type="button" class="collapsible"><i class="bi bi-caret-down-fill"
+                                        style="margin-right: 5px;"></i>2nd
+                                    Semester
+                                    Result</button>
+                                <div class="content" id="myForm2SResult">
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder13()"
+                                                        class="form-control" type="number" id="my2SeR" required=""
+                                                        placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">2nd
+                                                        Semester Exam Average </label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder13()"
+                                                        class="form-control" type="number" id="my2MonR" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">2nd
+                                                        Monthly Average in Semester</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input
+                                                        class="form-control" type="number" id="my2SaR" required=""
+                                                        placeholder="Listening" name="num3"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">2nd
+                                                        Semester Average</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input
+                                                        class="form-control" type="number" id="my2SeRa" required=""
+                                                        placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">2nd
+                                                        Semester Exam Average </label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input
+                                                        class="form-control" type="number" id="my2SeRme" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">2nd
+                                                        Monthly Average in Semester</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Annual Year-->
+                                <button type="button" class="collapsible"><i class="bi bi-caret-down-fill"
+                                        style="margin-right: 5px;"></i>Annual
+                                    Year</button>
+                                <div class="content" id="myFormAnnualYear">
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder14()"
+                                                        class="form-control" type="number" id="my1SaY" required=""
+                                                        placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">1ST
+                                                        SEMESTER AVERAGE</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input oninput="adder14()"
+                                                        class="form-control" type="number" id="my2SaY" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">2ND
+                                                        SEMESTER AVERAGE</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input
+                                                        class="form-control" type="number" id="myAaY" required=""
+                                                        placeholder="Listening" name="num3"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">ANNUAL
+                                                        AVERAGE</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-top: 15px;">
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input
+                                                        class="form-control" type="text" id="myKy" required=""
+                                                        placeholder="Speaking" style="color: #7d4e39;"
+                                                        name="num1"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">Rank</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input
+                                                        class="form-control" type="text" id="myMy" required=""
+                                                        placeholder="Writing" name="num2"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">MENTION</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="control-group">
+                                                <div class="mb-0 form-floating controls pb-2"><input
+                                                        class="form-control" type="text" id="myOy" required=""
+                                                        placeholder="Listening" name="num3"><label class="form-label"
+                                                        style="font-size: 12px;color: #7d4e39;font-family: 'Comic Neue', serif;">OTHER</label><small
+                                                        class="form-text text-danger help-block"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+
     <!--Modal adds new students-->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
@@ -5132,6 +6432,7 @@
                                                     id="input5aOct" data-filter-control="true"
                                                     data-show-search-clear-button="true">
                                                     <thead class="table-success border-secondary" id="myShowingTA">
+                                                        <th>N0</th>
                                                         <th>Name</th>
                                                     </thead>
                                                     <tbody id="tbody1">

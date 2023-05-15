@@ -66,7 +66,7 @@ table {
 }
 
 .collapsible {
-  background-color: rgba(31, 29, 29, 0.049);
+  background-color: rgba(255, 255, 255, 0.049);
   color: rgb(255, 255, 255);
   cursor: pointer;
   width: 100%;
@@ -78,12 +78,12 @@ table {
 }
 
 .collapsible:hover {
-  background-color: rgb(36, 35, 34);
+  background-color: rgb(42, 29, 2);
   border-radius: 20px;
 }
 
 .active {
-  background-color: rgba(182, 175, 168, 0.137);
+  background-color: rgba(34, 170, 41, 0.137);
   border-radius: 8px;
 }
 
@@ -769,10 +769,12 @@ td {
 
 #tbody1 {
   font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
 }
 
 #tbody1 {
   color: #815800;
+  background-color: white;
 }
 
 #myShowingTB {
@@ -1422,7 +1424,7 @@ td {
 
 }
 
-/* .popupScore {
+/* .freezePop {
   position: fixed;
   margin-right: 85%;
   left: 0;
@@ -1431,7 +1433,7 @@ td {
 
 .freezePop {
   display: block;
-  height: 33em;
+  height: 43em;
   overflow: scroll;
   left: 0;
 }
@@ -1443,7 +1445,6 @@ td {
 #tbody21 {
   background-color: #ffffff;
 }
-
 #tbody21 td:nth-child(1) {
   text-align: center;
 }
@@ -1459,6 +1460,10 @@ td {
 #tbody1 td:nth-child(1) {
   text-align: center;
 }
+#tbody1 td:nth-child(2) {
+  text-align: center;
+  width: 40em;
+}
 
 #tbody1 td:nth-child(5) {
   text-align: center;
@@ -1471,6 +1476,12 @@ td {
 #tbody1 td:nth-child(4) {
   padding: 5px;
 }
-/* .my5bpage{
-  background-color: #000000d3;
-} */
+.mydata{
+  background-color: #000000;
+}
+.myTb5a{
+  background-color: #000000;
+}
+body{
+  background-color: #000000;
+}

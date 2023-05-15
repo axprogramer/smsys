@@ -278,6 +278,8 @@ const saveData = (name,id,sex,grade,speaking,writing,listening,
 function selectAllData(){
   document.getElementById('tbody1').innerHTML="";
   studentN0=0;
+  studentN0Pop = 0;
+
   firebase.database().ref('5bAllData').once('value',
   function(AllRecords){
     AllRecords.forEach(
@@ -428,11 +430,10 @@ function selectAllData(){
 }
 window.onload = selectAllData;
 var studentN0;
-var stdList = [];
 var studentN0Pop;
-var stdListPop = [];
-studentN0Pop = 0;
 
+var stdList = [];
+var stdListPop = [];
 function addItemsToTable(name,id,sex,grade,speaking,writing,listening,
   reading,average,rank,speakingNov,writingNov,listeningNov,
   readingNov,averageNov,rankNOv,speakingDec,writingDec,listeningDec,
@@ -448,7 +449,7 @@ function addItemsToTable(name,id,sex,grade,speaking,writing,listening,
   my2SeRa,my2SeRme,my1SaY,my2SaY,myAaY,myKy,myMy,myOy,myKh,
   speakingjuly,writingjuly,listeningjuly,
   readingjuly,averagejuly,rankjuly){
-  var tbody = document.getElementById('tbody1');
+  var tbody = document.getElementById('tbody21');
   var trow = document.createElement('tr');
   var td0 = document.createElement('td');
   var td1 = document.createElement('td');
@@ -509,7 +510,7 @@ function addItemsToTablePop(name,id,sex,grade,speaking,writing,listening,
   my2SeRa,my2SeRme,my1SaY,my2SaY,myAaY,myKy,myMy,myOy,myKh,
   speakingjuly,writingjuly,listeningjuly,
   readingjuly,averagejuly,rankjuly){
-  var tbody = document.getElementById('tbody21');
+  var tbody = document.getElementById('tbody1');
   var trow = document.createElement('tr');
   var td0 = document.createElement('td');
   var td1 = document.createElement('td');
@@ -530,11 +531,13 @@ function addItemsToTablePop(name,id,sex,grade,speaking,writing,listening,
     speakingjuly,writingjuly,listeningjuly,
     readingjuly,averagejuly,rankjuly]);
     td0.innerHTML = ++studentN0Pop;
+    td1.innerHTML = myKh;
   
   
     trow.appendChild(td0);
+    trow.appendChild(td1);
   
-  td0.innerHTML = `<button type="button" class="button-6" role="button" onclick="Fillbox(${studentN0Pop})">${myKh}</button>`;
+  td1.innerHTML = `<button type="button" class="button-6" role="button" onclick="Fillbox(${studentN0Pop})">${myKh}</button>`;
   
   tbody.appendChild(trow);
 }
@@ -1648,3 +1651,11 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+// On Enter keypress
+$('input').keydown(function (event) {
+  if (event.which === 13) {
+    UpStd();
+    event.preventDefault();
+    return false;
+  }
+});
